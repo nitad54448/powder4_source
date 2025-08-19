@@ -1,0 +1,382 @@
+[Root]
+Most Recent Package=Powder APPpath
+
+[Package|Powder standard|Powder4]
+Icon1=Powder4.exe
+Title1=Powder4
+StartIn1=$(AppPath)
+Key1=Icon1
+
+
+[Package|Powder standard|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=G:\vb6\code\Powder4\powderCab
+
+[Package|Powder standard|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Powder standard|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Powder standard|Files Found]
+
+[Package|Powder standard|Files Released]
+
+[Package|Powder standard|Missing Dependency Information]
+C:\WINNT\SYSTEM32\pesgo32.ocx=
+C:\WINNT\SYSTEM32\PEGRAP32.DLL=
+
+[Package|Powder standard|Out-of-Date Dependency Information]
+C:\WINNT\SYSTEM32\MSCOMCT2.OCX=
+C:\WINNT\SYSTEM32\MSCOMCTL.OCX=
+C:\WINNT\SYSTEM32\comctl32.ocx=
+
+[Package|Powder standard|Files Added]
+g:\vb6\code\powder4\dbws\pw_dbws3.exe=
+g:\vb6\code\powder4\dicvol\pwd_dicvol91.exe=
+g:\vb6\code\powder4\hklgen\hklgen.exe=
+g:\vb6\code\powder4\ito\pwd_ito.exe=
+g:\vb6\code\powder4\peak\peak.exe=
+g:\vb6\code\powder4\peak\pk_transd.exe=
+g:\vb6\code\powder4\treor\pwd_treor.exe=
+
+[Package|Powder standard|Files Removed]
+
+[Package|Powder standard|Files In Project]
+G:\vb6\code\Powder4\Powder4.exe=Yes
+C:\WINNT\SYSTEM32\msvbvm60.dll=Yes
+C:\WINNT\SYSTEM32\OLEAUT32.DLL=Yes
+C:\WINNT\SYSTEM32\OLEPRO32.DLL=Yes
+C:\WINNT\SYSTEM32\ASYCFILT.DLL=Yes
+C:\WINNT\SYSTEM32\STDOLE2.TLB=Yes
+G:\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINNT\SYSTEM32\VB6FR.DLL=Yes
+C:\WINNT\SYSTEM32\PEGRAP32.DLL=Yes
+C:\WINNT\SYSTEM32\comctl32.ocx=Yes
+C:\WINNT\SYSTEM32\CMCTLFR.DLL=Yes
+C:\WINNT\SYSTEM32\COMDLG32.OCX=Yes
+C:\WINNT\SYSTEM32\CMDLGFR.DLL=Yes
+C:\WINNT\SYSTEM32\MSFLXGRD.OCX=Yes
+C:\WINNT\SYSTEM32\FLXGDFR.DLL=Yes
+C:\WINNT\SYSTEM32\pesgo32.ocx=Yes
+C:\WINNT\SYSTEM32\TABCTL32.OCX=Yes
+C:\WINNT\SYSTEM32\TABCTFR.DLL=Yes
+C:\WINNT\SYSTEM32\MSCOMCTL.OCX=Yes
+C:\WINNT\SYSTEM32\MSCMCFR.DLL=Yes
+C:\WINNT\SYSTEM32\MSCOMCT2.OCX=Yes
+C:\WINNT\SYSTEM32\MSCC2FR.DLL=Yes
+I:\powder\grid32.ocx=Yes
+G:\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+G:\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINNT\SYSTEM32\VB6STKIT.DLL=Yes
+G:\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+G:\vb6\code\Powder4\dbws\pw_dbws3.exe=Yes
+G:\vb6\code\Powder4\dicvol\pwd_Dicvol91.exe=Yes
+G:\vb6\code\Powder4\hklgen\HKLGEN.EXE=Yes
+G:\vb6\code\Powder4\ito\pwd_ito.exe=Yes
+G:\vb6\code\Powder4\peak\PEAK.EXE=Yes
+G:\vb6\code\Powder4\peak\Pk_transd.exe=Yes
+G:\vb6\code\Powder4\treor\pwd_treor.exe=Yes
+
+[Package|Powder standard|Configure Registry Files]
+Applicable=No
+
+[Package|Powder standard|Configure Remote Servers]
+Applicable=No
+
+[Package|Powder standard|Install Locations]
+G:\vb6\code\Powder4\Powder4.exe=$(AppPath)
+C:\WINNT\SYSTEM32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINNT\SYSTEM32\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\WINNT\SYSTEM32\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\WINNT\SYSTEM32\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\WINNT\SYSTEM32\STDOLE2.TLB=$(WinSysPathSysFile)
+G:\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINNT\SYSTEM32\VB6FR.DLL=$(WinSysPath)
+C:\WINNT\SYSTEM32\PEGRAP32.DLL=$(WinSysPath)
+C:\WINNT\SYSTEM32\comctl32.ocx=$(WinSysPath)
+C:\WINNT\SYSTEM32\CMCTLFR.DLL=$(WinSysPath)
+C:\WINNT\SYSTEM32\COMDLG32.OCX=$(WinSysPath)
+C:\WINNT\SYSTEM32\CMDLGFR.DLL=$(WinSysPath)
+C:\WINNT\SYSTEM32\MSFLXGRD.OCX=$(WinSysPath)
+C:\WINNT\SYSTEM32\FLXGDFR.DLL=$(WinSysPath)
+C:\WINNT\SYSTEM32\pesgo32.ocx=$(WinSysPath)
+C:\WINNT\SYSTEM32\TABCTL32.OCX=$(WinSysPath)
+C:\WINNT\SYSTEM32\TABCTFR.DLL=$(WinSysPath)
+C:\WINNT\SYSTEM32\MSCOMCTL.OCX=$(WinSysPath)
+C:\WINNT\SYSTEM32\MSCMCFR.DLL=$(WinSysPath)
+C:\WINNT\SYSTEM32\MSCOMCT2.OCX=$(WinSysPath)
+C:\WINNT\SYSTEM32\MSCC2FR.DLL=$(WinSysPath)
+I:\powder\grid32.ocx=$(AppPath)
+G:\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+G:\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\SYSTEM32\VB6STKIT.DLL=$(WinSysPathSysFile)
+G:\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+G:\vb6\code\Powder4\dbws\pw_dbws3.exe=$(AppPath)\dbws
+G:\vb6\code\Powder4\dicvol\pwd_Dicvol91.exe=$(AppPath)\dicvol
+G:\vb6\code\Powder4\hklgen\HKLGEN.EXE=$(AppPath)\hklgen
+G:\vb6\code\Powder4\ito\pwd_ito.exe=$(AppPath)\ito
+G:\vb6\code\Powder4\peak\PEAK.EXE=$(AppPath)\peak
+G:\vb6\code\Powder4\peak\Pk_transd.exe=$(AppPath)\peak
+G:\vb6\code\Powder4\treor\pwd_treor.exe=$(AppPath)\treor
+
+[Package|Powder standard|Configure Shared Files]
+Applicable=Yes
+G:\vb6\code\Powder4\Powder4.exe=No
+I:\powder\grid32.ocx=No
+G:\vb6\code\Powder4\dbws\pw_dbws3.exe=No
+G:\vb6\code\Powder4\dicvol\pwd_Dicvol91.exe=No
+G:\vb6\code\Powder4\hklgen\HKLGEN.EXE=No
+G:\vb6\code\Powder4\ito\pwd_ito.exe=No
+G:\vb6\code\Powder4\peak\PEAK.EXE=No
+G:\vb6\code\Powder4\peak\Pk_transd.exe=No
+G:\vb6\code\Powder4\treor\pwd_treor.exe=No
+
+[Package|Powder standard|Distribution]
+Type=single
+Size=
+Title=Powder4
+
+[Package|Powder standard|IconGroups]
+Group0=XRD
+PrivateGroup0=Faux
+Parent0=$(Programs)
+
+[Package|Powder standard|XRD]
+Icon1=Powder4.exe
+Title1=powder
+StartIn1=$(AppPath)
+Key1=Icon3
+
+[Package|Powder standard|Package]
+PackageFolder=G:\vb6\code\Powder4\powderCab
+ProjectFolder=G:\vb6\code\Powder4
+ServerSideCab=
+File1=G:\vb6\code\Powder4\powderCab\setup.exe
+File2=G:\vb6\code\Powder4\powderCab\Setup.Lst
+File3=G:\vb6\code\Powder4\powderCab\Powder4.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|Powder APPpath|Powder4]
+Icon1=Powder4.exe
+Title1=Powder4
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Powder APPpath|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=G:\powder
+
+[Package|Powder APPpath|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Powder APPpath|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Powder APPpath|Files Found]
+pw_ControlFile.cfg=G:\vb6\code\Powder4\pw_ControlFile.cfg
+
+[Package|Powder APPpath|Files Released]
+
+[Package|Powder APPpath|Missing Dependency Information]
+C:\WINNT\SYSTEM32\pesgo32.ocx=
+C:\WINNT\SYSTEM32\PEGRAP32.DLL=
+G:\xrd\powder4\MSCOMCT2.OCX=
+G:\xrd\powder4\MSCOMCTL.OCX=
+G:\xrd\powder4\TABCTL32.OCX=
+G:\xrd\powder4\pesgo32.ocx=
+G:\xrd\powder4\MSFLXGRD.OCX=
+G:\xrd\powder4\COMDLG32.OCX=
+G:\xrd\powder4\comctl32.ocx=
+G:\vb6\code\Powder4\MSCOMCT2.OCX=
+G:\vb6\code\Powder4\TABCTL32.OCX=
+G:\vb6\code\Powder4\MSFLXGRD.OCX=
+
+[Package|Powder APPpath|Out-of-Date Dependency Information]
+C:\WINNT\SYSTEM32\MSCOMCT2.OCX=
+C:\WINNT\SYSTEM32\MSCOMCTL.OCX=
+C:\WINNT\SYSTEM32\comctl32.ocx=
+C:\WINNT\SYSTEM32\TABCTL32.OCX=
+
+[Package|Powder APPpath|Files Added]
+g:\vb6\code\powder4\dbws\pw_dbws3.exe=
+g:\vb6\code\powder4\dicvol\pwd_dicvol91.exe=
+g:\vb6\code\powder4\hklgen\hklgen.exe=
+g:\vb6\code\powder4\ito\pwd_ito.exe=
+g:\vb6\code\powder4\peak\peak.exe=
+g:\vb6\code\powder4\peak\pk_transd.exe=
+g:\vb6\code\powder4\treor\pwd_treor.exe=
+pw_controlfile.cfg=
+g:\vb6\code\powder4\dbws\pw_dbws.dat=
+g:\vb6\code\powder4\dbws\plotinfo=
+g:\vb6\code\powder4\peak\peakparm.dat=
+
+[Package|Powder APPpath|Files Removed]
+
+[Package|Powder APPpath|Files In Project]
+C:\WINNT\SYSTEM32\msvbvm60.dll=Yes
+C:\WINNT\SYSTEM32\OLEAUT32.DLL=Yes
+C:\WINNT\SYSTEM32\OLEPRO32.DLL=Yes
+C:\WINNT\SYSTEM32\ASYCFILT.DLL=Yes
+C:\WINNT\SYSTEM32\STDOLE2.TLB=Yes
+G:\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINNT\SYSTEM32\VB6FR.DLL=Yes
+C:\WINNT\SYSTEM32\PEGRAP32.DLL=Yes
+G:\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+G:\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINNT\SYSTEM32\VB6STKIT.DLL=Yes
+G:\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+G:\vb6\code\Powder4\dbws\pw_dbws3.exe=Yes
+G:\vb6\code\Powder4\dicvol\pwd_Dicvol91.exe=Yes
+G:\vb6\code\Powder4\hklgen\HKLGEN.EXE=Yes
+G:\vb6\code\Powder4\ito\pwd_ito.exe=Yes
+G:\vb6\code\Powder4\peak\PEAK.EXE=Yes
+G:\vb6\code\Powder4\peak\Pk_transd.exe=Yes
+G:\vb6\code\Powder4\treor\pwd_treor.exe=Yes
+G:\vb6\code\Powder4\dbws\pw_dbws.dat=Yes
+G:\vb6\code\Powder4\dbws\plotinfo=Yes
+G:\vb6\code\Powder4\peak\PEAKPARM.DAT=Yes
+C:\WINNT\SYSTEM32\comctl32.ocx=Yes
+C:\WINNT\SYSTEM32\CMCTLFR.DLL=Yes
+C:\WINNT\SYSTEM32\COMDLG32.OCX=Yes
+C:\WINNT\SYSTEM32\CMDLGFR.DLL=Yes
+G:\vb6\code\Powder4\MSFLXGRD.OCX=Yes
+C:\WINNT\SYSTEM32\pesgo32.ocx=Yes
+C:\WINNT\SYSTEM32\MSCOMCTL.OCX=Yes
+C:\WINNT\SYSTEM32\MSCMCFR.DLL=Yes
+G:\vb6\code\Powder4\MSCOMCT2.OCX=Yes
+G:\vb6\code\Powder4\Powder4.exe=Yes
+C:\WINNT\SYSTEM32\TABCTL32.OCX=Yes
+C:\WINNT\SYSTEM32\TABCTFR.DLL=Yes
+G:\vb6\code\Powder4\pw_ControlFile.cfg=Yes
+
+[Package|Powder APPpath|Configure Registry Files]
+Applicable=No
+
+[Package|Powder APPpath|Configure Remote Servers]
+Applicable=No
+
+[Package|Powder APPpath|Install Locations]
+G:\vb6\code\Powder4\Powder4.exe=$(AppPath)
+C:\WINNT\SYSTEM32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WINNT\SYSTEM32\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\WINNT\SYSTEM32\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\WINNT\SYSTEM32\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\WINNT\SYSTEM32\STDOLE2.TLB=$(WinSysPathSysFile)
+G:\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINNT\SYSTEM32\VB6FR.DLL=$(AppPath)
+C:\WINNT\SYSTEM32\PEGRAP32.DLL=$(AppPath)
+C:\WINNT\SYSTEM32\comctl32.ocx=$(AppPath)
+C:\WINNT\SYSTEM32\CMCTLFR.DLL=$(AppPath)
+C:\WINNT\SYSTEM32\COMDLG32.OCX=$(AppPath)
+C:\WINNT\SYSTEM32\CMDLGFR.DLL=$(AppPath)
+C:\WINNT\SYSTEM32\MSFLXGRD.OCX=$(AppPath)
+C:\WINNT\SYSTEM32\FLXGDFR.DLL=$(AppPath)
+C:\WINNT\SYSTEM32\pesgo32.ocx=$(AppPath)
+C:\WINNT\SYSTEM32\TABCTL32.OCX=$(AppPath)
+C:\WINNT\SYSTEM32\TABCTFR.DLL=$(AppPath)
+C:\WINNT\SYSTEM32\MSCOMCTL.OCX=$(AppPath)
+C:\WINNT\SYSTEM32\MSCMCFR.DLL=$(AppPath)
+C:\WINNT\SYSTEM32\MSCOMCT2.OCX=$(AppPath)
+C:\WINNT\SYSTEM32\MSCC2FR.DLL=$(AppPath)
+I:\powder\grid32.ocx=$(AppPath)
+G:\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+G:\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\SYSTEM32\VB6STKIT.DLL=$(WinSysPathSysFile)
+G:\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+G:\vb6\code\Powder4\dbws\pw_dbws3.exe=$(AppPath)\dbws
+G:\vb6\code\Powder4\dicvol\pwd_Dicvol91.exe=$(AppPath)\dicvol
+G:\vb6\code\Powder4\hklgen\HKLGEN.EXE=$(AppPath)\hklgen
+G:\vb6\code\Powder4\ito\pwd_ito.exe=$(AppPath)\ito
+G:\vb6\code\Powder4\peak\PEAK.EXE=$(AppPath)\peak
+G:\vb6\code\Powder4\peak\Pk_transd.exe=$(AppPath)\peak
+G:\vb6\code\Powder4\treor\pwd_treor.exe=$(AppPath)\treor
+G:\vb6\code\Powder4\dbws\pw_ControlFile.cfg=$(AppPath)\dbws
+G:\vb6\code\Powder4\dbws\pw_dbws.dat=$(AppPath)\dbws
+G:\vb6\code\Powder4\dbws\plotinfo=$(AppPath)\dbws
+G:\vb6\code\Powder4\peak\PEAKPARM.DAT=$(AppPath)\peak
+G:\xrd\powder4\comctl32.ocx=$(AppPath)
+G:\xrd\powder4\COMDLG32.OCX=$(AppPath)
+G:\xrd\powder4\MSFLXGRD.OCX=$(AppPath)
+G:\xrd\powder4\pesgo32.ocx=$(AppPath)
+G:\xrd\powder4\TABCTL32.OCX=$(AppPath)
+G:\xrd\powder4\MSCOMCTL.OCX=$(AppPath)
+G:\xrd\powder4\MSCOMCT2.OCX=$(AppPath)
+G:\vb6\code\Powder4\MSFLXGRD.OCX=$(AppPath)
+G:\vb6\code\Powder4\TABCTL32.OCX=$(AppPath)
+G:\vb6\code\Powder4\MSCOMCT2.OCX=$(AppPath)
+C:\Documents and Settings\Administrateur\Bureau\Powder4.exe=$(AppPath)
+G:\vb6\code\Powder4\pw_ControlFile.cfg=$(AppPath)
+
+[Package|Powder APPpath|Configure Shared Files]
+Applicable=Yes
+G:\vb6\code\Powder4\Powder4.exe=No
+I:\powder\grid32.ocx=No
+G:\vb6\code\Powder4\dbws\pw_dbws3.exe=No
+G:\vb6\code\Powder4\dicvol\pwd_Dicvol91.exe=No
+G:\vb6\code\Powder4\hklgen\HKLGEN.EXE=No
+G:\vb6\code\Powder4\ito\pwd_ito.exe=No
+G:\vb6\code\Powder4\peak\PEAK.EXE=No
+G:\vb6\code\Powder4\peak\Pk_transd.exe=No
+G:\vb6\code\Powder4\treor\pwd_treor.exe=No
+C:\WINNT\SYSTEM32\VB6FR.DLL=No
+C:\WINNT\SYSTEM32\PEGRAP32.DLL=No
+C:\WINNT\SYSTEM32\comctl32.ocx=No
+C:\WINNT\SYSTEM32\CMCTLFR.DLL=No
+C:\WINNT\SYSTEM32\COMDLG32.OCX=No
+C:\WINNT\SYSTEM32\CMDLGFR.DLL=No
+C:\WINNT\SYSTEM32\MSFLXGRD.OCX=No
+C:\WINNT\SYSTEM32\FLXGDFR.DLL=No
+C:\WINNT\SYSTEM32\pesgo32.ocx=No
+C:\WINNT\SYSTEM32\TABCTL32.OCX=No
+C:\WINNT\SYSTEM32\TABCTFR.DLL=No
+C:\WINNT\SYSTEM32\MSCMCFR.DLL=No
+C:\WINNT\SYSTEM32\MSCOMCT2.OCX=No
+C:\WINNT\SYSTEM32\MSCC2FR.DLL=No
+G:\vb6\code\Powder4\dbws\pw_ControlFile.cfg=No
+G:\vb6\code\Powder4\dbws\pw_dbws.dat=No
+G:\vb6\code\Powder4\dbws\plotinfo=No
+G:\vb6\code\Powder4\peak\PEAKPARM.DAT=No
+C:\WINNT\SYSTEM32\MSCOMCTL.OCX=No
+G:\xrd\powder4\comctl32.ocx=No
+G:\xrd\powder4\COMDLG32.OCX=No
+G:\xrd\powder4\MSFLXGRD.OCX=No
+G:\xrd\powder4\pesgo32.ocx=No
+G:\xrd\powder4\TABCTL32.OCX=No
+G:\xrd\powder4\MSCOMCTL.OCX=No
+G:\xrd\powder4\MSCOMCT2.OCX=No
+G:\vb6\code\Powder4\MSFLXGRD.OCX=No
+G:\vb6\code\Powder4\TABCTL32.OCX=No
+G:\vb6\code\Powder4\MSCOMCT2.OCX=No
+C:\Documents and Settings\Administrateur\Bureau\Powder4.exe=No
+G:\vb6\code\Powder4\pw_ControlFile.cfg=No
+
+[Package|Powder APPpath|Distribution]
+Type=single
+Size=
+Title=Powder4
+
+[Package|Powder APPpath|IconGroups]
+Group0=XRD
+PrivateGroup0=Faux
+Parent0=$(Programs)
+
+[Package|Powder APPpath|XRD]
+Icon1=Powder4.exe
+Title1=powder
+StartIn1=$(AppPath)
+Key1=Icon3
+
+[Package|Powder APPpath|Package]
+PackageFolder=G:\powder
+ProjectFolder=G:\vb6\code\Powder4
+ServerSideCab=
+File1=G:\powder\setup.exe
+File2=G:\powder\Setup.Lst
+File3=G:\powder\Powder4.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

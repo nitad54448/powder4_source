@@ -1,0 +1,716 @@
+1          ***  INSTRUCTION  MANUAL  ***                    ---  VERSION 13  ---
+
+ IN CASE OF PROBLEMS, WRITE OR CALL
+     J.W.VISSER,  TECHNISCH PHYSISCHE DIENST, P.O.BOX 155,DELFT, NETHERLANDS.   PHONE  015 - 787004, (788020) / 40 OR
+     G.G.JOHNSON JR., MATERIALS RESEARCH LAB., PENN. STATEUNIVERSITY, UNIVERSITY PARK, PENN. 16802, 814-865-1637/40 OR
+     R.SHIRLEY, CHEMICAL PHYSICS DEPT., UNIV. OF SURREY, GUILDFORD, SURREY GU2 5XH, ENGLAND.   PHONE 0483-71281 X449/427
+0THIS PROGRAM TRIES TO FIND THE UNIT CELL FROM THE POWDER PATTERN.  THE PRINCIPLES ARE DESCRIBED IN 
+ A PAPER BY VISSER IN THE JOURNAL OF APPLIED CRYSTALLOGRAPHY (1969) 2, 89.                          
+
+ MOST OF THE CALCULATIONS ARE CARRIED OUT IN TERMS OF Q-VALUES, THESE ARE (100/D)**2 ,WHERE D IS THE
+ INTERPLANAR DISTANCE IN ANGSTROMS.  ALL VALUES IN THE PROGRAM ARE EXPRESSED IN QU (Q-UNITS), UNLESS
+ INDICATED OTHERWISE.         
+
+ THE INPUT OF THE PROGRAM IS ON UNIT 15, THE REGULAR OUTPUT IS ON UNIT 16. THE CARD-IMAGES OF THE   
+ INPUT CARDS ARE PRINTED ON UNIT 14.              
+ *** A SUMMARY OF THE OUTPUT (SUITABLE FOR CRT-TERMINALS, LINES < 71 CHARACTERS) IS PRINTED ON UNIT 66
+ THESE I/O UNITS CAN BE CHANGED IN THE MAIN PROGRAM.
+
+
+ THE USUAL INPUT OF THIS PROGRAM SHOULD CONSIST OF
+ 1.A TITLE CARD, CONTAINING UP TO 80 CHARACTERS   
+ 2.A PARAMETER CARD, WHICH MAY BE COMPLETELY BLANK
+ 3.ANOTHER PARAMETER CARD. CAN ALSO BE BLANK.     
+ 4.A NUMBER OF LINES CARDS.                       
+   THE OPTIMUM NUMBER OF LINES TO BE ENTERED IS SOMEWHERE BETWEEN 30 AND 35.                        
+   THE ABSOLUTE MINIMUM IS 20. THERE IS NO MAXIMUM, BUT THE PROGRAM WILL USE ONLY THE FIRST 40 LINES
+0NOTE**  IF YOU ACTUALLY USE CARDS,  THEY MAY BE LEFT BLANK.HOWEVER, IN SOME COMPUTER SYSTEMS ONE   
+ CANNOT GENERATE AN INPUT FILE WITH COMPLETELY BLANK LINES, THEY DISAPPEAR WITHOUT A TRACE. IN THAT 
+ CASE, IT IS BETTER TO ENTER A ZERO IN THE FIRST COLUMN OF THE SECOND AND THIRD 'CARD'.             
+
+----------------------------------------------------------------------------------------------------
+   THE LINES SHOULD BE ENTERED IN ASCENDING ORDER OF TWOTHETA ( =DESCENDING ORDER OF D).            
+----------------------------------------------------------------------------------------------------
+
+   THEY CAN BE ENTERED AS 2THETA, Q- OR D- VALUES  IN THE FORMAT  8F10.5                            
+   YOU MAY LEAVE ANY NUMBER OF POSITIONS ON THE CARD BLANK. THIS MEANS THAT YOU CAN ALSO ENTER ONLY 
+   ONE LINE PER CARD,IN ANY OF THE POSITIONS OF 8F10.5  MOREOVER, ONLY THE FIRST SIX LINES MUST BE  
+   IN THEIR CORRECT ORDER. AFTER DETERMINING WHETHER THESE ARE IN ASCENDING(2THETA,Q) OR DESCENDING 
+   (D) ORDER, THE PROGRAM WILL SORT ALL LINES.    
+   IF YOU WANT TO DROP A QUESTIONABLE INPUT LINE,  CHANGE ONLY ITS SIGN (PUNCH A MINUS).            
+   THE VALUE WILL REMAIN READABLE, BOTH ON THE CARD AND IN THE TEST OUTPUT.                         
+ 5.A BLANK CARD (OR A ZERO IN COL. 1 IF YOU WISH  TO BE MORE EXPLICIT) TO FINISH THE INPUT OF LINES 
+   OF ONE PROBLEM.                                
+0  REPEAT THE POINTS 1-4 AS MANY TIMES AS PROBLEMS THEN                                             
+ 6.A CARD CONTAINING THE WORD -- END -- IN THE FIRST THREE COLUMNS, TO FINISH THE INPUT.            
+
+1
+ THE PARAMETER CARD CAN CONTAIN THE FOLLOWING PARAMETERS--                                          
+
+ COLUMN  FORMAT  NAME   DEFAULT   MEANING         
+   1      A1     MAN      0       PRINTS THESE INSTRUCTIONS, UNLESS MAN=9                           
+   2      A1     INSTR    0       PRINTS INSTRUCTIONS FOR SPECIAL FEATURES IF INSTR=1               
+   3      A1     INTENS   0       READS INTENSITIES BESIDES LINE POSITIONS (8(F7.3,A3)) IF INTENS=1 
+   4      I1     NSOLMX   4       NUMBER OF SOLUTIONS PRINTED OUT EXTENSIVELY.                      
+  5- 6    I2     NSYST(1) 0       ORTHORHOMBIC SYSTEM,  +1=YES, -1=NO, 0=INDIFFERENT.               
+  7- 8    I2     NSYST(2) 0       MONOCLINIC   SYSTEM,  +1=YES, -1=NO, 0=INDIFFERENT.               
+  9-10    I2     NSYST(3) 0       TRICLINIC    SYSTEM,  +1=YES, -1=NO, 0=INDIFFERENT.               
+ 11-15   F5.2    TOL2    3.0 (QU) TOLERANCE(RANGE) ON 2-DIMENSIONAL SEARCH.                         
+ 16-20   F5.2    TOL3    4.5 (QU) TOLERANCE(RANGE) ON 3-DIMENSIONAL SEARCH.                         
+ 21-30   F10.5   WAVEL   1.5406(A)WAVELENGTH      
+ 31-32    I2     LINCO    0       IF LINCO .GT. 0, ENTER LINE COMBINATIONS OR ZONES(4F10.2), END WITH
+                                    A BLANK CARD,OR A CARD WITH A ZERO IN THE FIRST COLUMN
+    33    I1     LZERCK   0       GIVES A CHECK ON ZERO-ERRORS WHEN LZERCK > 0                      
+    34    I1     K (ENL)  0       GIVES OUTPUT OF INTERMEDIATE RESULTS, IF K .GE. 1                 
+ 35-36    I2     NQ1      3       NQ1 AND NQ2 DETERMINE THE NUMBERS OF LINES TO BE USED IN          
+ 37-38    I2     NQ2      6           COMBINATIONS FOR FINDING ZONES.                               
+ 39-40    I2     NZ1      6       NZ1 AND NZ2 DO THE SAME FOR FINDING LATTICES FROM ZONES           
+ 41-42    I2     NZ2      6                       
+ 43-44    I2     NR       0       REFINEMENT AND EVALUATION ONLY IF NR .GT. 0. TRIAL LATTICES REQUIRED
+ 45-46    I2     INDAT    5       NUMBER OF THE UNIT ON WHICH TO READ THE LINE POSITIONS            
+ 47-48    I2     LIST     1       PRINTS A LIST OF ALL CALC AND OBS LINES FOR *LIST* LATTICES       
+ 49-50    I2     J(TEST)  0       TEST OUTPUT IS  PRINTED WHEN  J.GE.1                              
+ 51-60   F10.5   WMOL    0.0      MOLECULAR WEIGHT
+ 61-70   F10.5   DOBS    0.0      OBSERVED DENSITY
+ 71-78    F8.4   TOLG    6.0      TOLERANCE ON THE MATCH BETWEEN CALCULATED AND OBSERVED TWO THETAS.
+ 79-80    I2     NTST     0       NUMBER,INDICATING WHERE IN THE MAIN PROGRAM,  TEST OUTPUT SHOULD START
+0ON SECOND CARD                                   
+0 1-10   F10.4   ZERCOR  0.0      ZERO CORRECTION (DEGREES TWOTHETA), TO BE APPLIED TO ALL LINES    
+ 11-20   F10.1   PRNTMR  4.0      THE MINIMUM FIGURE OF MERIT FOR A LATTICE TO BE PRINTED           
+ 21-30   F10.0   PRNTLN  14.      THE MINIMUM NUMBER OF INDEXED LINES FOR A LATTICE TO BE PRINTED.  
+1 INSTRUCTIONS FOR SPECIAL FEATURES ****  VERSION  13  ***** 
+
+0          COL  3  **INTENS**              
+  IF YOU WANT TO ENTER INTENSITIES WITH YOUR LINE POSITIONS YOU SHOULD SET INTENS(COL 3) AT 1.      
+ THE LINE POSITIONS AND INTENSITIES ARE THEN READ IN THE FORMAT 8(F7.3,A2,1X),WHICH MEANS THAT THE  
+ INTENSITIES ARE READ AS CHARACTERS. YOU MAY ENTER THEM AS A 2-DIGIT FIGURE BUT ALSO AS   VS, W , VW
+ ETC. YOU COULD ALSO USE THIS TO MARK ONLY THE VERY WEAK LINES OR SUSPECTED LINES.                  
+ NO CALCULATIONS ARE CARRIED OUT WITH THE INTENSITIES.
+0          COL  4  **NSOLMX**              
+ NSOLMX IS THE MAXIMUM NUMBER OF SOLUTIONS FOR WHICH A LIST OF (INDEXED) REFLECTIONS IS PRINTED.    
+ THE CORRESPONDING Q-SCHEME IS ONLY PRINTED WHEN  INTERMEDIATE RESULTS ARE GIVEN (COL. 34)  .AND.   
+ THE FIGURE OF MERIT IS LARGER THAN 4.0.          
+0          COL 5-6, 7-8, 9-10   **NSYST**  
+ WHEN YOU ARE REASONABLY SURE THAT THE SOLUTION MUST BELONG TO A CERTAIN CRYSTAL SYSTEM, YOU CAN    
+ INDICATE THIS IN COLS 5-10 (3I2). THE COLUMNS SERVE THE ORTHORHOMBIC, MONOCLINIC AND TRICLINIC     
+ SYSTEM RESPECTIVELY.  A ZERO MEANS THAT YOU ARE  INDIFFERENT (DEFAULT CASE), A +1 INDICATES THAT   
+ YOU ARE PRETTY SURE THAT THE CORRECT SOLUTION BELONGS TO THIS CRYSTAL SYSTEM, A -1 MEANS THE OPPOSITE.
+ THIS OPTION WORKS ONLY ON THE LAST PART OF THE PROGRAM AND DOUBLES THE TOLERANCES THERE..          
+ THIS IS ONLY POSSIBLE FOR ORTHORHOMBIC,MONOCLINIC AND TRICLINIC LATTICES.                          
+0           COL 11-15   **TOL2** 
+            COL 16-20   **TOL3** 
+ THE TOLERANCE ON THE VALUE OF R (THE TRIAL VALUE OF F USED IN THE SEARCH FOR ZONES, SEE MY PAPER,  
+ EQ. 4) IS GIVEN BY *TOL2*. WHEN YOU HAVE VERY GOOD DATA (0.01 DEGREE TWOTHETA) ON A FAIRLY LARGE   
+ UNIT CELL,YOU MIGHT LOWER IT TO 2.5 OR 2.0 .WITH A SMALL UNIT CELL YOU MIGHT INCREASE IT SOMEWHAT  
+ TO SAY 4.0. TOL3 IS THE SAME KIND OF TOLERANCE, BUT NOW ON THE TRIAL VALUE OF D IN THE SEARCH FOR  
+ LATTICES (SEE PAPER, PAGE 91).ITS VALUE CAN BE CHANGED IN THE SAME WAY AS THAT OF TOL2.            
+0          COL 31-32  **LINCO**            
+ LINCO ENABLES YOU TO ENTER YOUR OWN LINE COMBINATIONS OR YOUR OWN ZONES.                           
+ WHEN LINCO IS NOT ZERO, THE PROGRAM EXPECTS CARDS (AFTER THE LINES CARDS+THE BLANK CARD)     
+ AND READS THESE IN THE FORMAT  3F10.2,F10.1      
+ YOU MAY ENTER ANY NUMBER OF ZONES (LESS THAN 40) BUT YOU MUST END WITH A BLANK CARD.               
+ WHEN YOU ENTER ONLY 2 VALUES, THE PROGRAM INTERPRETS THIS AS A COMBINATION OF LINES, TO BE TRIED   
+ FOR FINDING ZONES.                               
+ WHEN YOU ENTER 3 VALUES, THE PROGRAM WILL TREAT  THESE AS  A ZONE AND WILL EVALUATE IT. IF YOU WANT
+ TO ENTER A RECTANGULAR ZONE, YOU MUST SET ITS THIRD CONSTANT AT 0.08 , OTHERWISE THE PROGRAM WILL  
+ TREAT IT AS A LINE COMBINATION.                  
+ IF YOU WANT TO ENSURE THAT A SPECIFIED ZONE WILL BE INCLUDED IN THE SEARCH FOR COMPLETE LATTICES,  
+ YOU SHOULD ALSO ENTER A HIGH QUALITY FIGURE (FOURTH VALUE ON THE CARD), PUNCHING A SINGLE DIGIT IN 
+ COL. 31 ASSURES YOU OF A HIGH QUALITY FIGURE.    
+ IF THE PROGRAM DOES NOT FIND THE SOLUTION AUTOMATICALLY, IT CAN OFTEN BE HELPED BY ADDING ZONES IN 
+ THIS WAY. ZONES WHICH ARE CORRECT, ALTHOUGH HAVING A LOW QUALITY FIGURE, CAN SOMETIMES BE RECOGNISED
+ IN THE LIST OF INTERMEDIATE RESULTS (K, COL.34)  BY THEIR SMALL AREA (I.E. LARGE *A* AND *B*) AND  
+ GOOD COVERAGE NEAR THE ORIGIN (I.E. MOST OF THE  LOW ANGLE CALCULATED LINES HAVE BEEN MATCHED WITH 
+ OBSERVED LINES). ZONES FROM ORIENTED SPECIMENS OR FIBRES, OR FROM ELECTRON DIFFRACTION STUDIES, CAN
+ ALSO BE USED.      
+0N.B.  THE PROGRAM WILL SKIP THE ZONE-FINDING PART WHENEVER THIS OPTION IS USED.                    
+ TAKE CARE TO ENTER ENOUGH ZONES (OR LINE COMBINATIONS) TO LET THE PROGRAM CONTINUE.                
+0          COL 33   ***LZERCK***           
+  YOU CAN ALSO ASK THE PROGRAM TO PERFORM A CHECK ON ZERO ERRORS (COL. 33). THE SUBROUTINE GIVES    
+ FULL PARTICULARS.  
+1
+0          COL 43-44   **NR**              
+    WHEN YOU WANT TO ENTER A NUMBER OF TRIAL LATTICES OF YOUR OWN, YOU CAN DO THIS BY MAKING NR POS.
+ THE PROGRAM WILL NOW EXPECT CARDS WITH TRIAL LATTICES AFTER THE INPUT OF THE LINES (+BLANK CARD).  
+ THERE SHOULD BE 6 DATA PER CARD (FORMAT 6F10.2), THE COEFFICIENTS A,B,C,D,E AND F OF               
+  Q=H*H*A+K*K*B+L*L*C+K*L*D+L*H*E+H*K*F           
+ WHERE Q=10000/(D*D)  (D=INTERPLANAR SPACING IN A)
+0*****YOU MAY ALSO ENTER THE TRIAL LATTICE AS A DIRECT LATTICE WITH 6 CONSTANTS IN ANGSTROMS AND (DECIMAL) DEGREES.
+ THE TRIAL LATTICES ARE TERMINATED BY A CARD WITH ZERO OR BLANK IN COLS 1-10.                       
+0          COL 47-48  **LIST**             
+ LIST. FOR THE BEST SOLUTION, THE PROGRAM WILL PRODUCE A LIST OF ALL OBSERVED AND CALCULATED LINES, 
+ SORTED ON TWOTHETA, UNLESS IT WOULD BE TOO LONG (MORE THAN 100 CALCULATED LINES). IF YOU WANT THIS 
+ LIST FOR MORE SOLUTIONS, YOU SHOULD ENTER THE NUMBER THAT YOU WANT IN COL. 48.  YOU CAN ALSO SUPPRESS
+ THIS OPTION BY MAKING LIST NEGATIVE. DEFAULT=1   
+0          COL 71-78   **TOLG**            
+ TOLG IS THE TOLERANCE ON THE FIT BETWEEN OBSERVED AND CALCULATED LINES. IT IS EXPRESSED IN HUNDREDTHS
+ OF A DEGREE TWOTHETA, E.G. THE DEFAULT VALUE OF 6.0 MEANS THAT A DIFFERENCE OF 0.060 DEGREES TWOTHETA
+ BETWEEN CALCULATED AND OBSERVED LINES IS JUST ACCEPTABLE.  
+ TOLG APPLIES TO BOTH THE ZONE AND LATTICE SEARCHES, AND TO THE LATTICE REFINEMENT.                 
+ FOR VERY ACCURATE DATA IT CAN BE ADVANTAGEOUS TO LOWER TOLG TO 4.0 OR 3.5.                   
+ FOR INACCURATE DATA IT CAN BE INCREASED, BUT SUCH DATA IS NOT USUALLY WORTH PROCESSING UNLESS THE  
+ CELL IS VERY SMALL.                              
+0          COL  79-80  *NTST**             
+ THE TEST OUTPUT CAN BE LIMITED TO THE SUBROUTINE  WHERE YOU REALLY NEED IT, BY ENTERING A PARAMETER
+ FOR *NTEST* IN COLUMN 80 OF THE FIRST PARAMETER  CARD. (SEE SUBROUTINE FOR DIRECTIONS)             
+0IF YOU WANT THE TEST OUTPUT TO CONTINUE UNTIL THE END OF THE PROGRAM, YOU MUST MULTIPLY THE DESIRED
+ NUMBER BY 11 AND USE COLUMNS 79 AND 80 OF THE FIRST PARAMETER CARD. PUNCH E.G. 88 IF THE LAST PART 
+ OF THE PROGRAM GIVES YOU TROUBLE.                
+
+
+0                              ********************
+                               *  ON SECOND CARD  *
+                               ********************
+0          COL 01-10  **ZERCOR**           
+ **ZERCOR**THE PROGRAM APPLIES THIS CORRECTION TO ALL LINES. THE CORRECTION IS APPLIED AS IT STANDS,
+ A POSITIVE CORRECTION IS ADDED TO THE TWOTHETA VALUES OF THE LINES.                                
+ THE CORRECTION MUST BE GIVEN IN DEGREES TWOTHETA, E.G.  -0.052 SUBTRACTS 0.052 DEGREES FROM THE    
+ TWOTHETA VALUES OF ALL LINES, EVEN IF YOU ENTERED D-VALUES.                                        
+0          COL 11-20  **PRNTMR**           
+ **PRNTMR**THE PROGRAM DOES NOT PRINT ANY LATTICES THAT HAVE A FIGURE OF MERIT THAT IS BELOW PRNTMR.
+ THE DEFAULT VALUE IS 4.0, WHICH MUST BE CONSIDERED AS AN ABSOLUTE MINIMUM FOR A LATTICE THAT HAS A  
+ CHANCE TO IMPROVE ITS PERFORMANCE.               
+0          COL 21-30  **PRNTLN**           
+ **PRNTLN**THE PROGRAM DOES NOT PRINT ANY LATTICES THAT HAVE LESS THAN *PRNTLN* INDEXED LINES.      
+ LATTICES WITH SUCH A LOW NUMBER OF INDEXED LINES ARE SOMETIMES A SUBLATTICE OF THE TRUE LATTICE.   
+ A LATTICE CAN ONLY BE CONSIDERED AS SATISFACTORY WHEN IT EXPLAINS ALL LINES.                       
+
+
+
+0**NOTE**  A USEFUL STRATEGY IS TO IMPROVE THE OBSERVED DATA BY USING LINES FOR WHICH 2 OR MORE  
+ ORDERS HAVE BEEN OBSERVED. THE LOWEST ORDERS CAN BE REPLACED BY A MORE ACCURATE VALUE CALCULATED   
+ FROM THE HIGHER ORDERS, AND SOMETIMES UNOBSERVED FIRST OR SECOND ORDER LINES CAN BE INFERRED AND   
+ ADDED TO THE  *OBSERVED* PATTERN.  LOW ORDER ABSENCES IN WELL-ESTABLISHED ZONES CAN BE FILLED IN A 
+ SIMILAR WAY. MULTIPLE ORDERS CAN ALSO BE USED TO CHECK FOR ZERO ERRORS IN TWOTHETA.                
+ SEE ALSO SUBROUTINE ZERCHK.                      
+1THIS PROGRAM TRIES TO FIND THE UNIT CELL FROM THE  POWDER PATTERN OF
+
+
+                    Powder v3.beta - 06/11/2001 09:10:41 - scw f2                                   
+
+
+ WITH A METHOD PROPOSED BY  DE WOLFF AND PROGRAMMED BY VISSER (J.APPL.CRYST.2,89(1969))
+            FORTRAN  VERSION    13      
+0====================================================================================
+ ==   A RESTRICTED BIBLIOGRAPHY IS GIVEN IN THE TEXT OF THE SUBROUTINE  *BIBLIO*   ==
+ ====================================================================================
+
+
+0****************************************************************
+ *                                                              *
+ *   ARE YOUR INPUT DATA REALLY THE BEST THAT CAN BE OBTAINED   *
+ *                                                              *
+ ****************************************************************
+
+
+ FINDING THE UNIT CELL  DEPENDS FOR 95 PERCENT ON THE QUALITY OF THE INPUT DATA.
+ A RANDOM ERROR OF 0.03 DEGREES TWOTHETA CAN USUALLY BE TOLERATED, BUT A SYSTEMATIC (ZERO POINT) ERROR OF 0.02 DEGREES
+ IS PROBABLY DISASTROUS.  CHECK YOUR INPUT LINES AGAINST THEIR HIGHER ORDERS.
+
+ DO NOT USE A DEBIJE-SCHERRER CAMERA  UNLESS THE UNIT CELL TO BE EXPECTED IS SMALL.
+ WOULD YOU LIKE TO SOLVE A JIGSAW PUZZLE WHEN HALF THE PIECES ARE MISSING---
+0THE WAVELENGTH IS    1.5406
+0THE INPUT CONSISTED OF THE FOLLOWING  28 LINES 
+   17.985       21.765       22.765       27.645       29.405       29.605       29.885       30.585       32.405       33.065   
+   37.865       43.685       44.325       45.145       46.485       47.445       51.685       55.785       55.945       57.065   
+   57.785       67.765       67.845       67.985       69.345       72.105       72.765       76.205   
+0THE INPUT CONSISTED OF
++                        TWO THETAS.
+0THE WAVELENGTH IS    1.5406
+0THE NUMBER OF LINES THAT WILL BE USED IS  28
+0THE INPUT LEADS TO THE FOLLOWING Q-VALUES   
+   411.8        600.7        656.5        962.0       1085.6       1100.1       1120.6       1172.4       1312.2       1364.7    
+  1774.2       2333.0       2398.4       2483.3       2624.6       2727.8       3202.4       3688.5       3708.0       3845.3    
+  3934.6       5238.2       5249.1       5268.1       5454.5       5837.6       5930.1       6417.6    
+0                                         ********
+                                         **********
+                                        ****    ****
+                                       ***  THE   ***
+                                      ***  NUMBER  ***
+                                     ***  OF LINES  ***
+                                    ***  ENTERED IS  ***
+                                   ***    ONLY 28     ***
+                                  ***  THIS MEANS THAT ***
+                                 ***  YOU MAY FIND A    ***
+                                ***  LATTICE THAT IS A   ***
+                               ***  SUBLATTICE OR SOME    ***
+                              ***  SUPERLATTICE OR OTHER   ***
+                             ***    DERIVATIVE LATTICE.     ***
+                            ************************************
+                           **************************************
+                          ****************************************
+0  THE NUMBER OF LINES ENTERED FOR THIS PROBLEM IS RATHERSMALL.
+ WITH ONLY 20 LINES YOUR CHANCES ARE 50:50 THAT YOU WILL FIND A SUBLATTICE
+ OR A DERIVED LATTICE.  WITH 40 LINES YOUR CHANCES OF FINDING THE CORRECT
+ LATTICE IMMEDIATELY ARE MUCH BETTER.  PLEASE ENTER MORE LINES IF POSSIBLE.
+ READ THE PAPER BY A.D. MIGHELL AND J.K. STALICK ON: THE RELIABILITY OF POWDER INDEXING PROCEDURES,
+ PAG. 393-403 IN: ACCURACY IN POWDER DIFFRACTION, SEE BIBLIOGRAPHY.
+0THIS PROGRAM CALCULATES A NUMBER OF UNIT CELLS.
+ THESE CELLS ARE ALL TESTED BY DE WOLFF'S CRITERION (READ: 
+ A SIMPLIFIED CRITERION FOR THE RELIABILITY OF A  POWDER PATTERN INDEXING, BY P.M. DE WOLFF ,       
+ JOURNAL APPLIED CRYSTALLOGRAPHY (1968) 1, 108  ).
+ IN ORDER THAT THE UNIT CELL BE ABLE TO PASS THE  TEST (M20 .GT. 10), AND ASSUMING THAT YOU DID NOT 
+ MISS TOO MANY LINES (N20=50), THE CRITERION DEMANDS THAT THE MEAN ERROR IN YOUR DATA IS            
+0                    **************************************************
+                     *   LESS THAN    0.043     DEGREES TWO THETA     *
+                     **************************************************
+0Q-VALUES WILL BE CONSIDERED TO BE EQUAL WHEN THEY DIFFER LESS THAN 1.4
+0THE LOWER LIMIT FOR THE VALUES OF A,B,C IS    24.22
+ THE MAXIMUM EDGE OF THE UNIT CELL IS     20.3 ANGSTROM 
+0ONLY A MINIMUM OF INTERMEDIATE RESULTS WILL BE PRINTED
+ PUNCH A 1 IN COLUMN 34 OF THE PARAMETER CARD IF YOU WANT   MORE OUTPUT. 
+0(COL 11-15) TOL2, THE TOLERANCE ON THE TRIAL F IS 3.0
+
+ (COL 16-20) TOL3, THE TOLERANCE ON THE TRIAL D IS 4.5
+
+ (COL 71-78) TOLG, THE TOLERANCE ON TWO THETA IS 0.080  DEGREES.
+ ************************************************
+ * THE OVERALL TOLERANCE IS CHANGED INTO 0.080 *
+ ************************************************
+0THE PROGRAM WILL COMBINE THE FIRST  3 LINES WITH THE FIRST  6
+0THE PROGRAM WILL TRY TO COMBINE THE FIRST  6 ZONES WITH THE FIRST  6
+0THE GIVEN MOLECULAR WEIGHT IS     0.000
+0THE GIVEN OBSERVED DENSITY IS    0.0000
+1                    Powder v3.beta - 06/11/2001 09:10:41 - scw f2                                   
+ ------------------------------------------------------------------------------------------------------------------------
+0ZONES SELECTED FOR FURTHER REFINEMENT
+
+
+ NEWNR    A       B     FMAAS       QUALITY   OLDNR CENTER  NOBS  NCALC  ZEROSHIFT 
+    1   271.9   412.4   269.2        571184.1   19.    0.    5.   15.    0.0000
+    2   170.4   241.3     0.0        385316.6    4.    1.    3.    5.    0.0000
+    3   240.4   412.2     4.6        295368.9   16.    0.    4.   15.    0.0000
+    4   411.7   600.1    44.3        153159.5    8.    0.    3.   11.    0.0000
+    5   442.5   599.6    57.9         44025.3   50.    0.    3.    9.    0.0000
+    6   411.7   960.7    62.2         21778.1   17.    0.    2.    7.    0.0000
+    7    41.0   230.5     0.0         21278.1   63.    0.    4.   11.    0.0000
+    8   266.7   271.4   125.8          9713.3   21.    0.    5.   17.    0.0000
+
+
+
+
+ NOTE--SOME OF THESE ZONES ARE PROBABLY CORRECT EVEN IF THE PROGRAM FAILS TO BUILD A PLAUSIBLE LATTICE  FROM THEM.
+1                    Powder v3.beta - 06/11/2001 09:10:41 - scw f2                                   
+ ------------------------------------------------------------------------------------------------------------------------
+0ZONES AFTER REFINEMENT ON TWOTHETA, ONLY THE ZEROSHIFT IS USED
+
+ NEWNR    A       B     FMAAS       QUALITY   OLDNR CENTER  NOBS  NCALC  ZEROSHIFT
+
+    1   271.9   412.4   269.2        571184.1   19.    0.    5.   15.   -0.0456
+    2   170.4   241.3     0.0        385316.6    4.    1.    3.    5.    0.0000
+    3   240.4   412.2     4.6        295368.9   16.    0.    4.   15.   -0.0162
+    4   411.7   600.0    44.4        153159.5    8.    0.    3.   11.    0.0000
+    5   442.5   599.6    57.9         44025.3   50.    0.    3.    9.    0.0000
+    6   411.7   960.7    62.2         21778.1   17.    0.    2.    7.    0.0000
+    7    41.0   230.3     0.0         21278.1   63.    0.    4.   11.    0.0174
+    8   266.7   271.4   125.8          9713.3   21.    0.    5.   17.   -0.0102
+
+
+
+ THE ZEROSHIFTS ARE NOT YET REALLY USED IN THE PROGRAM.
+ IF YOU SEE A CONVINCING ZERO SHIFT, YOU COULD ENTER THE ZEROSHIFT (WITH THE OPPOSITE SIGN) 
+ IN COL. 1-10 OF THE SECOND PARAMETER CARD, AND RERUN THE  PROBLEM
+1                    Powder v3.beta - 06/11/2001 09:10:41 - scw f2                                   
+------------------------------------------------------------------------------------------------------------------------
+
+ POSSIBLE LATTICES BASED ON THE ABOVE COMBINATION OF ZONES  
+
+ SERIAL    A       B       C        D       E       F     HITS  PEDIGREE 
+     1   412.4   271.9   271.9  -137.0   269.2   269.2     11.    111.
+     2   412.4   271.9   271.9  -153.9   269.2   269.2      7.    112.
+     3   271.9   412.4   412.4   135.6   269.2   269.2     13.    116.
+     4   271.9   412.4   412.4  -214.8   269.2   269.2     11.    117.
+     5   271.9   412.4   412.4   549.7   269.2   269.2     11.    118.
+     6   412.0   271.9   170.4    -0.1   340.8   269.2      8.    121.
+     7   412.0   271.9   170.4   340.6   340.8   269.2      8.    122.
+     8   412.0   271.9   170.4    -3.0   340.8   269.2      7.    123.
+     9   412.3   271.9   240.4  -410.2     4.6   269.2      8.    131.
+    10   412.0   271.9   960.7  -370.7    62.2   269.2      7.    161.
+    11   412.0   271.9   960.7   131.9    62.2   269.2      7.    162.
+    12   412.0   271.9   960.7   891.0    62.2   269.2      7.    163.
+    13   241.3   170.4   170.4   219.2     0.0     0.0      7.    221.
+    14   240.9   170.4   412.2  -218.0     4.6     0.0     10.    231.
+    15   240.9   170.4   412.2   217.9     4.6     0.0     10.    232.
+    16   240.9   170.4   412.2  -342.2     4.6     0.0      9.    233.
+    17   240.9   170.4   412.2  -482.9     4.6     0.0      8.    234.
+    18   411.7   170.4   600.0   -76.9    44.4   340.8      7.    241.
+    19   411.7   170.4   960.7  -510.5    62.2   340.8      9.    261.
+    20   412.2   240.4   240.4  -423.9     4.6     4.6      7.    331.
+    21   240.4   412.2   412.2   263.0     4.6     4.6     10.    336.
+    22   240.4   412.2   412.2   442.8     4.6     4.6     10.    337.
+    23   240.4   412.2   412.2  -596.3     4.6     4.6      8.    338.
+    24   240.4   412.2   412.2  -298.4     4.6     4.6      8.    339.
+    25   412.0   240.4   600.0  -238.4    44.4     4.6      7.    341.
+    26   412.0   240.4   600.0     9.3    44.4     4.6      7.    342.
+    27   412.0   240.4   600.0   121.1    44.4     4.6      7.    343.
+    28   412.0   240.4   960.7   110.4    62.2     4.6      8.    361.
+    29   600.0   411.7   411.7  -712.6    44.4    44.4      9.    441.
+    30   600.0   411.7   411.7  -486.8    44.4    44.4      8.    442.
+    31   600.0   411.7   411.7  -781.6    44.4    44.4      7.    443.
+    32   411.7   600.0   600.0  1028.7    44.4    44.4      9.    446.
+    33   411.7   600.0   600.0  -337.1    44.4    44.4      8.    447.
+    34   411.7   600.0   600.0  -335.6    44.4    44.4      8.    448.
+    35   411.7   600.0   600.0   300.4    44.4    44.4      8.    449.
+    36   599.8   411.7   442.5  -751.4    57.9    44.4      7.    451.
+    37   599.8   411.7   442.5   129.7    57.9    44.4      7.    452.
+    38   599.6   442.5   442.5  -425.6    57.9    57.9     10.    551.
+    39   599.6   442.5   442.5  -288.3    57.9    57.9      8.    552.
+    40   599.6   442.5   442.5  -636.7    57.9    57.9      7.    553.
+    41   599.6   442.5   442.5  -556.2    57.9    57.9      7.    554.
+    42   442.5   599.6   599.6  -925.9    57.9    57.9      8.    556.
+    43   442.5   599.6   599.6   328.1    57.9    57.9      8.    557.
+    44   442.5   599.6   599.6   330.7    57.9    57.9      8.    558.
+    45   442.5   599.6   599.6  -957.0    57.9    57.9      7.    559.
+    46   960.7   411.7   411.7  -488.0    62.2    62.2      8.    661.
+    47   960.7   411.7   411.7  -541.6    62.2    62.2      7.    662.
+    48   411.7   960.7   960.7   558.4    62.2    62.2      8.    666.
+    49   411.7   960.7   960.7  1750.7    62.2    62.2      8.    667.
+    50   411.7   960.7   960.7 -1858.1    62.2    62.2      7.    668.
+1                    Powder v3.beta - 06/11/2001 09:10:41 - scw f2                                   
+------------------------------------------------------------------------------------------------------------------------
+0              TRIAL LATTICES AFTER INDEXING AND LS REFINEMENT
+
+              ONLY THE FIRST 20 LINES ARE CONSIDERED FOR INDEXING 
+
+                                                           LINES  FIGURE    BRAVAIS
+      A        B        C        D         E        F    INDEXED  OF MERIT  LATTICE  PEDIGREE  VOLUME  ZEROSHIFT 
+ 
+     129.0     99.9    240.3      5.5      5.9     58.4      18.      4.1        P     234.   588.3   -0.0070
+ 
+     573.7     25.7    401.9     15.5     11.4      0.0      17.      6.9        P     451.   411.9    0.0002
+      56.8    355.5    240.2      0.0      3.7      0.0      17.      6.9        P     338.   454.3    0.0070
+ 
+     240.3    170.4    363.5    122.4      4.5      0.0      16.      9.5        P     231.   267.4    0.0041
+     240.2    139.6    269.9      0.0      4.9      0.0      16.      9.3        P     336.   332.4    0.0377
+     240.3    170.5    363.5    122.4      4.5      0.0      16.      9.1        P     232.   267.4    0.0039
+ 
+     412.0    240.6    600.5    120.8     44.8      3.4      15.     15.3        P     343.   131.4   -0.0116
+     120.8    119.0    170.0      0.0      0.0      0.0      15.      9.7        P     233.   639.4    0.0580
+      84.8    325.4    598.1      0.0     47.6      0.0      15.      8.0        P     442.   247.6    0.0606
+     101.7    170.4    244.9      0.0     66.6      0.0      15.      6.0        P     111.   496.6    0.0141
+     239.8     95.8    317.1      0.0      4.4      0.0      15.      5.1        P     337.   370.4   -0.0203
+     102.3    137.0    104.1      0.0     70.5      0.0      15.      4.7        P     131.   881.2   -0.0577
+     238.8     42.4    246.5      0.0     87.0      0.0      15.      4.5        P     261.   643.4    0.0949
+ 
+     411.8    270.9    960.3    134.1     59.4    264.9      14.     35.8        P     162.   106.2    0.0097
+      69.7    341.6    960.8      0.0     61.2      0.0      14.     20.2        P     662.   210.5    0.0170
+     411.4    240.3    601.3      3.2     46.1      4.3      14.     14.6        P     342.   129.8    0.0083
+     241.5    170.3    599.9     77.7    121.2      0.0      14.     10.2        P     241.   205.5   -0.0145
+     114.6    325.8    595.3      0.0     56.0      0.0      14.      9.5        P     551.   213.3    0.1028
+     266.1    200.7    272.4     70.6    198.0    -55.4      14.      6.4        P     163.   290.5    0.0252
+      27.7    382.1    582.2      0.0     10.8      0.0      14.      5.9        I     441.   403.3    0.0212
+     140.0     30.4    240.4      0.0      0.0      0.0      14.      4.9        C     221.   988.1    0.0077
+ 
+     442.2    409.1    598.0     47.2     55.9    131.4      13.     13.9        P     452.    97.5    0.0497
+      84.2    328.0    961.3      0.0     59.5      0.0      13.     13.5        P     661.   195.1   -0.0305
+     216.5    387.2    415.1      0.0     45.7      0.0      13.     11.9        P     448.   170.0   -0.1048
+     148.1    292.2    601.9      0.0     58.0      0.0      13.     10.7        P     552.   196.8    0.0045
+     216.5    387.2    415.0      0.0     45.6      0.0      13.     10.0        P     447.   170.0   -0.1048
+     412.6     43.3    920.2      0.0     59.3      0.0      13.      9.3        P     667.   246.9   -0.0608
+     412.4     43.3    558.4      0.0     44.6      0.0      13.      8.3        P     446.   317.1   -0.0451
+      60.6    544.9    444.9      0.0     56.1      0.0      13.      7.9        P     559.   264.7   -0.0807
+     151.9    260.1    155.6      0.0     35.9      0.0      13.      7.4        P     117.   406.1   -0.0066
+     271.8     68.7    343.1      0.0    267.6      0.0      13.      5.6        P     118.   439.6    0.0110
+     101.5    170.4    242.1      0.0     71.1      0.0      13.      5.3        P     122.   501.8    0.0080
+      98.6    175.5    241.2      0.0     71.9      0.0      13.      4.2        P     112.   503.4   -0.1548
+0NOTES 
+
+  1. *LINES INDEXED* REFERS TO THE NUMBER OF LINES FROM THE FIRST 20 OBSERVED LINES THAT HAVE BEEN ACCEPTED AS INDEXED  
+     BY THIS LATTICE, UP TO A MAXIMUM OF 20, WHICH WOULD REPRESENT COMPLETE SUCCESS.                                    
+
+  2. *FIGURE OF MERIT* IS DEFINED AS QOBS(20)/(2*MEANDIFF*NCALC) WHERE DIFFERENCES ARE TAKEN FOR INDEXED LINES ONLY     
+     AND *NCALC* IS THE NUMBER OF LINES GENERATED UP TO Q=1.003*Q(20),REGARDLESS OF WHETHER OR NOT THEY CONTRIBUTE TO   
+     THE INDEXINGS, BUT EXCLUDING SYSTEMATIC ABSENCES DUE TO THE BRAVAIS LATTICE TYPE. 
+     IT IS CLOSELY RELATED TO  M20 ,DE WOLFF(J.APPL.CRYST.1968,1972), ALLOWING FOR LESS THAN 20 SUCCESSFUL INDEXINGS.   
+0THE  4 BEST SOLUTIONS ARE NOW PRINTED MORE EXTENSIVELY. 
+0 THE PRINTING OF SOME  LATTICES IS SUPPRESSED    
+0FOR THE LATTICES IN THE CRYSTAL SYSTEMS THAT ARE TREATED PREFERENTIALLY, THE TOLERANCE HAS BEEN    
+ DOUBLED AND TWO ROUNDS OF LEAST SQUARES ARE EXECUTED. AFTERWARDS, THESE SOLUTIONS ARE SORTED WITH      
+ THE OTHER SOLUTIONS ON LINES INDEXED AND FIGURE  OF MERIT.                                         
+ IF YOUR PREFERRED SYSTEM DOES NOT COME OUT ON TOP THERE MIGHT BE SOMETHING AMISS WITH YOUR ASSUMPTIONS.
+1                    Powder v3.beta - 06/11/2001 09:10:41 - scw f2                                   
+------------------------------------------------------------------------------------------------------------------------
+
+                              THE  4 MOST PROBABLE SOLUTIONS 
+
+
+
+                                                          LINES  FIGURE OF           BRAVAIS
+    Q(A)     Q(B)     Q(C)      Q(D)     Q(E)     Q(F)   INDEXED   MERIT   PEDIGREE  LATTICE  ZEROSHIFT 
+    240.28   170.45   363.49   122.41     4.48     0.00      16.      9.5     231.        P    0.0041
+    573.67    25.72   401.94    15.49    11.36     0.00      17.      6.9     451.        P    0.0002
+     56.75   355.51   240.23     0.00     3.69     0.00      17.      6.9     338.        P    0.0070
+    128.96    99.87   240.34     5.47     5.89    58.39      18.      4.1     234.        P   -0.0070
+
+
+                     THE DIRECT CONSTANTS OF THESE LATTICES
+
+     A        B        C       ALFA     BETA     GAMMA      VOLUME
+     6.451    7.902    5.411  104.235   90.448   89.890      267.40
+     4.175   19.777    5.003   94.370   90.680   89.948      411.89
+    13.276    5.304    6.453   90.000   90.905   90.000      454.28
+     9.113   10.356    6.452   90.791   90.723  104.895      588.32
+0
+
+
+                                         ****   ATTENTION   ****
+
+ 1. ANY *SOLUTION* WITH A FIGURE OF MERIT LESS THAN 4.0 IS WORTHLESS AND SHOULD BE REJECTED RIGHT AWAY.                 
+
+ 2. ANY *SOLUTION*THAT LEAVES MORE THAN TWO VERY WEAK LINES UNEXPLAINED  IS WORTHLESS.   HOWEVER, IF THE FIGURE OF MERIT
+    IS GREATER THAN 10.0 IT MIGHT BE WORTHWHILE TO EXAMINE  THE INPUT DATA  AND THE *SOLUTION* MORE CLOSELY.            
+
+ 3. EVEN *SOLUTIONS* THAT INDEX ALL LINES WITH A FIGURE OF MERIT GREATER THAN 10.0 SHOULD NOT BE ACCEPTED UNCRITICALLY  
+    WITHOUT FURTHER INVESTIGATION
+
+
+
+
+ *********************************************************************
+ *                                                                   *
+ * THIS PROGRAM GIVES A NUMBER OF SUGGESTIONS THAT MAY HELP YOU TO   *
+ * FIND THE UNIT CELL THAT EXPLAINS YOUR EXPERIMENTAL DATA. HOWEVER  *
+ *                                                                   *
+ *     WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW     *
+ *     W                                                       W     *
+ *     W  IT IS ENTIRELY THE USERS RESPONSIBILITY TO DECIDE    W     *
+ *     W  WHETHER ANY OF THE SUGGESTED UNIT CELLS IS THE       W     *
+ *     W   CORRECT CELL.                                       W     *
+ *     W                                                       W     *
+ *     WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW     *
+ *                                                                   *
+ *********************************************************************
+0Powder v3.beta - 06/11/2001 09:10:41 - scw f2                                   
+
+
+
+ ***************************************************************
+ **  NO REALLY SATISFACTORY LATTICE HAS BEEN FOUND           ***
+ **  PROBLEM IS RERUN WITH A DIFFERENT SORTING OF THE ZONES  ***
+ ***************************************************************
+1                    Powder v3.beta - 06/11/2001 09:10:41 - scw f2                                   
+ ------------------------------------------------------------------------------------------------------------------------
+0ZONES SELECTED FOR FURTHER REFINEMENT
+
+
+ NEWNR    A       B     FMAAS       QUALITY   OLDNR CENTER  NOBS  NCALC  ZEROSHIFT 
+    1   271.9   412.4   269.2        571184.1   19.    0.    5.   15.   -0.0456
+    2   266.7   271.4   125.8          9713.3   21.    0.    5.   17.   -0.0102
+    3   274.7   285.2   147.5          1497.9   27.    0.    5.   17.    0.0000
+    4    41.0   230.3     0.0         21278.1   63.    0.    4.   11.    0.0174
+    5    59.7   598.0    58.2          9116.3   40.    0.    4.   15.    0.0000
+    6   240.4   412.2     4.6        295368.9   16.    0.    4.   15.   -0.0162
+    7   170.4   241.3     0.0        385316.6    4.    1.    3.    5.    0.0000
+    8   442.5   599.6    57.9         44025.3   50.    0.    3.    9.    0.0000
+    9   411.7   600.0    44.4        153159.5    8.    0.    3.   11.    0.0000
+   10    69.0   324.9     0.0           373.0   48.    0.    3.   11.    0.0000
+
+
+
+
+ NOTE--SOME OF THESE ZONES ARE PROBABLY CORRECT EVEN IF THE PROGRAM FAILS TO BUILD A PLAUSIBLE LATTICE  FROM THEM.
+1                    Powder v3.beta - 06/11/2001 09:10:41 - scw f2                                   
+ ------------------------------------------------------------------------------------------------------------------------
+0ZONES AFTER REFINEMENT ON TWOTHETA, ONLY THE ZEROSHIFT IS USED
+
+ NEWNR    A       B     FMAAS       QUALITY   OLDNR CENTER  NOBS  NCALC  ZEROSHIFT
+
+    1   271.9   412.4   269.3        571184.1   19.    0.    5.   15.   -0.0456
+    2   266.6   271.4   125.8          9713.3   21.    0.    5.   17.   -0.0102
+    3   274.5   283.8   146.4          1497.9   27.    0.    5.   17.    0.0159
+    4    41.0   230.0     0.0         21278.1   63.    0.    4.   11.    0.0174
+    5    14.9   582.4     0.0          9116.3   40.    0.    4.   15.    0.0000
+    6   240.9   412.3     5.0        295368.9   16.    0.    4.   15.   -0.0552
+    7   170.6   240.0     0.0        385316.6    4.    1.    3.    5.    0.0000
+    8   442.5   599.6    57.9         44025.3   50.    0.    3.    9.    0.0000
+    9   410.3   599.5    42.3        153159.5    8.    0.    3.   11.    0.0000
+   10    68.8   324.6     0.0           373.0   48.    0.    3.   11.    0.0000
+
+
+
+ THE ZEROSHIFTS ARE NOT YET REALLY USED IN THE PROGRAM.
+ IF YOU SEE A CONVINCING ZERO SHIFT, YOU COULD ENTER THE ZEROSHIFT (WITH THE OPPOSITE SIGN) 
+ IN COL. 1-10 OF THE SECOND PARAMETER CARD, AND RERUN THE  PROBLEM
+1                    Powder v3.beta - 06/11/2001 09:10:41 - scw f2                                   
+------------------------------------------------------------------------------------------------------------------------
+
+ POSSIBLE LATTICES BASED ON THE ABOVE COMBINATION OF ZONES  
+
+ SERIAL    A       B       C        D       E       F     HITS  PEDIGREE 
+     1   412.4   271.9   271.9  -137.0   269.3   269.3     11.    111.
+     2   412.4   271.9   271.9  -153.9   269.3   269.3      7.    112.
+     3   271.9   412.4   412.4   136.0   269.3   269.3     15.    116.
+     4   271.9   412.4   412.4  -214.8   269.3   269.3     11.    117.
+     5   271.7   412.4   266.6   405.6   125.8   269.3     12.    121.
+     6   271.7   412.4   266.6  -281.5   125.8   269.3      9.    122.
+     7   412.2   271.9   274.5  -135.8   402.7   269.3      8.    131.
+     8   412.2   271.9   274.5   170.2   402.7   269.3      8.    132.
+     9   412.2   271.9   274.5  -265.9   402.7   269.3      7.    133.
+    10   271.5   412.4    41.0    42.7    82.1   269.3      9.    141.
+    11   271.5   412.4    41.0  -180.2    82.1   269.3      7.    142.
+    12   412.3   271.9   240.9  -410.3     5.0   269.3      8.    161.
+    13   412.3   271.9   240.9    67.5     5.0   269.3      7.    162.
+    14   271.4   266.6   266.6   256.6   125.8   125.8     10.    221.
+    15   271.4   266.6   266.6   259.2   125.8   125.8      9.    222.
+    16   271.4   266.6   266.6  -508.7   125.8   125.8      8.    223.
+    17   271.4   266.6   266.6  -506.1   125.8   125.8      8.    224.
+    18   266.6   271.4   271.4  -153.2   125.8   125.8     10.    226.
+    19   266.6   271.4   271.4  -113.3   125.8   125.8     10.    227.
+    20   266.6   271.4   271.4  -292.2   125.8   125.8      9.    228.
+    21   266.6   271.4   271.4  -439.9   125.8   125.8      8.    229.
+    22   412.1   266.6   274.5   -85.8   402.7   407.5      7.    231.
+    23   412.1   266.6   274.5   -13.5   402.7   407.5      7.    232.
+    24   412.1   266.6   274.5    34.2   402.7   407.5      7.    233.
+    25   412.1   266.6   274.5   199.4   402.7   407.5      7.    234.
+    26   271.2   266.6    41.0   -33.5    82.1   125.8      8.    241.
+    27   271.2   266.6    41.0   -32.5    82.1   125.8      8.    242.
+    28   271.2   266.6    41.0   123.9    82.1   125.8      8.    243.
+    29   412.3   266.6   240.9    93.3     5.0   407.5      8.    261.
+    30   412.3   266.6   240.9  -232.9     5.0   407.5      7.    262.
+    31   283.8   274.5   274.5  -479.6   146.4   146.4     10.    331.
+    32   283.8   274.5   274.5  -486.6   146.4   146.4      9.    332.
+    33   283.8   274.5   274.5  -134.3   146.4   146.4      9.    333.
+    34   283.8   274.5   274.5  -496.2   146.4   146.4      7.    334.
+    35   274.5   283.8   283.8   533.8   146.4   146.4      9.    336.
+    36   274.5   283.8   283.8  -468.9   146.4   146.4      8.    337.
+    37   274.5   283.8   283.8    53.6   146.4   146.4      8.    338.
+    38   274.5   283.8   283.8   176.7   146.4   146.4      8.    339.
+    39   412.1   274.5   240.9  -142.2     5.0   402.7      9.    361.
+    40   412.1   274.5   240.9  -139.7     5.0   402.7      7.    362.
+    41   582.4    14.9    14.9     0.0     0.0     0.0      8.    551.
+    42    14.9   582.4   582.4   145.4     0.0     0.0      8.    556.
+    43   412.3   240.9   240.9  -420.4     5.0     5.0      8.    661.
+    44   412.3   240.9   240.9  -423.0     5.0     5.0      7.    662.
+    45   412.3   240.9   240.9  -417.2     5.0     5.0      7.    663.
+    46   240.9   412.3   412.3  -609.6     5.0     5.0      9.    666.
+    47   240.9   412.3   412.3   263.7     5.0     5.0      9.    667.
+    48   240.9   412.3   412.3  -599.0     5.0     5.0      8.    668.
+    49   240.4   412.3   170.6  -342.0     0.0     5.0      9.    671.
+    50   240.4   412.3   170.6  -340.5     0.0     5.0      9.    672.
+    51   240.4   412.3   170.6  -218.4     0.0     5.0      9.    673.
+    52   240.4   412.3   170.6  -492.1     0.0     5.0      8.    674.
+    53   170.6   240.0   240.0   202.7     0.0     0.0      8.    776.
+    54   599.6   442.5   442.5  -425.6    57.9    57.9     10.    881.
+    55   599.6   442.5   442.5  -288.3    57.9    57.9      8.    882.
+    56   599.6   442.5   442.5  -636.7    57.9    57.9      7.    883.
+    57   599.6   442.5   442.5  -556.2    57.9    57.9      7.    884.
+    58   442.5   599.6   599.6  -925.9    57.9    57.9      8.    886.
+    59   442.5   599.6   599.6   328.1    57.9    57.9      8.    887.
+    60   442.5   599.6   599.6   330.7    57.9    57.9      8.    888.
+    61   442.5   599.6   599.6  -957.0    57.9    57.9      7.    889.
+1                    Powder v3.beta - 06/11/2001 09:10:41 - scw f2                                   
+------------------------------------------------------------------------------------------------------------------------
+0              TRIAL LATTICES AFTER INDEXING AND LS REFINEMENT
+
+              ONLY THE FIRST 20 LINES ARE CONSIDERED FOR INDEXING 
+
+                                                           LINES  FIGURE    BRAVAIS
+      A        B        C        D         E        F    INDEXED  OF MERIT  LATTICE  PEDIGREE  VOLUME  ZEROSHIFT 
+ 
+     230.6     41.1    266.1     34.7    160.1      0.0      20.      5.4        P     241.   675.6   -0.0246
+ 
+     266.0    130.3    271.0    125.5    123.3    111.3      19.      6.2        P     232.   366.5   -0.0292
+ 
+     155.5    128.9    274.7      0.0    146.1      0.0      18.      5.3        P     338.   455.5   -0.0319
+     230.3     41.0    408.7     38.0    223.7      0.0      18.      4.4        P     141.   553.6    0.0091
+ 
+     271.6    151.5    274.6     10.7    136.4   -138.4      17.     12.0        P     131.   329.3    0.0022
+     274.9    240.8    285.0    148.2    147.6    143.4      17.     10.7        P     361.   255.1   -0.0083
+     269.2    264.9    275.0    198.7    203.5   -122.0      17.      7.7        P     234.   289.2    0.0075
+     266.4    176.4    271.6    173.0    125.5    157.9      17.      6.3        P     233.   329.1   -0.0053
+     273.2    242.5    415.8      5.3    270.7     68.7      17.      6.0        P     162.   210.2   -0.0975
+      56.8    355.9    240.5      0.0      5.6      0.0      17.      5.1        P     668.   453.9   -0.0036
+ 
+     240.3    170.5    363.7    122.1      4.2      0.0      16.     11.9        P     673.   267.2   -0.0037
+     269.3    266.7    273.6    127.9    144.2   -120.3      16.      6.9        P     121.   253.0   -0.0019
+     197.7     68.6    271.7      0.0    125.5      0.0      16.      6.2        P     222.   541.2   -0.0226
+     275.1    240.2    284.6    146.9    147.8    140.8      16.      5.8        P     362.   255.1    0.0165
+     266.8    241.5    271.1    237.9    125.1    233.8      16.      5.3        P     262.   304.6   -0.0357
+ 
+     266.7    240.9    271.7     88.6    126.2     93.2      15.     17.4        P     261.   252.8   -0.0171
+     241.1    140.1    271.6      0.0      4.8      0.0      15.     10.2        P     667.   330.2   -0.0313
+      53.9    358.2    240.8      0.0      4.7      0.0      15.      7.7        P     666.   464.1    0.0024
+     275.8    271.9    285.6     99.2    149.0   -169.9      15.      7.4        P     132.   245.9   -0.0133
+     121.7    119.3    170.3      0.0      0.0      0.0      15.      6.9        P     672.   635.9    0.0006
+     121.7    119.3    170.3      0.0      0.0      0.0      15.      6.9        P     671.   635.9    0.0008
+     101.7    170.4    244.9      0.0     66.6      0.0      15.      6.0        P     111.   496.6    0.0141
+      97.2    175.4    239.1      0.0     69.2      0.0      15.      5.2        P     226.   508.6   -0.1008
+     170.2     68.8    172.1      0.0      0.0      0.0      15.      4.9        P     776.   704.3   -0.0030
+     186.4     97.7    275.0      0.0    147.2      0.0      15.      4.8        P     339.   472.7   -0.0102
+ 
+     197.3     69.7    271.8      0.0    126.5      0.0      14.     13.2        P     221.   537.6   -0.0172
+     114.6    325.8    595.3      0.0     56.0      0.0      14.      9.5        P     881.   213.3    0.1028
+     107.2    163.8    248.0      0.0     88.8      0.0      14.      6.3        P     227.   497.9    0.0185
+      98.6    175.4    241.2      0.0     71.9      0.0      14.      4.1        P     112.   503.5   -0.1554
+ 
+     148.1    292.2    601.9      0.0     58.0      0.0      13.     10.7        P     882.   196.8    0.0045
+     151.9    260.1    155.6      0.0     35.9      0.0      13.      7.4        P     117.   406.1   -0.0066
+0NOTES 
+
+  1. *LINES INDEXED* REFERS TO THE NUMBER OF LINES FROM THE FIRST 20 OBSERVED LINES THAT HAVE BEEN ACCEPTED AS INDEXED  
+     BY THIS LATTICE, UP TO A MAXIMUM OF 20, WHICH WOULD REPRESENT COMPLETE SUCCESS.                                    
+
+  2. *FIGURE OF MERIT* IS DEFINED AS QOBS(20)/(2*MEANDIFF*NCALC) WHERE DIFFERENCES ARE TAKEN FOR INDEXED LINES ONLY     
+     AND *NCALC* IS THE NUMBER OF LINES GENERATED UP TO Q=1.003*Q(20),REGARDLESS OF WHETHER OR NOT THEY CONTRIBUTE TO   
+     THE INDEXINGS, BUT EXCLUDING SYSTEMATIC ABSENCES DUE TO THE BRAVAIS LATTICE TYPE. 
+     IT IS CLOSELY RELATED TO  M20 ,DE WOLFF(J.APPL.CRYST.1968,1972), ALLOWING FOR LESS THAN 20 SUCCESSFUL INDEXINGS.   
+0THE  4 BEST SOLUTIONS ARE NOW PRINTED MORE EXTENSIVELY. 
+0 THE PRINTING OF SOME  LATTICES IS SUPPRESSED    
+0FOR THE LATTICES IN THE CRYSTAL SYSTEMS THAT ARE TREATED PREFERENTIALLY, THE TOLERANCE HAS BEEN    
+ DOUBLED AND TWO ROUNDS OF LEAST SQUARES ARE EXECUTED. AFTERWARDS, THESE SOLUTIONS ARE SORTED WITH      
+ THE OTHER SOLUTIONS ON LINES INDEXED AND FIGURE  OF MERIT.                                         
+ IF YOUR PREFERRED SYSTEM DOES NOT COME OUT ON TOP THERE MIGHT BE SOMETHING AMISS WITH YOUR ASSUMPTIONS.
+1                    Powder v3.beta - 06/11/2001 09:10:41 - scw f2                                   
+------------------------------------------------------------------------------------------------------------------------
+
+                              THE  4 MOST PROBABLE SOLUTIONS 
+
+
+
+                                                          LINES  FIGURE OF           BRAVAIS
+    Q(A)     Q(B)     Q(C)      Q(D)     Q(E)     Q(F)   INDEXED   MERIT   PEDIGREE  LATTICE  ZEROSHIFT 
+    230.64    41.13   266.05    34.71   160.12     0.00      20.      5.4     241.        P   -0.0246
+    265.97   130.34   271.02   125.48   123.33   111.33      19.      6.2     232.        P   -0.0292
+    155.53   128.94   274.69     0.00   146.11     0.00      18.      5.3     338.        P   -0.0319
+    230.30    40.99   408.70    38.00   223.67     0.00      18.      4.4     141.        P    0.0091
+
+
+                     THE DIRECT CONSTANTS OF THESE LATTICES
+
+     A        B        C       ALFA     BETA     GAMMA      VOLUME
+     6.970   15.838    6.580  100.097  109.131   86.706      675.61
+     6.494    9.578    6.512  106.588   98.301  104.023      366.52
+     8.572    8.807    6.450   90.000  110.698   90.000      455.47
+     7.088   15.817    5.379   99.069  111.624   86.670      553.65
+0
+
+
+                                         ****   ATTENTION   ****
+
+ 1. ANY *SOLUTION* WITH A FIGURE OF MERIT LESS THAN 4.0 IS WORTHLESS AND SHOULD BE REJECTED RIGHT AWAY.                 
+
+ 2. ANY *SOLUTION*THAT LEAVES MORE THAN TWO VERY WEAK LINES UNEXPLAINED  IS WORTHLESS.   HOWEVER, IF THE FIGURE OF MERIT
+    IS GREATER THAN 10.0 IT MIGHT BE WORTHWHILE TO EXAMINE  THE INPUT DATA  AND THE *SOLUTION* MORE CLOSELY.            
+
+ 3. EVEN *SOLUTIONS* THAT INDEX ALL LINES WITH A FIGURE OF MERIT GREATER THAN 10.0 SHOULD NOT BE ACCEPTED UNCRITICALLY  
+    WITHOUT FURTHER INVESTIGATION
+
+
+
+
+ *********************************************************************
+ *                                                                   *
+ * THIS PROGRAM GIVES A NUMBER OF SUGGESTIONS THAT MAY HELP YOU TO   *
+ * FIND THE UNIT CELL THAT EXPLAINS YOUR EXPERIMENTAL DATA. HOWEVER  *
+ *                                                                   *
+ *     WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW     *
+ *     W                                                       W     *
+ *     W  IT IS ENTIRELY THE USERS RESPONSIBILITY TO DECIDE    W     *
+ *     W  WHETHER ANY OF THE SUGGESTED UNIT CELLS IS THE       W     *
+ *     W   CORRECT CELL.                                       W     *
+ *     W                                                       W     *
+ *     WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW     *
+ *                                                                   *
+ *********************************************************************
+0Powder v3.beta - 06/11/2001 09:10:41 - scw f2                                   
+0END OF INPUT,  NORMAL END OF PROGRAM

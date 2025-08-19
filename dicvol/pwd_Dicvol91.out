@@ -1,0 +1,164 @@
+1
+                             --------------------------------------------------------------------
+                             |  Powder 4.0 to DICVOL91 interface started on : 31/08/2022 00:21: |
+                             --------------------------------------------------------------------
+
+                                                          INPUT DATA
+                                                          **********
+                                  EXPERIMENTAL                                   EXPERIMENTAL
+                                    2-THETA                                          ERROR
+
+                                     22.895                                         0.030
+                                     32.445                                         0.030
+                                     32.695                                         0.030
+                                     40.105                                         0.030
+                                     40.515                                         0.030
+                                     46.735                                         0.030
+                                     46.865                                         0.030
+                                     58.075                                         0.030
+                                     58.485                                         0.030
+                                     68.255                                         0.030
+                                     68.505                                         0.030
+
+
+                                           ******************************************
+
+                    -------------  PARAMETER LIMITS  --------------     --------  VOLUME LIMITS  ---------
+                    |                                             |     |                                |
+                    |              A MAXIMUM = 20.00              |     |                                |
+                    |                                             |     |    VOLUME MINIMUM =  100.00    |
+                    |              B MAXIMUM = 20.00              |     |                                |
+                    |                                             |     |    VOLUME MAXIMUM = 1500.00    |
+                    |              C MAXIMUM = 20.00              |     |                                |
+                    |                                             |     |                                |
+                    -----------------------------------------------     ----------------------------------
+
+
+                                                     WAVELENGTH = 1.541800
+
+     LOWER FIGURE OF MERIT REQUIRED FOR PRINTED SOLUTION(S) :  M( 11) =   5.0
+
+
+
+
+                                  ************************************************************
+                                  **                                                        **
+                                  **  ATTENTION  : VOSDONNEES SONT-ELLES IRREPROCHABLES ?  **
+                                  **  WARNING  :   ARE YOUR DATA IRREPROACHABLE ?           **
+                                  **                                                        **
+                                  ************************************************************
+
+
+
+
+
+
+
+                             SEARCH OF TETRAGONAL AND/OR HEXAGONAL AND/OR ORTHORHOMBIC SOLUTION(S)
+                             *********************************************************************
+
+
+
+          VOLUME-DOMAIN BEING SCANNED       LOWER BOUND =   100.00A**3     HIGHER BOUND =   500.00A**3
+          ===========================
+
+
+        HEXAGONAL SYSTEM
+        ----------------
+
+          ITERATION NUMBER AT EACH DICHOTOMY LEVEL :            118      85      41       7       2       0       0
+
+                                                          NO SOLUTION
+
+
+          VOLUME-DOMAIN BEING SCANNED       LOWER BOUND =   500.00A**3     HIGHER BOUND =   900.00A**3
+          ===========================
+
+
+        HEXAGONAL SYSTEM
+        ----------------
+
+          ITERATION NUMBER AT EACH DICHOTOMY LEVEL :            166     150      60      14       2       0       0
+
+                                                          NO SOLUTION
+
+
+          VOLUME-DOMAIN BEING SCANNED       LOWER BOUND =   900.00A**3     HIGHER BOUND =  1300.00A**3
+          ===========================
+
+
+        HEXAGONAL SYSTEM
+        ----------------
+
+
+                    H E X A G O N A L    S Y S T E M 
+
+      DIRECT PARAMETERS :               A= 14.59538     C=  6.68551         VOLUME= 1233.377
+      STANDARD DEVIATIONS :                 0.00333         0.00181
+
+      H   K   L          DOBS      DCAL    DOBS-DCAL      QOBS      QCAL      2TH.OBS   2TH.CAL   DIF.2TH.
+
+      2   1   1        3.88422   3.88700  -0.00279      0.06628   0.06619      22.895   22.878    0.017
+      4   1   0        2.75944   2.75827   0.00117      0.13133   0.13144      32.445   32.459   -0.014
+      2   1   2        2.73891   2.73889   0.00002      0.13330   0.13331      32.695   32.695    0.000
+      4   2   1        2.24830   2.24945  -0.00115      0.19783   0.19763      40.105   40.084    0.021
+      0   0   3        2.22649   2.22850  -0.00201      0.20172   0.20136      40.515   40.477    0.038
+      4   2   2        1.94364   1.94350   0.00014      0.26471   0.26475      46.735   46.739   -0.004
+      5   2   1        1.93855   1.93718   0.00137      0.26610   0.26648      46.865   46.900   -0.035
+      5   3   2        1.58823   1.58873  -0.00050      0.39643   0.39619      58.075   58.055    0.020
+      7   0   2                  1.58873  -0.00050                0.39619               58.055    0.020
+      2   1   4        1.57807   1.57762   0.00045      0.40156   0.40179      58.485   58.503   -0.018
+      9   0   1        1.37406   1.37444  -0.00038      0.52965   0.52936      68.255   68.234    0.021
+      4   2   4        1.36966   1.36944   0.00022      0.53306   0.53323      68.505   68.517   -0.012
+
+
+          * NUMBER OF LINES
+               .- INPUT DATA =  11
+               .- CALCULATED = 131
+
+
+          * MEAN ABSOLUTE DISCREPANCIES
+                                              <Q> =0.1933E-03
+                                 <DELTA(2-THETA)> =0.1829E-01
+               MAX. ERROR ACCEPTED (DEG. 2-THETA) =0.4500E-01
+
+
+          * FIGURES OF MERIT
+                 1.- M( 11) =   10.5                         (REF. 4)
+                 2.- F( 11) =    4.6(0.0183, 131)            (REF. 5)
+
+                                                   ---------
+
+
+          ITERATION NUMBER AT EACH DICHOTOMY LEVEL :            153     197     110      16       6       1       1
+
+
+          VOLUME-DOMAIN BEING SCANNED       LOWER BOUND =  1300.00A**3     HIGHER BOUND =  1500.00A**3
+          ===========================
+
+
+        HEXAGONAL SYSTEM
+        ----------------
+
+          ITERATION NUMBER AT EACH DICHOTOMY LEVEL :             21      20       7       1       0       0       0
+
+                                                          NO SOLUTION
+
+
+                         END OF SEARCH FOR TETRAGONAL AND/OR HEXAGONAL AND/OR ORTHORHOMBIC SOLUTION(S)
+                         *****************************************************************************
+
+            ---  CALCULATION TIME FOR SEARCH DOWN TO ORTHORHOMBIC SYMMETRY :    0.0029 SECONDS
+
+
+            ---  T O T A L   CALCULATION TIME :     0.0029 SECONDS
+
+
+
+
+
+
+              DICVOL91 :  USEFUL REFERENCES
+              --------
+                * LOUER, D. & LOUER, M. (1972). J. APPL. CRYST. 5, 271-275.
+                * BOULTIF, A. & LOUER, D. (1991). J. APPL. CRYST. 24, 987-993.

@@ -1,0 +1,257 @@
+ %% NE PAS MODIFIER NI SUPPRIMER CE FICHIER! %% 
+ %% Ce fichier contient des informations relatives à l'installation d'une application. %% 
+ %% Il est utilisé pour supprimer automatiquement de votre ordinateur tous les composants de l'application, si vous le souhaitez. %% 
+
+
+NOTE: Début de la section du programme d'amorçage
+
+CONFIG: Title: "Powder4 - v1.4"
+
+ACTION: RegKey: "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion", "SharedDLLs"
+
+ACTION: SystemFile: "C:\WINNT\SYSTEM32\VB6STKIT.DLL"
+(Le fichier présent sur le disque était déjà à jour.)
+
+ACTION: SystemFile: "C:\WINNT\SYSTEM32\COMCAT.DLL"
+(Le fichier présent sur le disque était déjà à jour.)
+
+ACTION: DllSelfRegister: "C:\WINNT\SYSTEM32\COMCAT.DLL"
+
+ACTION: TLBRegister: "C:\WINNT\SYSTEM32\STDOLE2.TLB"
+
+ACTION: DllSelfRegister: "C:\WINNT\SYSTEM32\OLEPRO32.DLL"
+
+ACTION: DllSelfRegister: "C:\WINNT\SYSTEM32\OLEAUT32.DLL"
+
+ACTION: DllSelfRegister: "C:\WINNT\SYSTEM32\MSVBVM60.DLL"
+
+NOTE: Fin de la section du programme d'amorçage
+
+NOTE: Exécution dynamique du programme d'installation principal 'Setup1.exe'....
+
+ACTION: CreateDir: "C:\Documents and Settings\All Users\Menu Démarrer\Programmes\xrd"
+
+ACTION: PrivateFile: "g:\Powder4\_PwdInternalData.txt"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp.html"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\xyw_to_gsas_esd04.gif"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\xyw_to_gsas_esd03.gif"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\xyw_to_gsas_esd02.gif"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\xyw_to_gsas_esd.GIF"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\merging_data07.gif"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\merging_data06.gif"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\merging_data05.gif"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\merging_data04.gif"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\merging_data03.gif"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\merging_data02.gif"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\merging_data01.gif"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\imagevt1.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\imageu7p.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\images5e.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\imageq95.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\imageq91.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\imageped.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\imagepa3.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\imagem5n.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\imagekij.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\imageki5.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\imagekch.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\imagek3a.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\imageisa.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\imageicr.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\imagegu8.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\imagefmo.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\imagefa3.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\imagee2i.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\imagee1d.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\imaged4t.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\imagebro.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\imagebd5.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\image7uj.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\image7o3.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\image6ck.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\image5mm.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\image4ia.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\image3dd.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\image13g.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\pwd4hlp_files\image06k.jpg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\clearpixel.gif"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\peak\PEAKPARM.DAT"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\dbws\plotinfo"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\dbws\pw_dbws.dat"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\dbws\pw_ControlFile.cfg"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\treor\pwd_treor.exe"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\peak\Pk_transd.exe"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\peak\PEAK.EXE"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\ito\pwd_ito.exe"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: SharedFile: "g:\Powder4\hklgen\HKLGEN.EXE"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\dicvol\pwd_Dicvol91.exe"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\dbws\pw_dbws3.exe"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: SharedFile: "g:\Powder4\MSCOMCT2.OCX"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: SharedFile: "g:\Powder4\MSCMCFR.DLL"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: SharedFile: "g:\Powder4\mscomctl.ocx"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: SharedFile: "g:\Powder4\TABCTFR.DLL"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: SharedFile: "g:\Powder4\TABCTL32.OCX"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: SharedFile: "g:\Powder4\pesgo32.ocx"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: SharedFile: "g:\Powder4\MSFLXGRD.OCX"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: SharedFile: "g:\Powder4\CMDLGFR.DLL"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: SharedFile: "g:\Powder4\COMDLG32.OCX"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: SharedFile: "g:\Powder4\CMCTLFR.DLL"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: SharedFile: "g:\Powder4\comctl32.ocx"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: SharedFile: "g:\Powder4\PEGRAP32.DLL"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: PrivateFile: "g:\Powder4\Powder4.exe"
+(Fichier introuvable ou périmé -- nouveau fichier copié)
+
+ACTION: DllSelfRegister: "g:\Powder4\MSCOMCT2.OCX"
+
+ACTION: DllSelfRegister: "g:\Powder4\mscomctl.ocx"
+
+ACTION: DllSelfRegister: "g:\Powder4\TABCTL32.OCX"
+
+ACTION: DllSelfRegister: "g:\Powder4\pesgo32.ocx"
+
+ACTION: DllSelfRegister: "g:\Powder4\MSFLXGRD.OCX"
+
+ACTION: DllSelfRegister: "g:\Powder4\COMDLG32.OCX"
+
+ACTION: DllSelfRegister: "g:\Powder4\comctl32.ocx"
+
+ACTION: ShellLink: "XRD", "powder"
+
+ACTION: RegKey: "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion", "App Paths\Powder4.exe"
+
+ACTION: RegValue: "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\Powder4.exe", ""
+

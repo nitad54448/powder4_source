@@ -1,0 +1,7 @@
+Install Powder4 on Win10
+
+1. Make sure that the regional separator is "." and not ","
+2. open cmd as admin in win 10
+	-cd /windows/syswow64
+	-regsvr32 /path/to/powder4/directory/pesgo32.ocx
+and all other ocx that you receive an error for : mscomct2.ocx, msflxgrd.ocx,comctl.ocx...

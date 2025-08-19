@@ -1,0 +1,1144 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="Nita DRAGOE">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.04 [en] (Win95; I) [Netscape]">
+   <TITLE>Powder - a help file</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#C0C0C0" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000" BACKGROUND="powder6.gif">
+
+<DIV ALIGN=right><A NAME="top"></A></DIV>
+<IMG SRC="Image1.gif" HEIGHT=30 WIDTH=31>
+<BR><B><FONT COLOR="#CC0000"><FONT SIZE=+3>Powder v1.00</FONT></FONT></B>
+<BR><FONT COLOR="#CC0000"><FONT SIZE=+1>A short help file</FONT></FONT>
+<BR>
+<HR ALIGN=LEFT WIDTH="34%">
+<CENTER><TABLE COLS=2 >
+<TR>
+<TD>
+<UL>
+<LI>
+<B>About the <A HREF="#aboutprogram">program</A>&nbsp;</B></LI>
+
+<LI>
+<B>Update notes&nbsp;</B></LI>
+
+<LI>
+<B>About this <A HREF="#aboutversion">version</A> and <A HREF="#autor">author</A>&nbsp;</B></LI>
+
+<LI>
+<B><A HREF="#Features">Features</A></B></LI>
+
+<LI>
+<B>Available <A HREF="#form">forms</A> (or windows...)</B></LI>
+
+<LI>
+<B><A HREF="#menu">The menus</A>&nbsp;</B></LI>
+
+<LI>
+<B><A HREF="#notice">Notice</A>&nbsp;</B></LI>
+</UL>
+<B>&nbsp;</B>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;</TD>
+
+<TD><IMG SRC="todai1.jpg" HEIGHT=240 WIDTH=320>&nbsp;
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT SIZE=-1>Tokyo University, Hongo
+campus,&nbsp; march '98</FONT>&nbsp;
+
+<P><FONT SIZE=-2>This picture has nothing to do with this program, except
+maybe that here I keep my bicycle when working late in night</FONT></TD>
+</TR>
+</TABLE></CENTER>
+<FONT SIZE=-2>&nbsp;</FONT>
+
+<P>
+<HR ALIGN=LEFT WIDTH="35%">
+<BR>&nbsp;<A NAME="aboutprogram"></A>
+<BR>&nbsp;
+<BR><B><FONT SIZE=+1>About this program. Some history.</FONT></B>
+<BR>&nbsp;
+<BR>This program consists in a collection of tools for X-ray powder diffraction.
+This is a variant of a previously one, known as Convert v3 which was capable
+of various data file conversions. These functions are still available in
+the program Powder. The goal is to write a comprehensive package for the
+X-ray diffraction on powders, I have to say that this version is far from
+that goal. This small help file should give some info about this program,
+probably a heuristic method will be better for the user. However, at this
+moment the conversion function is still the main function of this program.
+A graphic interface for peak hunting and peak profile analysis will be
+added later sometime..
+
+<P>Since I start working on X-ray powder diffractometry I noticed that
+almost each program required a different form of the data file (quite normal,
+different authors, different programs..) There was quite a pain to convert
+the data file from an instrument to an appropriate format for use with
+another software. So, not willing to do the conversion by hand, I wrote
+some small routines in some variants of Basic and/or Fortran (very good
+Format function) to do the job. There were no fancy interfaces or help.
+I had to write then nicer routines for some of my colleagues. And I had
+then the (good ???) idea to write a more general program for such types
+of conversion. This was Convert 1.0. That version was written when doing
+my PhD at Universit&eacute; Paris Sud (1994; this wasn't what I supposed
+to do...!); it was written in a french version of Visual Basic 3.0. Another
+version and a bug hunting followed when I was working at University of
+Bucharest. The version 3 was written in '97 at University of Tokyo (Visual
+Basic v5, a japanese version; so some error messages may look funny on
+your computer).
+<BR>&nbsp;
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="UpdateNotes"></A>
+<BR>&nbsp;
+
+<P><FONT SIZE=+1><B>Update notes</B>.</FONT>
+<BR>&nbsp;
+
+<P><B>v.01 a</B>
+<BR>compiled on march 8, 98
+<BR>&nbsp;
+
+<P><B>v.01 b.</B>
+<BR>hkl generation added.
+<BR>correcting a bug in Decimate function
+<BR>compiling date: march 28, 1998
+
+<P><B>v.01 c</B>
+<BR>energy dispersive refinement is now possible
+<BR>compiling date: april 3, 1998
+<BR>&nbsp;
+
+<P><A HREF="#top">&nbsp;back to top</A>
+<BR>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="aboutversion"></A>
+<BR>&nbsp;
+
+<P><B><FONT SIZE=+1>About version and author</FONT></B>
+<BR><B>&nbsp;</B>
+<BR>For the exact version look in the About form (a window is called here
+Form), the help file may not be up to date.
+<BR>This is the version 1.00 of Powder, a 32 bits version and can run only
+in Windows 95 or NT 3.5 or, I hope, above. I didn't find any bugs in this
+version but I think that it may contain some (an even number...). If you
+find any, hopefully sooner, please let me know and I will try to correct
+them.
+<BR>I can not guarantee a support to this program since I have a job; that
+will depend entirely on my free time. However, before asking me something
+read the help file and follow the advises in the notice.
+<BR>&nbsp;
+<BR><A NAME="autor"></A>
+<BR>&nbsp;
+<BR><B>The author of this program is:</B>
+<BR>&nbsp;
+<BR>Dr. N. Dragoe
+<BR>Department of Applied Chemistry,
+<BR>Faculty of Engineering, University of Tokyo
+<BR>7-3-1 Hongo, Bunkyo-ku, Tokyo 113, Japan
+<BR>&nbsp;
+<BR>tdragoe@hongo.ecc.u-tokyo.ac.jp
+<BR>&nbsp;
+
+<P>The permanent address is given in the About form, which can be seen
+from the Help menu.
+<BR><A NAME="About"></A>
+<BR>&nbsp;
+
+<P><IMG SRC="imageF5F.JPG" HEIGHT=218 WIDTH=364>
+
+<P>and e-mail:
+
+<P>ndragoe@math.math.unibuc.ro
+<BR>ndragoe@dopey.univermed-cdgm.ro
+<BR>&nbsp;
+<BR>this is my permanent address, for a while (1997-1999 ?) you can reach
+me at the address in Tokyo/Japan.
+<BR>&nbsp;
+
+<P>&nbsp;
+<BR>It will be nice to have some comments from you...
+<BR>&nbsp;
+<BR><A HREF="#top">back to top</A>
+<BR>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="Features"></A>
+<BR>&nbsp;
+
+<P><B><FONT SIZE=+1>Features</FONT></B>
+
+<P>It is useful mainly for people doing X-ray diffraction experiments although
+the program can be used with different data types or instruments (I am
+using it for conversion of UV/VIS spectra ascii data where the X values
+are in a decreasing order; so a negative step can revert this...).
+<BR>This program can read and write some of the data files I know : Dbws,
+Gsas, Philips, Siemens, Scintag, ascii files, MXP18 data, Wppf....Some
+other files can also be read with this program.
+<BR>A quite different function now is a unit cell refinement calculations
+and HKL generation which can also be performed with this program.
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="form"></A>
+<BR>&nbsp;
+
+<P><B><FONT SIZE=+1>Forms</FONT></B>
+
+<P>There are three different windows in the program.
+
+<P><A HREF="#About">About</A>-which contains the version number and with
+which the program itself starts. This form can be viewed at any time from
+the Help/About menu. To start the program you must click on the icon or
+in the text area in the form.
+
+<P><A HREF="#menu">Main form</A>- which is practically the old Convert
+3 program.
+
+<P><A HREF="#Cell">PowderCell</A>-is a new form added for utilities related
+to unit cell refinement or powder pattern generation
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR>&nbsp;<A NAME="menu"></A>
+<BR>&nbsp;
+
+<P><B><FONT SIZE=+1>Main form - menus</FONT></B>
+
+<P>The main form of the program has one text region where some info is
+printed from time to time and few commands available in a menu. The form
+look like this:
+
+<P><IMG SRC="imageVLD.JPG" HEIGHT=313 WIDTH=497>
+
+<P>There are few menus in this form. Click on the appropriate keyword for
+more information.
+<BR>&nbsp;
+<BR><B><A HREF="#file">File</A></B>
+<BR>&nbsp;&nbsp;&nbsp; Open
+<BR>&nbsp;&nbsp;&nbsp; Save as
+<BR>&nbsp;&nbsp;&nbsp; Send data
+<BR>&nbsp;&nbsp;&nbsp; Quit
+<BR>&nbsp;
+<BR><B><A HREF="#header">Header</A></B>
+<BR>&nbsp;&nbsp;&nbsp; I don't have a header...
+<BR>&nbsp;&nbsp;&nbsp; Ignore first ...
+<BR>&nbsp;
+<BR><B><A HREF="#tools">Tools</A></B>
+<BR>&nbsp;&nbsp;&nbsp; Unit cell
+<BR>&nbsp;&nbsp;&nbsp; Read HSTDMP from GSAS lst file
+<BR>&nbsp;&nbsp;&nbsp; Read REFLIST from GSAS/rfl file
+<BR>&nbsp;&nbsp;&nbsp; Compute d/angle
+<BR>&nbsp;&nbsp;&nbsp; Remove strange characters
+<BR>&nbsp;&nbsp;&nbsp; Swap XY
+<BR>&nbsp;&nbsp;&nbsp; Open file in Wordpad
+<BR>&nbsp;&nbsp;&nbsp; Show report
+<BR>&nbsp;&nbsp;&nbsp; Clear report
+<BR>&nbsp;
+<BR><B><A HREF="#help">Help</A></B>
+<BR>&nbsp;&nbsp;&nbsp; About
+<BR>&nbsp;&nbsp;&nbsp; Contents - HTML file
+<BR>&nbsp;&nbsp;&nbsp; Author WWW page
+<BR>&nbsp;
+<BR>&nbsp;
+<BR><A HREF="#top">back to top</A>
+<BR>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="file"></A>
+<BR>&nbsp;
+
+<P><B>File</B>
+<BR>This menu contains the following sub menus:
+
+<P><A HREF="#mainfileopen">&nbsp;&nbsp;&nbsp; Open</A>
+<BR>&nbsp;&nbsp;&nbsp; <A HREF="#MainSaveAs">Save as</A>
+<BR>&nbsp;&nbsp;&nbsp; Quit
+<BR>&nbsp;
+
+<P><A NAME="mainfileopen"></A>
+<BR>&nbsp;
+
+<P><B>File-Open</B>
+
+<P>This command open a raw data file and read the data in memory. You should
+choose the file format you have otherwise strange effects may occur.
+<BR>The program accepts the following commands (as sub-menus) while in
+File-Open menu:
+
+<P><A HREF="#openDbws">DBWS</A><A HREF="opendbws"> </A>file
+<BR><A HREF="#openGsas">GSAS-CW ESD</A>
+<BR><A HREF="#openGsas">GSAS-CW STD</A>
+<BR><A HREF="#openPhilips">Philips</A> PC-UDF
+<BR><A HREF="#openScintag">Scintag</A> data
+<BR><A HREF="#openSiemens">Siemens</A>, ascii
+<BR><A HREF="#openWppf">Wppf/Profit 1</A>
+<BR><A HREF="#openWppf">Wppf/Profit 2</A>
+<BR><A HREF="#openLine">Line</A>
+<BR>&nbsp;&nbsp;&nbsp; The first value as Y
+<BR>&nbsp;&nbsp;&nbsp; The first 2 values as X, Y
+<BR>&nbsp;&nbsp;&nbsp; The first 3 values as X, Y, Z
+<BR><A HREF="#OpenFreeAscii">Y-free ascii</A>
+<BR><A HREF="#OpenFreeAscii">XY free ascii</A>
+<BR><A HREF="#OpenFreeAscii">XYZ free ascii</A>
+<BR><A HREF="#openMXP">MXP18</A>, binary
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="openDbws"></A>
+<BR>&nbsp;
+
+<P><B>Open DBWS file</B>
+
+<P>DBWS format consists in: starting 2theta, step, final 2theta and a title
+(named in fortran as 3F8, A56), this being the first line in the file,
+called in <I>Powder</I> as header. The rest of the file are in 8F7,1X format.
+Only the first 56 spaces are read since some old data files have a comment
+or card number in the columns 72 through 80 (this area was reserved for
+comments in the old days). The values read from the header will be later
+used to generate the X values, if necessary. Although it reads a title
+here, the program will prompt you to set or modify the title when trying
+to save the data. You can use this command only for data files having 8
+values on a line, otherwise you may obtain strange results.
+<BR>Refer to the <A HREF="#header">Header</A> commands if you want to find
+out how to ignore the header read from this file.
+<BR>&nbsp;
+<BR>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="openGsas"></A>
+<BR>&nbsp;
+
+<P><B>GSAS - CW ESD&nbsp; and GSAS - CW STD</B>
+
+<P>GSAS is the well known program (in my opinion the best free package,
+and better than many commercial ones, for XRD) written by A.C. Larson and
+Bob von Dreele from LANL.
+<BR>You can read a GSAS-ESD constant wavelength. In <I>Powder</I> there
+are some limitations regarding Gsas files. Some of the records (except
+starting two theta, step and the number of points) are ignored in this
+program. For instance "Instrument parameter" which is optional in the Gsas
+file is completely ignored here, as well as BINTYP info (read the GSAS
+manual for more information). The data is read as 5 values and corresponding
+ESD's on a line until the EOF marker is found. The normal GSAS data may
+have few BANK records in a file, here only one is read.
+<BR>&nbsp;
+<BR>Same general comments are available for STD file too,&nbsp; ten values
+in each line are accepted here. For use of the GSAS files I strongly recommend
+to read the instructions in the GSAS User Manual. Note that new versions
+of GSAS contain a file converter.
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><I>&nbsp;</I>&nbsp;<A NAME="openPhilips"></A>
+<BR>&nbsp;
+
+<P><B>Philips PC-UDF</B>
+
+<P>With this function you can read a Philips UDF file. The UDF files which
+I know consist in a header (about 20 lines) and then the diffraction data
+as eight characters in a row, separated by commas. From the UDF header
+some fields are ignored. If you don't want to use a header, the same file
+can be read by Y, free ascii command.
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="openScintag"></A>
+<BR>&nbsp;
+
+<P><B>Scintag data</B>
+
+<P>This file type is similar to that of Philips, i.e. a big header which
+is mostly ignored by <I>Powder</I> and 2theta, intensity and esd. Although
+it is not convenient, the same file can be read ignoring the header, as
+XYZ free ascii.
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="openSiemens"></A>
+<BR>&nbsp;
+
+<P><B>Siemens ascii</B>
+
+<P>The format of this file is quite similar to the Philips or Scintag ones,
+a header followed by data written as 8 values on each line. As before,
+from header only some fields are requested.
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="openWppf"></A>
+<BR>&nbsp;
+
+<P><B>WPPF/Profit</B>
+
+<P>WPPF and Profit are two different programs written by H. Toraya. These
+programs can read two distinct data files either as 8 or 10 values in a
+line. These data types are named hereafter as format 1 and respectively
+2. The program detect the data type you have and read it either as 8 or
+10 values in a row, as appropriate. From the header of this file, some
+info as the wavelength or counting time are ignored.
+<BR>&nbsp;
+<BR>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="openLine"></A>
+<BR>&nbsp;
+
+<P><B>&nbsp;Line</B>
+
+<P><I>&nbsp;&nbsp;&nbsp;&nbsp; </I>the first value, as Y
+<BR>&nbsp;&nbsp;&nbsp;&nbsp; the first 2 values, as XY
+<BR>&nbsp;&nbsp;&nbsp;&nbsp; the first 3 values, as XYZ
+
+<P>On this menu, three commands are available giving the opportunity for
+reading only the first value, the first 2 values, or the first 3 values
+from each line. This is useful only if&nbsp; there are more data in a row
+than x, y. These commands do not allow a header, you will be prompted for
+additional information if necessary. If the data file contains some titles,
+use the available commands to ignore these lines, see the <A HREF="#header">Headers</A>
+menu.
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="OpenFreeAscii"></A>
+<BR>&nbsp;
+
+<P><B>Y; free ascii</B>
+
+<P>You can read Y values no matter the format is, as long as the data are
+separated by comma or tab or spaces and no empty lines are in between values.
+<BR>&nbsp;
+<BR><B>X, Y; free ascii</B>
+
+<P>Read X and the corresponding Y in any format as long as the values are
+in pairs (i.e. in each line the final value must be for an Y value.)
+<BR>&nbsp;
+<BR><B>X, Y, Z; ascii free</B>
+
+<P>Read X, Y, Z from any ascii file. Z is usually considered the ESD value
+for each Y. However, in this program no ESD estimations/correction are
+made, if necessary Z will be filled with 1.0.
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="openMXP"></A>
+<BR>&nbsp;
+
+<P><B>MXP-18 binary</B>
+
+<P>This is a binary data file from Mac Science MXP18 diffractomers.
+<BR>Read some details from a header as well as X and Y. Instructions relative
+to ascii file do not apply here (for instance, ignore lines, etc)
+
+<P><A HREF="#top">back to top</A>
+<BR>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="MainSaveAs"></A>
+<BR>&nbsp;
+
+<P><B>File-Save As</B>
+<BR>&nbsp;
+<BR>Write the data in the appropriate format. If necessary, the program
+will ask details about the data. Some notes applies for each format. The
+program accepts the following commands (as sub-menus):
+
+<P><A HREF="#SaveDbws">DBWS</A>
+<BR><A HREF="#saveGsas">GSAS - CW ESD</A>
+<BR><A HREF="#saveGsas">GSAS - CW STD</A>
+<BR><A HREF="#SavePhilips">Philips UDF</A>
+<BR><A HREF="#SavePhilips">Scintag</A>
+<BR><A HREF="#SavePhilips">Siemens</A>
+<BR><A HREF="#SaveWppf">WPPF/Profit 1</A>
+<BR><A HREF="#SaveWppf">WPPF/Profit 2</A>
+<BR><A HREF="#SaveAscii">Y-ascii</A>
+<BR><A HREF="#SaveAscii">XY-ascii</A>
+<BR><A HREF="#SaveAscii">XYZ-ascii</A>
+<BR><A HREF="#Savedplot">DPLOT</A> file
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="SaveDbws"></A>
+<BR>&nbsp;
+
+<P><B>DBWS file</B>
+
+<P>This command save a file in a Dbws file format.
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">&nbsp;<A NAME="saveGsas"></A>
+<BR>&nbsp;
+
+<P><B>GSAS - CW ESD</B>
+<BR><B>GSAS - CW STD</B>
+
+<P>The output file for GSAS is limited at some constants. For more advanced
+data type use the built-in convert program from the GSAS package (or edit
+manually). No "Instrument parameter" is written in the output file, the
+BANK number is always 1. Check the data file for 80 characters in length,
+GSAS requires this (<I>Powder</I> fill with spaces up to 80 chars but if
+you edit this files with other editors check if you still have 80 characters
+on each line).
+<BR>&nbsp;
+<BR>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="SavePhilips"></A>
+<BR>&nbsp;
+
+<P><B>Philips UDF ,&nbsp; Siemens ascii and Scintag</B>
+
+<P>In Philips, Siemens and Scintag files, most of the header is fixed,
+you can manually change the values to your preferences.
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR>&nbsp;<A NAME="SaveWppf"></A>
+<BR>&nbsp;
+
+<P><B>WPPF/Profit 1 or</B>&nbsp;<B> 2</B>
+
+<P>Both format types in WPPF/Profit neglect the wavelength value and the
+counting time. The wavelength will be always of copper Kalpha 1. You can
+change later this value, see the Wppf or Profit user manual for this.
+<BR>&nbsp;
+<BR>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="SaveAscii"></A>
+<BR>&nbsp;
+
+<P><B>Y; ascii</B>
+<BR><B>X, Y; ascii</B>
+<BR><B>X, Y, Z; ascii</B>
+
+<P>Not much to explain here, the output is in ascii with one record per
+line.
+<BR>&nbsp;
+<BR>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="Savedplot"></A>
+<BR>&nbsp;
+
+<P><B>Dplot file</B>
+
+<P>Save the data in a Dplot file. Dplot is a very good freeware program
+for scientific graphs. I quote from the Dplot help file: "DPLOT is a general
+purpose X-Y plotting program that allows you to view, manipulate, and produce
+hard copies of data in a variety of formats".
+<BR>The package can be found at <A HREF="http://sliris.wes.army.mil">http://sliris.wes.army.mil.</A>
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+
+<P><A HREF="#top">back to top</A>
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="header"></A>
+<BR>&nbsp;
+
+<P><B>Header</B>
+<BR>&nbsp;
+<BR><B>I don't have a header</B>
+
+<P>Selecting this option (it is ON if there is a check mark on the menu)
+allows the reading of data file which do not have a header definition.
+<BR>&nbsp;
+
+<P><B>Ignore first ...</B>
+
+<P>With this option, first lines from data file can be ignored. The user
+should choose how many lines to be ignored when reading a data file. For
+instance, if you have an ascii data file and in the first 3 lines there
+are some comments, you can choose Ignore first then input the value 3.
+In this case the program will ignore the first 3 lines in your data file.
+<BR>Or, if you want to read a DBWS file and modify the 2 theta values,
+select I don't have a header option and then Ignore 1st line. The program
+will skip the 1st line and then start to read data directly, not searching
+for the X values. It will ask at a later occasion, if necessary.
+<BR>&nbsp;
+<BR><A HREF="#top">back to top</A>&nbsp;
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="tools"></A>
+<BR>&nbsp;
+
+<P><B>Tools</B>
+<BR>&nbsp;
+<BR>The menu Tools contains the following commands:
+<BR>&nbsp;
+
+<P>&nbsp;&nbsp;&nbsp; <A HREF="#MainToolsUnitCell">Unit cell</A>
+<BR>&nbsp;&nbsp;&nbsp; Read <A HREF="#MainToolsGsasrelated">HSTDMP</A>
+from GSAS lst file
+<BR>&nbsp;&nbsp;&nbsp; Read <A HREF="#MainToolsGsasrelated">REFLIST </A>from
+GSAS/rfl file
+<BR>&nbsp;&nbsp;&nbsp; <A HREF="#MainToolsCompute">Compute d/angle</A>
+<BR>&nbsp;&nbsp;&nbsp;<A HREF="#MainToolsRemove"> Remove strange characters</A>
+<BR><A HREF="#MainToolsSwap">&nbsp;&nbsp;&nbsp; Swap XY</A>
+<BR>&nbsp;<A HREF="#MainToolsOpenWordpad">&nbsp;&nbsp; Open file in Wordpad</A>
+<BR>&nbsp;&nbsp;&nbsp; <A HREF="#MainToolsShowReport">Show report</A>
+<BR>&nbsp;<A HREF="#MainToolsClearReport">&nbsp;&nbsp; Clear report</A>
+<BR>&nbsp;
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="MainToolsUnitCell"></A>
+<BR>&nbsp;
+
+<P><B>Unit cell</B>
+
+<P>This command will open a routine related to Unit cell refinement and/or
+hkl generation. See the <A HREF="#Cell">Unit cell commands.</A>
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="MainToolsGsasrelated"></A>
+<BR>&nbsp;
+
+<P><B>Read HSTDMP from GSAS .lst file</B> and <B>Read REFLIST from GSAS
+.rfl file</B>
+
+<P>These commands are related to Gsas package. The first one&nbsp; request
+a GSAS results file, *.lst. It will search in this file the occurrence
+of "Program HSTDMP" string. When it can find this, a file named _hstdmp.dat
+is created in the application directory (Warning - it will erase an old
+_hstdmp.dat file). This file contains the data output from HSTDMP program.
+If two or more statements are found the data set will be attached one after
+another without a separator. This command may depends on the GSAS version
+you have. You can use the _hstdmp.dat file for another application (your
+preferred graph editor..)
+<BR>&nbsp;
+<BR><I>Read Reflist from GSAS/rfl file </I>request a .rfl file written
+by GSAS. This file can be saved by the Tools/Reflist menu command with
+the option R/ascii file. With this function you can read h,k,l Fo and esd(Fo)
+from Gsas and save a Shelx .hkl file (for structure determination or use
+of these data with another software). The program <I>Powder</I> will ask
+for a batch number which is an optional field in Shelx (for those making
+batch refinements). The output file will be merged. The format in the output
+file is as required by Shelx 97, I don't know if works with older versions
+but I guess it does so..
+<BR>&nbsp;
+<BR>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="MainToolsRemove"></A>
+<BR>&nbsp;
+
+<P><B>Remove strange characters</B>
+
+<P>This option allows to skip all characters from the extended code and
+from command code (smaller than 30). It is useful when the data come from
+some Unix software which have a different ascii character set, as my MXP18.
+It is a time consuming option (this is relative, 5 seconds with 5000 data
+on my laptop). To be honest, often I use this command without an obvious
+reason (some files, depending on the programs saving them, give errors
+when read by Powder. I guess that this is related to the EOL chars).
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="MainToolsCompute"></A>
+
+<P>&nbsp;
+<BR><B>Compute d/angle</B>
+
+<P>Toggle a small utility for computing d or diffraction angle for a given
+radiation. When working with this routine, the report -a kind of activity
+log- is not visible anymore; however it is still there (if you want to
+read the report toggle OFF this function and ON the Show report command)
+<BR>&nbsp;
+<BR>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="MainToolsSwap"></A>
+<BR>&nbsp;
+
+<P><B>Swap X, Y</B>
+
+<P>This function interchange the X and Y data in memory. Generally it is
+not useful for X-ray diffraction data but for other type of data file.
+<BR>&nbsp;
+<BR>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="MainToolsOpenWordpad"></A>
+<BR>&nbsp;
+
+<P><B>Open file in Wordpad</B>
+
+<P>This command open a shell to Wordpad, where you can edit or print a
+datafile or the report pad, etc...
+<BR>&nbsp;
+<BR>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="MainToolsShowReport"></A>
+<BR>&nbsp;
+
+<P><B>Show report</B>
+
+<P>In the main form, a text area shows what is going on, what was the filename,
+how many lines it found in it, and so on. All output from the Unit Cell
+routine is directed here.&nbsp; May also be useful for some debugging purposes.
+<BR>You can toggle the visibility of this report pad (it is still in memory).
+From time to time (when this pad has 32kb) the report will be appended
+to a file called _rpbackup.dat and will be erased from the screen.
+<BR>This file is in the working directory (Warning- NOT the application
+directory); take care and clean this file from time to time as it can get
+very large...
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="MainToolsClearReport"></A>
+<BR>&nbsp;
+
+<P><B>Clear report</B>
+
+<P>A self explaining command, be careful : no UNDO is available.
+<BR>You can also clear or copy/paste data to this report at any time. Use
+the RightClick button of the mouse to see a PopUp Menu with common commands
+under Win95 (as Select, Copy,...).
+<BR>&nbsp;
+
+<P><A HREF="#top">back to top</A>
+<BR>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR>&nbsp;<A NAME="help"></A>
+<BR>&nbsp;
+<BR><B>Help</B>
+<BR><B>&nbsp;</B>
+<BR><B>About</B>
+
+<P>Shows the About window of the program. Nothing interesting there except
+the version number of the program (or the author ?..). When you have trouble
+and want to ask some questions (<I>after reading this help file and after
+you let me know you use the program</I> !) , report this version number.
+<BR><I>&nbsp;</I>
+<BR><B>Contents-html file</B>
+
+<P>Open this Help file in the default browser. You can also edit this file
+and change whatever you like (I will be glad to put your comments in the
+future help files!)
+<BR>&nbsp;
+<BR><B>Author WWW page</B>
+
+<P>Open the default browser and go to my WWW page (there might be an update
+or another version of this program). The page location is read from the
+ascii file _wwwauthor.page from the application directory. You can edit
+this file and change the URL of the author page if this will change. If
+this file isn't there, the program will try at the address internally stored.
+This command may not be available all the time, this is a temporary job
+and so a temporary home page (I guess it will be there until the end of
+1999...)
+<BR>&nbsp;
+<BR><A HREF="#top">back to top</A>
+<BR>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="Cell"></A>
+<BR>&nbsp;
+
+<P><B><FONT SIZE=+1>PowderCell</FONT></B>
+
+<P>This form will help you in refining a unit cell and to generate hkl
+and d's. It is also useful when reading some data (it can read a specified
+column from the file, etc..). The form looks like this:
+
+<P><IMG SRC="imageJKL.JPG" HEIGHT=382 WIDTH=563>
+
+<P>There are few menus which will are discussed later in this file.
+<BR>The unit cell, both for cell refinement and hkl computing can be selected
+from the listbox named Cell, just click on it. In its right side there
+is a similar one where you can select the Wavelength or, if you use something
+rare -as a synchrotron- put the actual value in the associated text field.
+<BR>The grid in the middle of the image is referred here as Data grid,
+where you -or the program- will put some data. you can change the data
+type in the column 4 just by clicking on the top of the grid (you can toggle
+between d/A, theta, 2 theta or E/keV for energy dispersive data). You can
+put a lot of data here (I hope not, because the program will become really
+slow) although I am not sure about the upper limit of the MSFlex grid,
+I guess you can put more than 15000 rows...). For refinement you have to
+insert data there, no empty lines allowed, the order is meaningless.
+<BR>The grid in the right part of the form is the standard grid where you
+should insert the expected and observed values for your standard material.
+<B>Important note</B>: use the same data type as in the data grid, therefore
+you can put here, d, theta or 2theta depending on what you have in the
+data grid..
+<BR>The data inserted in the standard grid will be used for a calibration,
+if and only if, the associated check box is ON (named <I>Use standard</I>).
+<BR>The correction for 2theta is made with an interpolation polynomial
+for the difference in theta/2theta or d relative to theta.
+<BR>The program computes such a difference with a pseudo-Inverse routine
+i.e. an overdetermined system (frankly speaking, a least squares!).
+<BR>You should remember some mathematical basics, the polynomial interpolation
+may give strange results. However the corrections&nbsp; are printed on
+the report pad in the main form; check them out. In this version, the polynomial
+degree can be comprised between 0 and 8; although I recommend a value between
+1 and 4. Two observations here:
+<BR>-do not use a high degree polynomial (I suggest you not to go over
+4 or 5) unless you have a lot of data somehow homogeneously distributed
+over the 2theta domain (about 20 to 30 data for a good conditioning) and
+not too far from the initial and final values.
+<BR>-0 polynomial is not a zero error if the inserted data is d.
+
+<P>There are checkboxes associated with text fields, such as a, b, c...etc.
+In the refinement, the meaning is to refine or not the corresponding parameter;
+there is no meaning for them in the hkl generation routine.
+<BR>For instance, in the following example:
+
+<P><IMG SRC="imageCIR.JPG" HEIGHT=382 WIDTH=563>
+
+<P>the cell selected is monoclinic (note the constraints, you can not modify
+alpha and gamma for this cell). The parameters a,b,c and zero error will
+be refined while the wavelength and beta will not. No standard correction
+is to be made.
+<BR>The lower left part shows three text fields with width, steps and refine.
+The meaning of these parameters will be explained later; however for a
+normal refinement (i.e. almost always) only <B>Steps/Cycles</B> is take
+into account and its meaning is in fact <B>Cycles</B>.
+<BR>In this example, when the method of refinement is Least squares (see
+later), 10 refinement cycles will be made.
+
+<P><B>Another important note: </B>by weight In this program the value of
+w in the relation is considered:
+
+<P>w(Yo-Yc), so don't put the esd's on the column 5 but 1/esd.
+<BR>&nbsp;
+<BR>&nbsp;
+
+<P>The available menus are:
+<BR>&nbsp;
+<UL><A HREF="#cellFile">File</A>
+<BR><A HREF="#CellEdit">Edit</A>
+<BR><A HREF="#CellCompute">Compute</A>
+<BR><A HREF="#CellDecimate">Decimate</A></UL>
+&nbsp;
+<BR><A HREF="#top">back to top</A>
+<BR>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="cellFile"></A>
+<BR>&nbsp;
+
+<P><B>Cell-File</B>
+
+<P>The commands in this menu are:
+
+<P>&nbsp;&nbsp;<A HREF="#Cell-Ignore">&nbsp; Ignore:</A>
+<BR>&nbsp;<A HREF="#CellImportData">&nbsp;&nbsp; Import data (ascii)</A>
+<BR>&nbsp;&nbsp;&nbsp; <A HREF="#CellImportCal">Import calibration data</A>
+<BR><A HREF="#CellExportdata">&nbsp;&nbsp;&nbsp; Export data grid to ascii
+file</A>
+<BR><A HREF="#CellQuit">&nbsp;&nbsp;&nbsp; Quit</A>
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="Cell-Ignore"></A>
+<BR>&nbsp;
+
+<P><B>Ignore</B>
+
+<P>Similar to the Ignore function from the Main form. The program will
+ask how many lines from a data file should be ignored. Usually, the data
+files contains some headers and comments, by this command one can import
+data by ignoring few lines and thus avoiding editing and saving it under
+other name, etc..
+<BR>Initially this menu will have the caption "Ignore:none" and after activated
+this menu will show how many lines will be ignored.
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="CellImportData"></A>
+<BR>&nbsp;
+
+<P><B>Import data</B>
+
+<P>This function will import data from an ascii file and put these data
+in grid. Note: each record should contain four data or five data (the last
+is for a weight). The selection between the two option is made with submenus.
+These data can be either each record on one line either sequentially in
+an ascii file. If the four values are read, the weight column will be filled
+with 1. Special functions for editing the weight are available in the <B>Edit
+</B>menu.
+<BR>If the data file are in a different format it still can be read with
+the command <B>Input data in column</B>, available in <B>Edit</B> menu.
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="CellImportCal"></A>
+<BR>&nbsp;
+
+<P><B>Import calibration data</B>
+
+<P>A two column ascii file will be read into standard grid. <B>Warning:</B><I>If
+the data in the standard grid are not the same type as those in the data
+grid, you'll get a mess.</I>
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="CellExportdata"></A>
+<BR>&nbsp;
+
+<P><B>Export data grid</B>
+
+<P>The data from grid can be saved into an ascii file. This function is
+useful either for storing the datafile for further reference or to export
+a generated hkl, d pattern. See the menu command Compute.
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="CellQuit"></A>
+<BR>&nbsp;
+
+<P><B>Quit</B>
+
+<P>Close the Cell refinement form and loose all the data you have in grid.
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="CellEdit"></A>
+<BR>&nbsp;
+
+<P><B>Edit command menus</B>
+<BR>&nbsp;
+<BR>The following commands are available here:
+<UL><A HREF="#CellInsertRow">Insert Row</A>
+<BR><A HREF="#CellInsertRow">Delete Row</A>
+<BR><A HREF="#CellInsertRow">Delete Column</A>
+<BR><A HREF="#CellAddColumn">Add to Column</A>
+<BR>&nbsp;&nbsp;&nbsp; a constant value
+<BR>&nbsp;&nbsp;&nbsp; a column
+<BR>&nbsp;&nbsp;&nbsp; 1/column
+<BR>&nbsp;&nbsp;&nbsp; to weight:1
+<BR><A HREF="#CellAddColumn">Multiply Column</A>
+<BR>&nbsp;&nbsp;&nbsp; with a constant value
+<BR>&nbsp;&nbsp;&nbsp; with column
+<BR>&nbsp;&nbsp;&nbsp; with 1/column
+<BR><A HREF="#CellInputDataColumn">Input data in Column</A>
+<BR><A HREF="#CellClearData">Clear data grid</A>
+<BR><A HREF="#CellClearData">Clear std. grid</A>
+<BR><A HREF="#CellSetRows">Set data rows</A></UL>
+
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="CellInsertRow"></A>
+<BR>&nbsp;
+
+<P><B>Insert Row, Delete Row, Delete Column</B>
+
+<P>These functions refer to the data grid only. You can insert or delete
+rows in the grid, if you want to modify your data (delete column will delete
+data but not the column...). Delete row is in fact equivalent to a <B>Cut
+</B>command and is very useful because&nbsp; you can not have empty lines
+in the data grid (the program will "read" how many data you actually have
+by checking an empty line.)
+
+<P>&nbsp;
+<BR>&nbsp;
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="CellAddColumn"></A>
+<BR>&nbsp;
+
+<P><B>Add to Column</B>
+<BR><B>&nbsp;&nbsp;&nbsp; a constant value</B>
+<BR><B>&nbsp;&nbsp;&nbsp; a column</B>
+<BR><B>&nbsp;&nbsp;&nbsp; 1/column</B>
+<BR><B>&nbsp;&nbsp;&nbsp; to weight:1</B>
+<BR><B>Multiply Column</B>
+<BR><B>&nbsp;&nbsp;&nbsp; with a constant value</B>
+<BR><B>&nbsp;&nbsp;&nbsp; with column</B>
+<BR><B>&nbsp;&nbsp;&nbsp; with 1/column</B>
+
+<P>These commands are similar, they will add a value (or multiply with
+one) to a column in the data grid. The program will ask which column you
+want to modify (H is considered the first column). You can add or multiply
+weight with the value which is in another column (but the same row). By
+this mechanism you can change the weighting scheme for the refinement.
+<BR>Take care: if you put 0 in the weight column that data row will be
+neglected in the refinement.
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="CellInputDataColumn"></A>
+<BR>&nbsp;
+
+<P><B>Input data in Column</B>
+
+<P>This is a very powerful function which allows you to read only one column
+from a data file (or read some data and skip others in a regular manner).
+The program will ask in which column the data are to be inserted (again,
+the column 1 is H). The second question is which values will be skipped
+(read one values and then skip <B>n</B>), you'll be asked about this n;
+n=0 means to read all the data.
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="CellClearData"></A>
+<BR>&nbsp;
+
+<P><B>Clear data grid</B>
+<BR><B>Clear std. grid</B>
+
+<P>You can clear one or both of the grid at any time.
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="CellSetRows"></A>
+<BR>&nbsp;
+
+<P><B>Set data rows</B>
+
+<P>When inserting data from files, to avoid errors the program automatically
+will increase the number of rows (often to much). By this command you can
+set the number of rows to a reasonable value. Sometimes this can save some
+time. If the grid has (because of unfortunate input files..) 1000 rows
+but you have only 100 data points it is better to set the data rows to
+100 to save some memory (anyway, in my opinion -from time to time- 5 seconds
+more or less it is not a big deal !).
+<BR>&nbsp;
+
+<P>&nbsp;<A HREF="#top">back to top</A>
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="CellCompute"></A>
+<BR>&nbsp;
+
+<P><B>Compute</B>
+
+<P>This is the main function in this form. There are two possibilities,
+shown in the sub-menus:
+
+<P><A HREF="#CellComputeUnitcell">Unit cell parameters</A>
+<BR>&nbsp;&nbsp;&nbsp; least squares
+<BR>&nbsp;&nbsp;&nbsp; overdetermined system, Newton
+<BR>&nbsp;&nbsp;&nbsp; multidimensional search
+<BR><A HREF="#CellComputehkl">HKL, d and theta</A>
+<BR>&nbsp;&nbsp;&nbsp; send to report pad
+<BR>&nbsp;&nbsp;&nbsp; send to data grid
+<BR>&nbsp;
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%"><A NAME="CellComputeUnitcell"></A>
+<BR>&nbsp;
+
+<P><B>Unit cell parameters</B>
+<BR><B>&nbsp;&nbsp;&nbsp; least squares</B>
+<BR>&nbsp;<B>&nbsp;&nbsp; energy dispersive data</B>
+<BR><B>&nbsp;&nbsp;&nbsp; overdetermined system, Newton</B>
+<BR><B>&nbsp;&nbsp;&nbsp; multidimensional search</B>
+<BR><B>&nbsp;</B>
+
+<P>The unit cell parameters are calculated by least squares (all three
+methods have some least squares procedures inside) and I recommend you
+to use the first option (however, is the only one who gives the standards
+deviations for the cell parameters).
+<BR>Both <B>least squares</B> and <B>overdetermined system, Newton </B>use
+the same algorithm of Newton, the difference is in the solution of the
+linear system (first one is a Crout type and the second one is a Gauss-Jordan).
+The second method is less convergent than the first one because of a dumping
+factor I imposed, but seems to be more stable. You should check if you
+arrived at a convergence, the values for the sq. deviations at each cycle
+are printed.
+<BR>A fancy called&nbsp;<B> multidimensional search&nbsp;</B> is just a
+search for the minimum of the squared difference between Q and its expression
+reciprocal terms. This is done by a modified Interval halving method. I
+will explain this method because is very easy to put in code (although
+its value is limited) and because it is not a recommended method for refinement,
+especially for lower symmetries.
+
+<P>Starting from an initial guess (no matter how far from the minimum)
+one can find the minimum of a function f=(y<SUB>1</SUB>-y<SUB>2</SUB>)<SUP>2</SUP>
+where y<SUB>1 </SUB>is an experimental value and y<SUB>2</SUB> is a model
+depending of some parameters x<SUB>1</SUB>, ..,x<SUB>n&nbsp; </SUB>which
+have to be estimated. If n is not too high one can make a search in an
+interval and compute the function f at each step, the minimum f will be
+an estimate of the solution x. The error will depend on the step size and
+on the fact that the actual minim is comprised in the search range.
+<BR>In this function, if the minimum is not comprised in the search range,
+the width will be adjusted toward the minimum.
+<BR>This procedure is implemented here (test it if you like but think how
+long it will take!). The <B>width </B>shows how far from the initial point
+it will search the minimum, the <B>steps/cycles</B> is how many steps will
+make on each variable on each interval and <B>refine </B>shows how many
+times to do this with a halving of the width for each cycle.
+<BR>For each <B>refine </B>the step will be smaller with a 1/q factor where
+q is the number of <B>refine</B> in the textbox. The fields <B>Width</B>
+and <B>refine </B>are used only in the search algorithm and have no meaning
+in the least squares.
+<BR>It is very slow because, for <B>n</B> parameters problem one need steps<B><SUP>n</SUP></B>
+functions evaluations and this multiply by <B>refine</B> value.
+<BR>It is a very time consuming tehnique but probably in ten years from
+now....
+<BR>Actually,&nbsp; the reason of existence for this function here lies
+in other routines I will add later and in some educational purposes (manual
+indexations...). One can make an indexation according to Ito's procedure
+and get any strange triclinic cell. By a subsequent Delaunay transformation
+we can get a better cell.
+
+<P>Note: the results are printed in the Report pad and not in the Cell
+Form.
+
+<P>At this moment I don't know much about the accuracy of this program
+compared to other known programs (the minimizations use Double precision
+for variables but Visual Basic is not made for scientists!). I think that
+the eventual error is smaller than 0.001A which for me is good enough.
+<BR>I am waiting some input from you here...
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="CellComputehkl"></A>
+<BR>&nbsp;
+
+<P><B>HKL, d and theta</B>
+<BR><B>&nbsp;&nbsp;&nbsp; send to report pad</B>
+<BR><B>&nbsp;&nbsp;&nbsp; send to data grid</B>
+
+<P>Both commands perform the same calculation tasks but the output is directed
+either to the report pad or to data grid.
+<BR>The HKL and d are computed for the cell you have and with the parameters
+found in the Cell form.The hkl limits and 2theta are to be input by the
+user as well as Bravais symbols.
+
+<P>
+<HR ALIGN=LEFT WIDTH="63%">
+<BR><A NAME="CellDecimate"></A>
+<BR>&nbsp;
+
+<P><B>Decimate</B>
+
+<P>This menu contains three functions which are inspired by the Armel LeBail's
+Overlap. Reading Fullprof FOU, Gsas RFL and/or Shelx HKL files, eliminating
+the reflections which are too close (the two theta limit will be requested)
+and save what's left in a Shelx .hkl file for further direct methods or
+whatever.
+<BR>The cell values are taken from the Cell form, the symmetry is not requested.
+<BR>&nbsp;
+
+<P><A HREF="#top">back to top</A>
+
+<P>
+<HR ALIGN=LEFT SIZE=14 WIDTH="63%">
+<BR>&nbsp;<A NAME="notice"></A>
+<BR>&nbsp;
+
+<P><B><FONT SIZE=+1>Notice</FONT></B>
+<BR>&nbsp;
+<BR>There are some limitations in the use of this program and probably
+there are some bugs too. It may be slow but it can read as many data as
+you have, a special attention was paid to the "friendly" characteristic.
+Some comments may help you out of trouble.
+<BR>And now, the usual stuff:
+<BR><FONT SIZE=-2>&nbsp;</FONT>
+<BR><B>License Agreement</B>
+
+<P><FONT SIZE=-2>This software is provided "as is" and without warranties
+of any kind; use it on your own risk.</FONT>
+<BR><FONT SIZE=-2>If you don't like it don't blame me but don't use it.
+I don't guarantee for any accuracy and/or meaning of the output.</FONT>
+<BR><FONT SIZE=-2>You are hereby licensed to use this software if you are
+from a non-profit making institution only.&nbsp; You may make as many copies
+of the software as you wish.&nbsp; You may give exact copies (including
+this help file) of the original software version and redistribute the complete
+and unmodified version via electronic means. You are specifically prohibited
+from charging a fee, or requesting donations, for any such copies.</FONT>
+<BR>&nbsp;
+<BR><B><FONT SIZE=-1>I you want to use this software, you are requested
+to send an e-mail to the author, stating your name, institution and the
+version you have. This is for bug reports and updates. Future correspondence
+regarding this program will be made only to the people on my "user list"
+where you can stay as long as you want (and to encourage you, I will not
+answer to any questions if you are not on that list).</FONT></B>
+<BR>&nbsp;
+<BR>
+<HR ALIGN=LEFT SIZE=3 WIDTH="50%">
+<BR>&nbsp;
+<BR><A HREF="#top">back to top</A>
+</BODY>
+</HTML>

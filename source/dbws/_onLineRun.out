@@ -1,0 +1,188 @@
+1RIETVELD ANALYSIS PROGRAM DBWS-9807, RELEASE  21.09.98,
+   COPYRIGHT 1998 BY R.A.YOUNG,
+   SEE APPENDIX B ON COPYRIGHT-AND-FAIR-USE IN USERS GUIDE FOR CONDITIONS,
+   THIS PROGRAM SHOULD BE CITED IN ALL WORK TO WHICH IT HAS CONTRIBUTED AS AN UPGRADE OF:
+  "DBWS-9411 - an upgrade of the DBWS programs for Rietveld
+   Refinement with PC and mainframe computers",
+   J. Appl. Cryst., Vol. 28, 366-7; 1995
+ ---------------------------------------------------------
+  pw_DBWS3 is a version of DBWS98, compiled for Intel *86
+         interface with Powder v3, december 2000 
+ ---------------------------------------------------------
+ PROGRAM PARAMETERS:
+ IDSZ=32000    IRS= 4096    NATS= 300     MSZ=200     NOV=1024
+ laB6                                                                  
+ PATTERN CALCULATION,XRAY
+ READ DATA IN TRADITIONAL DBWS FORMAT
+ ---------------------------------------------------------
+ NUMBER OF PHASES=    1
+ NUMBER OF EXCLUDED REGIONS=    0
+ NUMBER OF SCATTERING SETS=    0
+ BACKGROUND TO BE REFINED  
+ PSEUDO-VOIGT (PV) PROFILE, NPROF =    5
+ IPREF=1, MARCH-DOLLASE PREFERRED ORIENTATION FUNCTION
+ ---------------------------------------------------------
+ IABSR=1, CORRECTION OF SURFACE ROUGHNESS BY YOUNG
+ IASYM=0, Usual Rietveld Asymmetry
+ ---------------------------------------------------------
+ NO AMOPHOUS AND COMPTON CORRECTION TO THE BGD
+ GENERATE PARAMETER LIST
+ OUTPUT ABSOLUTE VALUES OF STRUCTURE FACTORS + PHASE ANGLE
+ PRINT REFLECTION LIST
+ WAVELENGTHS=    1.54050  1.54430  LAMDA MEAN =    1.54177
+ ALPHA2:ALPHA1 RATIO =   0.5000
+ BASE OF PEAK = 2.0*HW*   30.00
+ MONOCHROMATOR CORRECTION =  0.8009
+ ABSORPTION CORRECTION COEFFICIENT =   1.0000 CM-1
+ SLAB-WIDTH =   0.0000 CM.
+ RIETVELD ASYMMETRY CORRECTION FOR ANGLES LESS THAN   35.000 DEGREES
+ NUMBER OF CYCLES =    1
+ RELAXATION FACTORS
+ FOR COORDINATES= 0.95
+ FOR ANISOTRPIC TEMPERATURE FACTORS= 0.95
+ FOR FWHM PARAMETERS=  0.95
+ FOR LATTICE CONSTANTS= 0.95
+ EPS-VALUE=   0.1
+ ---------------------------------------------------------
+ NUMBER OF PARAMETERS VARIED=    0
+ GLOBAL PARAMETERS AND CODEWORDS
+ ZEROPOINT=    0.16   11.00
+ BACKGROUND PARAMETERS AND CODEWORDS
+ ORIGIN OF BACKGROUND POLYNOMIAL AT TWO-THETA =   90.000DEGREES
+ 8.08000     16.1700     64.3500        0.000000    0.000000    0.000000
+  31.000      41.000      51.000      61.000       0.000       0.000
+ DISPLACEMENT PEAKSHIFT PARAMETER AND CODEWORD   -0.14   21.00
+ TRANSPARENCY PEAKSHIFT PARAMETER AND CODEWORD    0.00    0.00
+ SURFACE ROUGHNESS P PARAMETER AND CODEWORD   0.0000   0.0000
+ SURFACE ROUGHNESS Q PARAMETER AND CODEWORD   0.0000   0.0000
+ SURFACE ROUGHNESS R PARAMETER AND CODEWORD   1.0000   0.0000
+ SURFACE ROUGHNESS T PARAMETER AND CODEWORD   0.0000   0.0000
+
+1PHASE  1
+ lab6 simulation                                   
+ NUMBER OF ATOMS=    2
+ NUMBER OF FORMULA UNITS PER UNIT CELL=    2
+ PARTICLE ABSORPTION FACTOR =   1.0000
+ PREFERRED ORIENTATION VECTOR=   0.0000  0.0000  1.0000
+
+0THE SPACE GROUP IS P M 3 M             
+ The multiplicity of the general site is  48
+
+ ***INITIAL PARAMETERS***
+ ATOM    M NTYP              X         Y         Z         B        So
+                           B11       B22       B33       B12       B13       B23
+ La      1 LA+3          0.00000   0.00000   0.00000   0.54946   1.00000
+                         0.00490   0.00270   0.00490   0.00140  -0.00010  -0.00002
+ b       6 B             0.19948   0.00000   0.00000   1.14810   0.98000
+                         0.01430   0.00000   0.01900   0.00850  -0.00320  -0.00420
+ OVERALL SCALE FACTOR=0.658000E-02
+ OVERALL TEMP. FACTOR=     0.00000
+ DIRECT CELL PARAMETERS=   4.1570   4.1570   4.1570  90.0000  90.0000  90.0000
+ PREFERRED ORIENTATION PARAMETERS=  1.000  0.000
+ ASYMMETRY PARAMETER=0.166240
+ MIXING PARAMETERS = .510       0.000   0.000
+
+ FWHM PARAMETERS (U,V,W,CT,Z,X,Y)=   0.0196  -0.0033   0.0059   0.0000   0.0000   0.0000   0.0000
+
+0THE LAUE SYMMETRY IS M3M     
+ CELL VOLUME PHASE( 1 ) =      71.8357
+0***Coding of variables***
+ ATOM                        X         Y         Z         B         So
+                           B11       B22       B33       B12       B13       B23
+ La                        91.00     91.00      0.00      0.00      0.00
+                            0.00      0.00      0.00      0.00      0.00      0.00
+ b                          0.00      0.00      0.00      0.00      0.00
+                            0.00      0.00      0.00      0.00      0.00      0.00
+ OVERALL SCALE FACTOR=    0.00
+ OVERALL TEMP. FACTOR=    0.00
+ DIRECT CELL PARAMETERS=    0.00    0.00    0.00    0.00    0.00    0.00
+ PREFERRED ORIENTATION PARAMETERS=    0.00    0.00
+ ASYMMETRY PARAMETER=    0.00
+ MIXING PARAMETERS =     0.00    0.00    0.00
+
+ FWHM PARAMETERS (U,V,W,CT,Z,X,Y)=    0.00    0.00    0.00    0.00    0.00    0.00    0.00
+
+ ATOM =LA+3 dfp,dfpp=  -1.40940    9.03760  MASS= 138.905  Wlenght:1.540500
+ Scat Coef.= 20.24890   2.92070  19.37630   0.25070  11.63230  17.82110   0.33605  54.94530   2.40860
+ ATOM =B    dfp,dfpp=   0.00900    0.00390  MASS=  10.810  Wlenght:1.540500
+ Scat Coef.=  2.05450  23.21850   1.33260   1.02100   1.09790  60.34980   0.70680   0.14030  -0.19320
+ LAUE SYMMETRY M3M      WILL BE USED TO GENERATE INDICES
+1NO.  CODE    H   K   L  MULT     HW    POSN    FACTOR  
+
+    1   1      0   0   1     6   0.078  21.371 25.115557
+    2   2      0   0   1     6   0.078  21.425 24.986845
+    3   1      0   1   1    12   0.081  30.400 12.042724
+    4   2      0   1   1    12   0.081  30.477 11.978678
+    5   1      1   1   1     8   0.084  37.459  7.713703
+    6   2      1   1   1     8   0.084  37.555  7.671368
+    7   1      0   0   2     6   0.088  43.526  5.571743
+    8   2      0   0   2     6   0.088  43.639  5.540394
+    9   1      0   1   2    24   0.092  48.979  4.305600
+   10   2      0   1   2    24   0.092  49.108  4.280956
+   11   1      1   1   2    24   0.097  54.012  3.478294
+   12   2      1   1   2    24   0.097  54.157  3.458228
+   13   1      0   2   2    12   0.107  63.247  2.485213
+   14   2      0   2   2    12   0.107  63.421  2.471156
+   15   1      0   0   3     6   0.112  67.578  2.174149
+   16   1      1   2   2    24   0.112  67.578  2.174149
+   17   2      0   0   3     6   0.112  67.768  2.162249
+   18   2      1   2   2    24   0.112  67.768  2.162249
+   19   1      0   1   3    24   0.118  71.779  1.938508
+   20   2      0   1   3    24   0.118  71.983  1.928444
+   21   1      1   1   3    24   0.124  75.880  1.758733
+   22   2      1   1   3    24   0.124  76.100  1.750290
+   23   1      2   2   2     8   0.130  79.908  1.621952
+   24   2      2   2   2     8   0.131  80.145  1.614990
+   25   1      0   2   3    24   0.137  83.886  1.519444
+   26   2      0   2   3    24   0.138  84.141  1.513880
+   27   1      1   2   3    48   0.145  87.835  1.445207
+   28   2      1   2   3    48   0.145  88.108  1.441005
+   29   1      0   0   4     6   0.162  95.721  1.366413
+   30   2      0   0   4     6   0.163  96.033  1.365001
+   31   1      0   1   4    24   0.172  99.695  1.357426
+   32   1      2   2   3    24   0.172  99.695  1.357426
+   33   2      0   1   4    24   0.173 100.030  1.357538
+   34   2      2   2   3    24   0.173 100.030  1.357539
+
+1PHASE NO. =   1     PHASE NAME lab6 simulation                                   
+0NO.  CODE     H   K   L    FWHM    POSN    ICALC      IOBS      FCALC     FOBS   PHASE_C
+    1   1      0   0   1   0.078  21.371   212401.   212401.   462.827   462.827     0.00
+    2   2      0   0   1   0.078  21.425   105664.   105663.
+    3   1      0   1   1   0.081  30.400   141818.   141818.   386.189   386.189     0.00
+    4   2      0   1   1   0.081  30.477    70537.    70535.
+    5   1      1   1   1   0.084  37.459    44793.    44793.   332.137   332.137     0.00
+    6   2      1   1   1   0.084  37.555    22274.    22273.
+    7   1      0   0   2   0.088  43.526    22390.    22386.   319.039   319.007     0.00
+    8   2      0   0   2   0.088  43.639    11132.    11130.
+    9   1      0   1   2   0.092  48.979    54488.    54488.   283.083   283.083     0.00
+   10   2      0   1   2   0.092  49.108    27088.    27088.
+   11   1      1   1   2   0.097  54.012    35217.    35217.   253.207   253.207     0.00
+   12   2      1   1   2   0.097  54.156    17507.    17505.
+   13   1      0   2   2   0.107  63.247     9877.     9865.   224.355   224.219     0.00
+   14   2      0   2   2   0.107  63.421     4911.     4906.
+   15   1      0   0   3   0.112  67.578     5371.     5371.   250.136   250.136     0.00
+   16   1      1   2   2   0.112  67.578    14172.    14172.   203.167   203.167     0.00
+   17   2      0   0   3   0.112  67.768     2671.     2671.
+   18   2      1   2   2   0.112  67.768     7047.     7047.
+   19   1      0   1   3   0.118  71.779    15963.    15963.   228.349   228.349     0.00
+   20   2      0   1   3   0.118  71.983     7940.     7940.
+   21   1      1   1   3   0.124  75.880    12092.    12091.   208.652   208.645     0.00
+   22   2      1   1   3   0.124  76.100     6017.     6016.
+   23   1      2   2   2   0.130  79.908     2362.     2361.   166.338   166.275     0.00
+   24   2      2   2   2   0.131  80.145     1176.     1175.
+   25   1      0   2   3   0.137  83.886     8574.     8572.   189.031   189.003     0.00
+   26   2      0   2   3   0.138  84.141     4271.     4270.
+   27   1      1   2   3   0.145  87.835    13693.    13680.   173.199   173.119     0.00
+   28   2      1   2   3   0.145  88.108     6826.     6818.
+   29   1      0   0   4   0.162  95.721     2429.     2414.   212.206   211.556     0.00
+   30   2      0   0   4   0.163  96.033     1213.     1208.
+   31   1      0   1   4   0.172  99.695     7955.     7955.   192.636   192.634     0.00
+   32   1      2   2   3   0.172  99.695     4318.     4318.   141.921   141.920     0.00
+   33   2      0   1   4   0.173 100.030     1695.     1695.
+   34   2      2   2   3   0.173 100.030      920.      920.
+0 DERIVED BRAGG R-FACTOR =    0.01
+0 DERIVED R-F            =     0.02
+ -------------------------------------------------------     
+  program pw_DBWS3 run on 2001/11/10, at 11:25
+   CPU time :    1.406250E-01 seconds 
+ -------------------------------------------------------     

@@ -1,0 +1,2168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  	   
+  <meta http-equiv="CONTENT-TYPE"
+ content="text/html; charset=windows-1252">
+  <title>Powder - a help file</title>
+     	 	   
+  <meta name="GENERATOR" content="StarOffice 7  (Win32)">
+  	   
+  <meta name="AUTHOR" content="Nita DRAGOE">
+  	   
+  <meta name="CREATED" content="20040126;12240092">
+  	   
+  <meta name="CHANGEDBY" content="n dragoe">
+  	   
+  <meta name="CHANGED" content="20040129;14460011">
+  	   
+  <style>
+	<!--
+		@page { size: 21cm 29.7cm }
+		TD P { margin-bottom: 0cm; color: #000000; line-height: 150%; page-break-inside: avoid; page-break-before: auto; page-break-after: avoid }
+		TD P.western { font-family: "Arial", sans-serif; font-size: 11pt }
+		H1 { color: #000000 }
+		H1.western { font-family: "Times New Roman", serif; font-size: 26pt }
+		P { margin-bottom: 0.2cm; color: #000000; line-height: 150%; page-break-inside: avoid; page-break-before: auto; page-break-after: avoid }
+		P.western { font-family: "Arial", sans-serif; font-size: 11pt }
+		H2 { color: #000000 }
+		H2.western { font-family: "Times New Roman", serif; font-size: 20pt }
+		H3 { color: #000000; page-break-before: auto; page-break-after: auto }
+		H3.western { font-size: 16pt }
+		PRE { color: #000000 }
+		BLOCKQUOTE { color: #000000 }
+		A:link { color: #0000ee }
+		A:visited { color: #551a8b }
+	-->
+	</style> 
+  
+  <meta name="author" content="nd">
+</head>
+  <body lang="en-US" text="#000000" link="#0000ee" vlink="#551a8b"
+ dir="ltr">
+   
+<p class="western" style="margin-bottom: 0.5cm;"><a name="top"></a>  </p>
+   
+<h1 class="western"><font color="#cc0000"><font size="6"><b>Powder4</b></font></font></h1>
+   
+<h1 class="western"><font size="4"><font color="#cc0000">A short help file</font></font> 
+ </h1>
+   
+<hr>  
+<ul>
+  	<li>     
+    <h2 class="western">About the <a href="#aboutprogram">program</a> </h2>
+  	</li>
+   <li>     
+    <h2 class="western">About this <a href="#aboutversion">version</a> 	and 
+    <a href="#autor">author</a> </h2>
+  	</li>
+   <li>     
+    <h2 class="western"><a href="#Features">Features</a></h2>
+  	</li>
+   <li>     
+    <h2 class="western">Available <a href="#form">forms</a> (or 	windows...)</h2>
+  	</li>
+   <li>     
+    <h2 class="western"><a href="#menu">The menus</a> </h2>
+  	</li>
+   <li>     
+    <h2 class="western"><a href="#notice">Notice</a> </h2>
+  </li>
+ 
+</ul>
+   
+<h2 class="western"><br>
+ <br>
+  </h2>
+   
+<hr>  
+<h2><big><big><a name="aboutprogram"></a><font size="4"><big><big>About this 
+program. Some history.</big></big></font>  </big></big></h2>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><br>
+ This program consists of a collection of tools for powder X-ray powder diffraction. 
+This is a variant of a previously one, known as Powder3 , 2..etc, and down 
+to Convert v3 which was capable of various data file conversions. These functions 
+are still available in this program. The goal is to write a comprehensive 
+package for the X-ray diffraction on powders, I have to say that this version 
+is far from that goal. This small help file should give some info about this
+ program, probably a heuristic method will be better for the user. However, 
+at this moment the conversion function is still the main function of this 
+program. A graphic interface for peak hunting and peak profile analysis was 
+also added.  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;">Since I start working on 
+X-ray powder diffractometry I noticed that almost each program required a 
+different form of the data file (quite normal, different authors, different 
+programs). There was quite a pain to convert the data file from an instrument 
+to an appropriate format for use with another software. So, not willing to 
+do the conversion by hand, I wrote some small routines in some variants of 
+Basic and/or FORTRAN (which has a very good Format function) to do the job. 
+There were no fancy interfaces or help. I had to write then nicer routines 
+for some of my colleagues. And I had then the (good ???) idea to write a more
+general program for such types of conversion. This was Convert 1.0. That version
+was written when doing my PhD at Université Paris Sud (1994; this wasn't
+what I supposed to do...!); it was written in a french version of Visual
+Basic 3.0. Another version and a bug hunting followed when I was working at
+University of Bucharest. The version 3 was written in '97 at University of
+Tokyo (Visual Basic v5, a japanese version; so some error messages may look
+funny on your computer). <br>
+    </p>
+   
+<hr>  
+<h2 class="western"><big><big><a name="aboutversion"></a><font size="4"><big><big>About
+ this version and author</big></big></font>  </big></big></h2>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><br>
+ For the exact version look in the About form (a window is called here Form), 
+the help file may not be up to date. <b><i>Due to a severe lack of time as 
+well as a lack of motivation (I have no ideea who is using the program anymore 
+because there is no feedback from the users) the development of this program 
+will probably stop.</i></b><br>
+ This is the version 4 of Powder, a 32 bits version and can run in Windows 
+95 or NT 3.5 or, I hope, above. I didn't find any bugs in this version but 
+I think that it may contain some (an even number...). If you find any, hopefully 
+sooner, please let me know and I will try to correct them. I can not guarantee 
+a support to this program since I have a job; that will depend entirely on 
+my free time. However, before asking me something read the help file and follow
+the advises in the notice. <br>
+ <br>
+ <a name="author"></a><br>
+ <b>The author of this program is:</b> <br>
+ <br>
+ Dr. N. Dragoe <br>
+ LPCES-ICMMO, Université Paris Sud<br>
+ Bat. 410<br>
+ 91405 Orsay, France</p>
+   
+<p class="western" style="margin-bottom: 0.5cm;">nita.dragoe@lpces.u-psud.fr</p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><br>
+ <a href="#top">back to top</a>  </p>
+   
+<hr>  
+<h2 class="western"><big><big><a name="Features"></a><font size="4"><big><big>Features</big></big></font>
+ </big></big></h2>
+   
+<p class="western" style="margin-bottom: 0.5cm;">It is useful mainly for people
+doing X-ray diffraction experiments although the program can be used with
+different data types or instruments (I am using it for conversion of UV/VIS
+spectra ASCII data where the X values are in a decreasing order; so a negative
+step can revert this...). <br>
+ This program can read and write some of the data files I know : DBWS, GSAS, 
+Philips, Siemens, Scintag, ASCII files, MXP18 data, WPPF.... Some other files 
+can also be read with this program. <br>
+ A quite different function was added recently : a unit cell refinement calculations 
+and HKL generation functions.</p>
+   
+<hr>  
+<h2 class="western"><big><big><a name="form"></a><font size="4"><big><big>Forms/Pages</big></big></font>
+ </big></big></h2>
+   
+<p class="western" style="margin-bottom: 0.5cm;">There are several different 
+windows in the program, called here <b>Forms</b> or <b>Pages</b>. </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><a href="#about">About</a>-which
+ contains the version number and with the program starts. This form can be 
+viewed at any time from the Help/About menu. To start the program you must 
+click on the icon or in the text area in the form.  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><a href="#menu">Main form</a>- 
+which is practically the old Convert 3 program.</p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><font color="#3333ff">Merge
+ files</font> - two functions for merging files, useful for variable counting 
+time (hereafter VCT) data acquisitions</p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><font color="#3333ff">Graphic</font>
+ - GUI data management, background removal, peak hunting, etc</p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><font color="#3333ff">Rietveld/gDBWS</font>
+ - Rietveld file preparation and graphical interface</p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><a href="#unitcell">UnitCell</a>-is
+ a form added for utilities related to unit cell refinement</p>
+   
+<hr>  
+<h2 class="western"><big><big><a name="menu"></a><font size="4"><big><big><b>Main 
+form - menus</b></big></big></font></big></big></h2>
+   
+<p class="western" style="margin-bottom: 0.5cm;">The main form of the program 
+has one text region where some info is printed from time to time and few commands
+available in a menu. This area is called “report pad” , refer to the information
+printed here during the execution of this program. Most of the output, except
+the saved files, will be listed here.</p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;">There are few menus in this 
+form. Click on the appropriate keyword for more information.  </p>
+   
+<h3 class="western"><br>
+ <br>
+ <a href="#file">File</a>  </h3>
+   
+<p class="western" style="margin-left: 2cm; margin-bottom: 0.5cm;">Open <br>
+ Save as<br>
+ Merge XY<br>
+ Merge XYZ<br>
+ Batch mdi -&gt; GSAS<br>
+ Save Report pad<br>
+ Shell to Notepad<br>
+ Quit</p>
+   
+<h3 class="western"><br>
+ <br>
+ <a href="#header">Header</a>  </h3>
+   
+<p class="western" style="margin-left: 2cm; margin-bottom: 0.5cm;">I don't 
+have a header... <br>
+ Ignore first ...  </p>
+   
+<h3 class="western"><a href="#Graphic">Graphic</a></h3>
+   
+<h3 class="western"><a href="#unitcell">Unitcell</a></h3>
+   
+<h3 class="western"><a href="#Rietveld">Rietveld</a></h3>
+   
+<h3 class="western"><a href="#tools">Tools</a>  </h3>
+   
+<p class="western" style="margin-left: 2cm; margin-bottom: 0.5cm;">Read HSTDMP 
+from GSAS lst file <br>
+ Read REFLIST from GSAS/rfl file <br>
+ Compute d/angle <br>
+ Remove strange characters <br>
+ Truncate data<br>
+ Swap X, Y<br>
+ Show report <br>
+ Clear report  </p>
+   
+<h3 class="western"><a href="#help">Help</a></h3>
+   
+<p class="western" style="margin-left: 2cm; margin-bottom: 0.5cm;">About
+<br>
+ Contents - html file <br>
+ Author WWW page<br>
+ CCP14 web page  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><br>
+ <a href="#top">back to top</a>  </p>
+   
+<hr>  
+<h2 class="western"><a name="file"></a>Main Form -&gt; File  </h2>
+   
+<p class="western" style="margin-bottom: 0.5cm;">This menu contains the following 
+sub menus:</p>
+   
+<p class="western"
+ style="margin-left: 2cm; margin-bottom: 0.5cm; line-height: 150%;"> <a
+ href="#mainfileopen">Open</a> <br>
+ <a href="#mainfilesaveas">Save as </a><br>
+ <a href="#mainfileMergeXY">Merge XY</a><br>
+ <a href="#mainfileMergeXYZ">Merge XYZ</a><br>
+ <a href="#mainfileBatchmdi">Batch mdi -&gt;  GSAS</a><br>
+ <a href="#mainfileSaveReport">Save Report pad</a><br>
+ <a href="#mainfileshellnotepad">Shell to Notepad</a><br>
+ <a href="#mainfileQuit">Quit</a></p>
+   
+<hr>  
+<h2 class="western"><a name="mainfileopen"></a>Main Form &gt; File -&gt;
+Open  </h2>
+   
+<p class="western" style="margin-bottom: 0.5cm;">This command open a raw data
+file and read the data in memory. You should choose the file format you have
+otherwise strange effects may occur. The program accepts the following commands
+(as sub-menus) while in File-Open menu:  </p>
+<p>   </p>
+<blockquote>
+  <p><a href="#opendbws">DBWS file </a> </p>
+</blockquote>
+<p>   </p>
+<blockquote>
+  <p><a href="#opengsas">GSAS-CW ESD and STD</a></p>
+</blockquote>
+<p>   </p>
+<blockquote>
+  <p><a href="#openlhpm">LHPM</a></p>
+</blockquote>
+<p>   </p>
+<blockquote>
+  <p><a href="#openphilipsudf">Philips PC-UDF </a> </p>
+</blockquote>
+<p>   </p>
+<blockquote>
+  <p><a href="#openriet7">Riet 7</a></p>
+</blockquote>
+<p>   </p>
+<blockquote>
+  <p><a href="#openscintag">Scintag</a> data  </p>
+</blockquote>
+<p>   </p>
+<blockquote>
+  <p><a href="#opensiemens">Siemens,</a> ascii  </p>
+</blockquote>
+<p>   </p>
+<blockquote>
+  <p><a href="#openwppf">WPPF/Profit</a></p>
+</blockquote>
+<p>   </p>
+<blockquote>
+  <p><a href="#openline">Line </a> </p>
+</blockquote>
+<p>   </p>
+<blockquote>
+  <p>The first value as Y  </p>
+</blockquote>
+<p>   </p>
+<blockquote>
+  <p>The first 2 values as X, Y  </p>
+</blockquote>
+<p>   </p>
+<blockquote>
+  <p>The first 3 values as X, Y, Z  </p>
+</blockquote>
+<p>   </p>
+<blockquote>
+  <p><a href="#openyfreeascii">Y-free ascii </a> </p>
+</blockquote>
+<p>   </p>
+<blockquote>
+  <p><a href="#openfreeascii">XY free ascii</a>  </p>
+</blockquote>
+<p>   </p>
+<blockquote>
+  <p><a href="#openfreeascii">XYZ free ascii </a> </p>
+</blockquote>
+<p>   </p>
+<blockquote>
+  <p><a href="#openmacsciencent">Mac Science (Win NT), binary</a> </p>
+</blockquote>
+<p>   </p>
+<blockquote>
+  <p><a href="#openmxp18">MXP18 (unix) binary</a>  </p>
+</blockquote>
+<p>   </p>
+<blockquote>
+  <p><a href="#openphilipsrd">Philips RD/SD, binary</a>  </p>
+</blockquote>
+<p>   </p>
+<blockquote>
+  <p><a href="#opencustom">Custom</a></p>
+</blockquote>
+   
+<p class="western" style="margin-bottom: 0.5cm; line-height: 150%;"><br>
+ <br>
+  </p>
+   
+<hr>  
+<h3 class="western"><a name="opendbws"></a>DBWS file  </h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">In DBWS format there is a
+first line with : starting 2theta, step, final 2theta and a title (in FORTRAN 
+is 3F8, A56). This is the first line in the file, called in <i>Powder</i> 
+as <b>header.  </b>Note that, like in all cases in this program, the starting 
+2 theta is the first value and not start_2theta+step as is the case elsewhere 
+!!<br>
+ The rest of the file are in 8F7,1X format. Only the first 56 spaces are
+read  since some old data files have a comment or card number in the columns
+72 through 80 (this area was reserved for comments in the old days). The
+values read from the header will be later used to generate the X values,
+if necessary. Although it reads a title here, the program will prompt you
+to set or modify the title when trying to save the data. You can use this
+command only for data files having 8 values on a line, otherwise you may
+obtain strange results. <br>
+ Refer to the <a href="#header">Header</a> commands if you want to find out
+ how to ignore the header read from this file. This may be useful when wanting 
+to change the value of the 2theta (although I can not see the reason for doing
+this).  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;">   </p>
+   
+<hr>  
+<h3 class="western"><a name="opengsas"></a>GSAS - CW ESD and GSAS - CW STD 
+ </h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">GSAS is the well known program 
+written by A.C. Larson and Bob von Dreele from LANL. <br>
+ You can read a GSAS-ESD constant wavelength. In <i>Powder</i> there are
+some limitations regarding Gsas files. Some of the records (except starting
+two theta, step and the number of points) are ignored in this program. For
+instance "Instrument parameter" which is optional in the Gsas file is completely
+ignored here, as well as BINTYP info (read the GSAS manual for more information). 
+The data is read as 5 values and corresponding ESD's on a line until the
+EOF marker is found. The normal GSAS data may have few BANK records in a
+file, here the first BANK record is read. <br>
+ Same general comments are available for STD file; ten values in each line 
+are accepted here. For use of the GSAS files I strongly recommend to read
+ the instructions in the GSAS User Manual. Note that in the new version of 
+GSAS a file converter is available.  </p>
+   
+<hr size="2">  
+<h3 class="western"><a name="openlhpm"></a>LHPM</h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">This format is similar to 
+that of DBWS but having 10 data on each line. Here only the first 64 characters 
+on a line are considered.</p>
+   
+<hr>  
+<h3 class="western"><a name="openphilipsudf"></a>Philips/Panalytical PC-UDF 
+ </h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">With this function you can 
+read a Philips (now Panalytical) UDF file. The UDF files which I know have 
+a header (about 20 lines) and then the diffraction data as eight characters 
+in a row, separated by commas. <i>Powder</i> is looking for the <b>RawScan</b> 
+statement then reads all the data.  From the UDF header most of the fields 
+are ignored, this applies as well when writing the UDF file. If you don't 
+want to use a header, the same file can be read by <b>Y, free ascii</b> command. 
+ </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<hr>  
+<h3 class="western"><a name="openriet7"></a>Riet7  </h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">This format has a header 
+on four lines with a title and some other details (monochromator, date, etc). 
+ The important part is on a line with starting 2theta, step and ending 2theta 
+each having 8 characters.  Then the Y data are read as one value per line, 
+the 2theta are computed from the header info.<br>
+ <br>
+    </p>
+   
+<hr size="2">  
+<h3 class="western"><a name="openscintag"></a>Scintag data  </h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">This file type is similar 
+to that of Philips, i.e. a big header which is mostly ignored by <i>Powder</i> 
+and 2theta, intensity and esd. Although it is not convenient, the same file 
+can be read ignoring the header, as XYZ free ascii.<br>
+ <br>
+ <br>
+  </p>
+   
+<hr>  
+<h3 class="western"><a name="opensiemens"></a>Siemens ascii  </h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">The format of this file is
+quite similar to the Philips or Scintag ones, a header followed by data written
+as 8 values on each line. As before, from the header information only some
+fields are requested.<br>
+ <br>
+ <br>
+  </p>
+   
+<hr>  
+<h3 class="western"><a name="openwppf"></a>WPPF/Profit  </h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">WPPF and Profit are two different
+programs written by Hideo Toraya. These programs can read two distinct data
+files either as 8 or 10 values in a line. The program detect the data type
+you have and read it either as 8 or 10 values in a row, as appropriate. From
+the header of this file, some info as the wavelength or counting time are
+ignored.  </p>
+   
+<hr>  
+<h3 class="western"><a name="openline"></a>Line</h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">the first value, as Y <br>
+ the first 2 values, as XY <br>
+ the first 3 values, as XYZ  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;">On this menu, three commands 
+are available giving the opportunity for reading only the first value, the 
+first 2 values, or the first 3 values from each line. This is useful only 
+if there are more data in a row than x, y. These commands do not allow a header,
+you will be prompted for additional information if necessary. If the data
+file contains some titles, use the available commands to ignore these lines,
+see the <a href="#header">Header</a> menu.<br>
+ <br>
+ <br>
+  </p>
+   
+<hr>  
+<h3 class="western"><a name="openfreeascii"></a><b>Y; free ascii</b></h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">You can read Y values no 
+matter the format is, as long as the data are separated by comma or tab or 
+spaces and no empty lines are in between values.  </p>
+   
+<h3 class="western">X, Y; free ascii  </h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">Read X and the corresponding 
+Y in any format as long as the values are in pairs (i.e. in each line the 
+final value must be for an Y value.)  </p>
+   
+<h3 class="western">X, Y, Z; ascii free  </h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">Read X, Y, Z from any ascii 
+file. Z is usually considered the ESD value for each Y. However, in this program
+no ESD estimations/correction are made, if necessary Z will be filled with
+1.0.<br>
+ <br>
+ <br>
+  </p>
+   
+<hr>  
+<h3 class="western"><a name="openmacsciencent"></a><a name="openmxp181"></a>
+ MAC Science NT, binary  </h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">This is a binary data file 
+from the Mac Science diffractometers on NT systems. Read some details from 
+a header as well as X and Y. Instructions relative to ASCII file do not apply 
+here (for instance, ignore lines, etc), this is a binary file.  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<hr>  
+<h3 class="western"><a name="openmxp18"></a>MXP-18 binary  </h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">This is a binary data file 
+from the Mac Science MXP18 rotating anode diffractometers. <br>
+ Read some details from a header as well as X and Y. Instructions relative
+ to ASCII file do not apply here (for instance, ignore lines, etc), this
+is a binary file.  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<hr>  
+<h3 class="western"><a name="openphilipsrd"></a>Philips/Panalytical RD/SD</h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">A different format came from
+Philips and now is in use with the recent Panalytical diffractometers : the
+RD and SD ; these are binary files and <b>Powder</b> is able to read the
+RD and SD 3 to 7. Note that recently, an additional format is available from
+Philips/Panalytical the .<b>xrdml</b>. As of now there is no function associated
+with this format. I recommend the use of a UDF file format instead of the
+RD files.</p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<hr>  
+<h3 class="western"><a name="opencustom"></a>Custom</h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">This function, coupled with 
+the <b>Ignore lines </b>command, allows the reading of files on columns (or 
+even diagonally !!). A small window will ask for the number of point <b>n1</b> 
+to be read following by “skipping” <b>n2</b> points. For instance, reading 
+an ASCII file having three columns : <b>n1</b>=1 and <b>n2</b>=2 will allow 
+the reading of the first column while <b>n1</b>=3 and <b>n2</b>=2 will read 
+the third one. If <b>n2</b> is different than 2 then the data read is on
+“diagonal”. Give it a try but make sure to check the output (note that some
+UNIX characters may be considered “data so the output of this function may
+be affected by this; a solution is to apply the “<b>Remove strange characters”</b>
+function  to this kind of files).</p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><a href="#top">back to top</a></p>
+   
+<hr>  
+<h2 class="western"><a name="mainfilesaveas"></a>Main form -&gt; File -&gt; 
+Save As  </h2>
+   
+<p class="western" style="margin-bottom: 0.5cm; line-height: 100%;"><br>
+ Write the <i>last set of data read </i>in the selected format. If necessary, 
+the program will ask some details about the data, such as the 2 theta... Some
+notes applies for each format. The program accepts the following commands 
+(as sub-menus):</p>
+   
+<blockquote><a href="#savedbws">DBWS</a>  </blockquote>
+   
+<blockquote><a href="#savegsas">GSAS - CW ESD GSAS - CW STD</a></blockquote>
+   
+<blockquote><a href="#savelhpm">LHPM</a>  </blockquote>
+   
+<blockquote><a href="#savephilipsudf">Philips UDF, Siemens, Scintag</a> </blockquote>
+   
+<blockquote><a href="#saveriet7">RIET7</a></blockquote>
+   
+<blockquote><a href="#savewppf">WPPF/Profit </a> </blockquote>
+   
+<blockquote><a href="#saveyascii">Y, XY or XYZ ascii </a> </blockquote>
+   
+<blockquote><a href="#savedplot">DPLOT </a>file  </blockquote>
+   
+<p class="western"
+ style="margin-left: 2cm; margin-bottom: 0.5cm; line-height: 150%;"> <br>
+ <br>
+  </p>
+   
+<hr>  
+<h3 class="western"><a name="savedbws"></a>DBWS file  </h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">This command save a file 
+in a <a href="#opendbws">DBWS</a> file format.<br>
+ <br>
+ <br>
+  </p>
+   
+<hr>  
+<h3 class="western"><a name="savegsas"></a>GSAS - CW ESD , CW STD  </h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">The output file for GSAS 
+is limited to some constants. For more advanced data type use the built-in 
+convert program from the GSAS package (or edit the file manually). No "Instrument 
+parameter" is written in the output file, the BANK number is always 1. Check 
+the data file for 80 characters in length, GSAS requires this (<i>Powder</i> 
+fill with spaces up to 80 chars but if you edit this files with other editors
+ check if you still have 80 characters on each line).  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;">A small example of using 
+GSAS conversion follows (as shown on <a href="http://www.ccp14.ac.uk/">www.ccp14.ac.uk</a>)
+ :</p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<p class="western">With the latest Powder4 for Windows by Nita Dragoe will 
+allow you to convert an x,y,esd powder diffraction file in column format into
+GSAS ESD format.  </p>
+   
+<p class="western">First run Powder for Windows  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><img
+ src="pwd4hlp_files/xyw_to_gsas_esd.GIF" name="Image57"
+ alt="Powder starting screen" align="bottom" width="475" height="258"
+ border="0">
+  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<p class="western">Click on <b>File, Open, X Y Z Free ASCII</b> and select 
+the column format data file.  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><img
+ src="pwd4hlp_files/xyw_to_gsas_esd02.gif" name="Image58"
+ alt="Powder Menu" align="bottom" width="472" height="378" border="0">
+  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><img
+ src="pwd4hlp_files/xyw_to_gsas_esd03.gif" name="Image59"
+ alt="Have imported the X Y ESD data" align="bottom" width="475"
+ height="258" border="0">
+  </p>
+   
+<p class="western">Click on <b>File, Save as, GSAS - CW ESD</b>. Provide the
+filename (preferably with a .gsa or .gs file extension.) <b>Done!</b>  </p>
+   
+<p class="western">It is advisable to look at the resulting file and compare 
+the top and bottom with the original data to see the conversion did go OK. 
+ </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><img
+ src="pwd4hlp_files/xyw_to_gsas_esd04.gif" name="Image60"
+ alt="Save into GSAS ESD Format" align="bottom" width="475" height="328"
+ border="0">
+  </p>
+   
+<hr>  
+<h3 class="western"><a name="savelhpm"></a>LHPM</h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">The LFPM format is similar 
+to that of DBWS but having 10 data on each line.  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<hr>  
+<h3 class="western"><a name="savephilipsudf"></a>Philips UDF, Siemens ascii 
+and Scintag  </h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">In Philips, Siemens and Scintag
+files, most of the header is fixed, you can manually change the values to
+your preferences.  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<hr>  
+<h3 class="western"><a name="savewppf"></a>WPPF/Profit 1 or 2  </h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">Both format types in WPPF/Profit 
+neglect the wavelength value and the counting time. The wavelength will be 
+always of copper Kalpha 1. You can change later this value, see the Wppf or
+Profit user manual for this.  </p>
+   
+<hr>  
+<h3 class="western"><a name="saveriet7"></a>Riet7  </h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">This format has a header 
+on four lines with a title and some other details (monochromator type, date, 
+etc).  The important part is on a line with starting 2theta, step and ending 
+2theta each having 8 characters.  Then the Y data are saved as one value per
+line. As for the UDF format the info in the header are always the same and
+not relevant to this program. You may need to change these values by using 
+a classical a text editor.</p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<hr>  
+<h3 class="western"><a name="saveyascii"></a><b>Y; X, Y and X, Y, Z, ASCII</b></h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">Not much to explain here, 
+the output is in ASCII with one record per line. The first line is a date 
+stamp of the <b>Powder4</b>.</p>
+   
+<hr>  
+<h3 class="western"><a name="savedplot"></a>Dplot file  </h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">This command save the data 
+file in a <b>Dplot</b> file. Dplot is a very good freeware program for scientific 
+graphs. I quote from the Dplot help file: "DPLOT is a general purpose X-Y 
+plotting program that allows you to view, manipulate, and produce hard copies 
+of data in a variety of formats". The package can be found at <a
+ href="http://www.dplot.com/">http://www.dplot.com</a></p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><a href="#top">back to top</a> 
+ </p>
+   
+<hr>  
+<h2 class="western"><a name="mainformheader"></a><b>Main Form -&gt; Header</b></h2>
+   
+<p class="western" style="margin-bottom: 0.5cm;">There are two submenus in 
+the <b>Header</b> option :  </p>
+   
+<h3 class="western">I don't have a header  </h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">Selecting this option (it 
+is ON if there is a check mark on the menu) allows the reading of data file 
+which do not have a header definition. This has no other meaning that instructing 
+the program not to “look" after the 2theta, and so on.  </p>
+   
+<h3 class="western">Ignore first : none...  </h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">With this option, <b><i>n</i></b>
+ lines from data file can be ignored. The user should choose how many lines 
+to be ignored when reading a data file. For instance, if you have an ascii 
+data file and in the first 3 lines there are some comments, you can choose 
+Ignore first then input the value 3. In this case the program will ignore 
+the first 3 lines in your data file. You can ignore as many lines as you want
+(limited to 32000 though !).<br>
+ Another possible use: if you want to read a DBWS file and modify the 2 theta 
+values, select <b><i>I don't have a header</i></b> option and then <b><i>Ignore 
+1st line</i></b>. The program will skip the 1st line and then start to read 
+data directly, not searching for the X values. It will ask for it at a later 
+occasion, if necessary.  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><br>
+ <a href="#top">back to top</a>  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<hr>  
+<h2 class="western"><a name="mainformgraphic"></a>Graphic</h2>
+   
+<p class="western" style="margin-bottom: 0.5cm;">If the program has successfully 
+read a file the data in memory is kept and this function will open the graphic 
+routine. If necessary the X data will be asked as starting 2 theta and step 
+2 theta. Note that by opening the <b>Graphic page</b> the main page of the 
+program will, temporarily, disappear. For more detailed explanations on how 
+to use the graphic routines see the <a href="#Powdertutorial">tutorial section</a>. 
+ </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;">Only the first 32000 pairs 
+of data are shown in the graphic routine. If you have larger datafiles you 
+can select, by removing some parts of the file with the command <b>Tools </b>-&gt; 
+<a href="#maintoolstruncatedata">Truncate data,</a> which region to be seen
+in the graph.</p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><i><b>Warning : depending 
+upon the system you are using, the pegraphs.OCX may be required to be registered 
+with regsvr32.exe *.ocx. </b></i> </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><a href="#top"><u>back to 
+top</u></a></p>
+   
+<hr>  
+<h2 class="western"><a name="mainformunitcell"></a>Unit cell</h2>
+   
+<p class="western" style="margin-bottom: 0.5cm;">This is an independent routine 
+in this program, no data is necessary to be read before starting these functions 
+which are related mostly related to the indexation and refinement of the unit
+cell. Some practical details about these utilities are given in the <a
+ href="#Powdertutorial">tutorial</a>, more can be found <a
+ href="#unitcell">here</a>.  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><a href="#top">back to top</a></p>
+   
+<hr>  
+<h2 class="western"><a name="menurietveld"></a>Rietveld</h2>
+   
+<p class="western" style="margin-bottom: 0.5cm;">This function is not well 
+tested and it is not anymore under development. I had no time to make a help 
+file for it, it is a GUI DBWS version with Rietveld graphs capabilities. Give
+it some try,...but unless you are familiar with DBWS I recommend you to check
+Winplotr/Fullprof or Expgui/Gsas programs.</p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><a href="#top">back to top</a> 
+ </p>
+   
+<hr>  
+<h2 class="western"><a name="menutools"></a>Tools  </h2>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><br>
+ The menu <b>Tools</b> contains the following commands:  </p>
+   
+<blockquote>Read<a href="#maintoolsgsas"> HSTDMP</a> from GSAS lst file 
+</blockquote>
+   
+<blockquote>Read <a href="#maintoolsgsas">REFLIST </a>from GSAS/rfl file 
+</blockquote>
+   
+<blockquote><a href="#maintoolscompute">Compute d/angle</a>  </blockquote>
+   
+<blockquote><a href="#maintoolsremove">Remove strange characters</a>  </blockquote>
+   
+<blockquote><a href="#maintoolstruncatedata">Truncate data</a></blockquote>
+   
+<blockquote><a href="#maintoolsswap">Swap XY</a>  </blockquote>
+   
+<blockquote><a href="#maintoolsshowreport">Show report</a>  </blockquote>
+   
+<blockquote><a href="#maintoolsclearreport">Clear report</a></blockquote>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><a href="#top">back to top</a> 
+ </p>
+   
+<hr>  
+<h3 class="western"><a name="maintoolsgsas"></a>Read HSTDMP from GSAS .lst 
+file and Read REFLIST from GSAS .rfl file</h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">These commands are related 
+to GSAS package. The first one  request a GSAS results file, *.lst. It will 
+search in this file the occurrence of "Program HSTDMP" string. When it can 
+find this, a file named _hstdmp.dat is created in the application directory 
+(Warning - it will erase an old _hstdmp.dat file). This file contains the 
+data output from HSTDMP program. If two or more statements are found the data
+set will be attached one after another without a separator. This command may
+depends on the GSAS version you have. You can use the _hstdmp.dat file for
+another application (your preferred graph editor..) <br>
+   <br>
+ <i>Read Reflist from GSAS/rfl file </i>request a .rfl file written by GSAS. 
+This file can be saved by the Tools/Reflist menu command with the option R/ascii
+file. With this function you can read h,k,l Fo and esd(Fo) from Gsas and
+save a Shelx .hkl file (for structure determination or use of these data with
+another software). The program <i>Powder</i> will ask for a batch number which
+is an optional field in Shelx (for those making batch refinements). The output
+file will be merged. The format in the output file is as required by SHELX
+97, I don't know if works with older versions but I guess it does so.. <br>
+    </p>
+   
+<hr>  
+<h3 class="western"><a name="maintoolsremove"></a><b>Remove strange characters</b></h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">This option allows to skip 
+all characters from the extended code and from command code (smaller than 
+30). It is useful when the data come from some Unix software which have a 
+different ascii character set, as my MXP18. It is a time consuming option 
+(this is relative, 5 seconds with 5000 data on my laptop). To be honest, often
+I use this command without an obvious reason (some files, depending on the
+programs saving them, give errors when read by Powder. I guess that this
+is related to the EOL chars).  </p>
+   
+<p class="western"><br>
+ <br>
+  </p>
+   
+<hr size="2">  
+<h3 class="western"><a name="maintoolstruncatedata"></a><b>Truncate data</b></h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">This option allows to (irreversibly 
+!) delete some parts from the data file in memory (no changes are ever made 
+to the input files).  It may become useful if you want to analyse a smaller 
+region of the data file or in the rare case of data files larger than 32k 
+pairs of data. Note that the program (in theory) can read 2 Gb sets of data 
+!!<br>
+ <br>
+ <br>
+  </p>
+   
+<hr>  
+<h3 class="western"><a name="maintoolscompute"></a>Compute d/angle  </h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">Toggle a small utility for 
+computing d or diffraction angle for a given radiation. When working with 
+this routine, the report -a kind of activity log- is not visible anymore; 
+however it is still there (if you want to read the report toggle OFF this 
+function and ON the Show report command) <br>
+    </p>
+   
+<hr>  
+<h3 class="western"><a name="maintoolsswap"></a><b>Swap X, Y</b></h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">This function interchange 
+the X and Y data in memory. Generally it is not useful for X-ray diffraction 
+data but for other type of data file. <br>
+   </p>
+   
+<hr>  
+<h3 class="western"><a name="maintoolsshowreport"></a><b>Show report</b></h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">In the main form, a text 
+area shows what is going on, what was the filename, how many lines it found 
+in it, and so on. All output from the Unit Cell routine is directed here.  
+May also be useful for some debugging purposes. <br>
+ You can toggle the visibility of this report pad (it is still in memory). 
+From time to time (when this pad has 32kb) the report will be appended to 
+a file called _rpbackup.dat and will be erased from the screen. <br>
+ This file is in the working directory (Warning- NOT the application directory); 
+take care and clean this file from time to time as it can get very large... 
+ </p>
+   
+<hr>  
+<h3 class="western"><a name="maintoolsclearreport"></a><b>Clear report</b></h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">A self explaining command, 
+be careful : no UNDO is available. <br>
+ You can also clear or copy/paste data to this report at any time. Use the 
+Right_Click button of the mouse to see a PopUp Menu with common commands under
+Win95 (as Select, Copy,...). <br>
+    </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><a href="#top">back to top</a> 
+ </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;">   </p>
+   
+<hr>  
+<h2 class="western">Help  </h2>
+   
+<p class="western" style="margin-bottom: 0.5cm;">   </p>
+   
+<h3 class="western"><b>About</b></h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">Shows the About window of 
+the program. Nothing interesting there except the version number of the program 
+(or the author ?..). When you have trouble and want to ask some questions 
+(<i><b>after</b> reading this help file and <b>after</b> you have already 
+let me know you use this program</i> !), report this version number. <br>
+    </p>
+   
+<h3 class="western">Contents-html file  </h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">Open this Help file in the 
+default browser. You can also edit this file and change whatever you like 
+(I will be glad to put your comments in the future help files!)<br>
+ <br>
+ <br>
+  </p>
+   
+<h3 class="western">Author WWW page  </h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">Open the default browser 
+and go to my WWW page (there might be an update or another version of this 
+program). The page location is read from the ASCII file _PwdInternalData.txt 
+from the application directory. You can edit this file and change the URL 
+of the author page. If this file isn't there, the program will try at the 
+address internally stored. <br>
+   <br>
+ <a href="#top">back to top</a>  </p>
+   
+<hr>  
+<h2 class="western"><a name="unitcell"></a>Unit Cell /Powder Cell</h2>
+   
+<p class="western" style="margin-bottom: 0.5cm;">This form will help you in
+refining a unit cell and to generate hkl and d's. It is also useful when reading
+some data (it can read a specified column from the file, etc..).  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;">There are few menus which 
+will are discussed later in this file. The unit cell, both for cell refinement 
+and hkl computing, can be selected from the listbox named <b>Cell</b>, just 
+click on it. In its right side there is a similar one where you can select 
+the <b>Wavelength</b> or, if you use something rare -as a synchrotron- put 
+the actual value in the associated text field. <br>
+ The grid in the middle of the image is referred here as <b>Data grid</b>, 
+where you -or the program- will put some data. You can change the data type 
+in the column 4 just by clicking on the top of the grid (you can toggle between 
+d/A, theta, 2 theta or E/keV for energy dispersive data). You can put a lot 
+of data here but you have to be patient, in this case the program is rather
+ slow, although I am not sure about the upper limit of the MSFlex grid, I 
+guess you can put more than 15000 rows...). For refinement you have to insert 
+data there, no empty lines allowed, the order is meaningless. <br>
+ The grid in the right part of the form is the standard grid where you should 
+insert the expected and observed values for your standard material. <br>
+ <b>Important note</b>: use the same data type as in the data grid, therefore 
+you can put here, d, theta or 2theta depending on what you have in the data
+ grid.. <br>
+ The data inserted in the standard grid will be used for a calibration, if 
+and only if, the associated check box is ON (named <i>Use standard</i>).  The
+correction for 2theta is made with an interpolation polynomial for the difference
+in theta/2theta or d relative to theta. The program computes such a difference
+with a pseudo-Inverse routine i.e. an over-determined system (frankly speaking,
+a least squares!). <br>
+ You should remember some mathematical basics, the polynomial interpolation 
+may give strange results. However the corrections  are printed on the report 
+pad in the main form; check them out. In this version, the polynomial degree 
+can be comprised between 0 and 8; although I recommend a value between 1 and
+4. Two observations here: <br>
+     -do not use a high degree polynomial (I suggest you not to go over 4 
+or 5) unless you have a lot of data somehow homogeneously distributed over 
+the 2theta domain (about 20 to 30 data for a good conditioning) and not too 
+far from the initial and final values. <br>
+     -0 polynomial is not a zero error if the inserted data is d.  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;">There are checkboxes associated 
+with text fields, such as a, b, c...etc. In the refinement, the meaning is 
+to refine or not the corresponding parameter; there is no meaning for them 
+in the hkl generation routine. <br>
+ The lower left part shows a text field meaning refinements <b>Cycles</b>. 
+In this example, when the method of refinement is Least squares (see later), 
+10 refinement cycles will be made.  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><b>Another important note: 
+</b>by weight In this program the value of w in the relation is considered: 
+ </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;">w(Yo-Yc), so don't put the 
+esd's on the column 5 but 1/esd. <br>
+    </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;">The available menus are (
+they are quite self-explaining ) : <br>
+    </p>
+   
+<ul>
+  	   
+  <h3 class="western"><a href="#cellFile">File</a></h3>
+  	   
+  <h3 class="western">Ignore : none    	</h3>
+   
+</ul>
+   
+<p class="western" style="margin-bottom: 0.5cm;">Similar to the Ignore function 
+from the Main form. The program will ask how many lines from a data file should
+be ignored. Usually, the data files contains some headers and comments, by
+this command one can import data by ignoring few lines and thus avoiding editing
+and saving it under other name, etc.. Initially this menu will have the caption
+"Ignore:none" and after activated this menu will show how many lines will
+be ignored.  </p>
+   
+<h3 class="western" style="margin-left: 2cm;">Import ASCII : 4 or 5 values 
+on line  </h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">This function will import 
+data from an ascii file and put these data in grid. Note: each record should 
+contain four data or five data (the last is for a weight). The selection between
+the two option is made with submenus. These data can be either each record
+on one line either sequentially in an ascii file. If the four values are
+read, the weight column will be filled with 1. Special functions for editing
+the weight are available in the <b>Edit </b>menu. <br>
+ If the data file are in a different format it still can be read with the 
+command <b>Input data in column</b>, available in <b>Edit</b> menu.</p>
+   
+<h3 class="western" style="margin-left: 2cm;">Import calibration data</h3>
+   
+<p class="western" style="margin-bottom: 0.5cm;">A two column ascii file will
+be read into standard grid. <b>Warning: </b><i>If the data in the standard 
+grid are not the same type as those in the data grid, you'll get a mess.</i></p>
+   
+<h3 class="western" style="margin-left: 2cm;">Export data grid to graphic</h3>
+   
+<h3 class="western" style="margin-left: 2cm;">Export data grid to ASCII file 
+ </h3>
+   
+<p class="western" style="margin-left: 0.02cm; margin-bottom: 0.5cm;">The
+ data from grid can be saved into an ascii file. This function is useful
+either for storing the datafile for further reference or to export a generated
+hkl, d pattern.</p>
+   
+<h3 class="western" style="margin-left: 2cm;">Export standard grid to ASCII 
+file</h3>
+   
+<h3 class="western" style="margin-left: 2cm;">Quit</h3>
+   
+<p class="western" style="margin-left: 0.02cm; margin-bottom: 0.5cm;">Close
+ the Cell refinement form and loose all the data you have in grid.  </p>
+   
+<ul>
+  	   
+  <h2 class="western">Data</h2>
+  	   
+  <ul>
+  		     
+    <h3 class="western">Sort</h3>
+  		     
+    <h3 class="western">Set data type to : 2 theta, theta, d, energy</h3>
+  		     
+    <h3 class="western">Change data type to : 2 theta, theta, d, energy</h3>
+  		     
+    <h3 class="western">Insert row</h3>
+  		     
+    <h3 class="western">Delete row</h3>
+  		     
+    <h3 class="western">Delete column</h3>
+  	   
+  </ul>
+   
+</ul>
+   
+<p class="western" style="margin-bottom: 0.5cm;">These functions refer to 
+the data grid only. You can insert or delete rows in the grid, if you want 
+to modify your data (delete column will delete data but not the column...). 
+Delete row is in fact equivalent to a <b>Cut </b>command and is very useful 
+because  you can not have empty lines in the data grid (the program will "read"
+how many data you actually have by checking an empty line.)  </p>
+   
+<h3 class="western" style="margin-left: 2.5cm;">Add to Column <br>
+ a constant value <br>
+ a column <br>
+ 1/column <br>
+ to weight:1 <br>
+ Multiply Column <br>
+ with a constant value <br>
+ with column <br>
+ with 1/column  </h3>
+   
+<p class="western"
+ style="margin-left: 0.04cm; text-indent: -0.04cm; margin-bottom: 0.5cm;">
+ These commands are similar, they will add a value (or multiply with one) 
+to a column in the data grid. The program will ask which column you want to
+modify (H is considered the first column). You can add or multiply weight 
+with the value which is in another column (but the same row). By this mechanism 
+you can change the weighting scheme for the refinement. <br>
+ Take care: if you put 0 in the weight column that data row will be neglected 
+in the refinement.  </p>
+   
+<ul>
+  	   
+  <ul>
+  		     
+    <h3 class="western">Input data in column</h3>
+  	   
+  </ul>
+   
+</ul>
+   
+<p class="western"
+ style="margin-left: 0.02cm; text-indent: -0.04cm; margin-bottom: 0.5cm;">
+ This is a very powerful function which allows you to read only one column 
+from a data file (or read some data and skip others in a regular manner). 
+The program will ask in which column the data are to be inserted (again, the
+column 1 is H). The second question is which values will be skipped (read 
+one values and then skip <b>n</b>), you'll be asked about this n; n=0 means 
+to read all the data.  </p>
+   
+<h3 class="western" style="margin-left: 2cm;">Clear data grid</h3>
+   
+<p class="western"
+ style="margin-left: 0.02cm; text-indent: -0.04cm; margin-bottom: 0.5cm;">
+ You can clear one or both of the grid at any time.</p>
+   
+<h3 class="western" style="margin-left: 2cm;">Set the number of rows</h3>
+   
+<p class="western"
+ style="margin-left: 0.02cm; text-indent: -0.04cm; margin-bottom: 0.5cm;">
+ When inserting data from files, to avoid errors the program automatically 
+will increase the number of rows (often to much). By this command you can 
+set the number of rows to a reasonable value. Sometimes this can save some 
+time. If the grid has (because of unfortunate input files..) 1000 rows but 
+you have only 100 data points it is better to set the data rows to 100 to 
+save some memory (anyway, in my opinion -from time to time- 5 seconds more 
+or less it is not a big deal !).  </p>
+   
+<ul>
+  	   
+  <ul>
+  		     
+    <h3 class="western">Paste the DICVOL results in data grid</h3>
+  	   
+  </ul>
+  	   
+  <h2 class="western">Standard</h2>
+  	   
+  <ul>
+  		     
+    <h3 class="western">Change standard data</h3>
+  		     
+    <h3 class="western">Input standard data in column</h3>
+  		     
+    <h3 class="western">Insert row</h3>
+  		     
+    <h3 class="western">Delete row</h3>
+  		     
+    <h3 class="western">Delete column</h3>
+  		     
+    <h3 class="western">Clear standard grid</h3>
+  	   
+  </ul>
+  	   
+  <h2 class="western">Cell</h2>
+  	   
+  <ul>
+  		     
+    <h3 class="western">Assign hkl to peaks</h3>
+  		     
+    <h3 class="western">Refinement of unit cell parameters</h3>
+  	   
+  </ul>
+   
+</ul>
+   
+<p class="western" style="margin-bottom: 0.5cm;">The unit cell parameters 
+are calculated by least squares (all three methods have some least squares 
+procedures inside) and I recommend you to use the first option (however, is
+the only one who gives the standards deviations for the cell parameters). 
+<br>
+ Both <b>least squares</b> and <b>overdetermined system, Newton </b>use the 
+same algorithm of Newton, the difference is in the solution of the linear 
+system (first one is a Crout type and the second one is a Gauss-Jordan). The
+second method is less convergent than the first one because of a dumping
+ factor I imposed, but seems to be more stable. You should check if you arrived 
+at a convergence, the values for the sq. deviations at each cycle are printed. 
+<br>
+ A fancy called  <b>multidimensional search </b> is just a search for the 
+minimum of the squared difference between Q and its expression reciprocal 
+terms. This is done by a modified Interval halving method. I will explain 
+this method because is very easy to put in code (although its value is limited) 
+and because it is not a recommended method for refinement, especially for 
+lower symmetries.  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;">Starting from an initial 
+guess (no matter how far from the minimum) one can find the minimum of a function
+f=(y<sub>1</sub>-y<sub>2</sub>)<sup>2</sup> where y<sub>1 </sub>is an experimental
+value and y<sub>2</sub> is a model depending of some parameters x<sub>1</sub>,
+..,x<sub>n  </sub>which have to be estimated. If n is not too high one can
+make a search in an interval and compute the function f at each step, the
+minimum f will be an estimate of the solution x. The error will depend on
+the step size and on the fact that the actual minim is comprised in the search
+range. <br>
+ In this function, if the minimum is not comprised in the search range, the 
+width will be adjusted toward the minimum. <br>
+ This procedure is implemented here (test it if you like but think how long 
+it will take!). The <b>width </b>shows how far from the initial point it will
+search the minimum, the <b>steps/cycles</b> is how many steps will make on
+each variable on each interval and <b>refine </b>shows how many times to
+do this with a halving of the width for each cycle. <br>
+ For each <b>refine </b>the step will be smaller with a 1/q factor where
+q is the number of <b>refine</b> in the textbox. The fields <b>Width</b>
+and <b>refine </b>are used only in the search algorithm and have no meaning
+in the least squares. <br>
+ It is very slow because, for <b>n</b> parameters problem one need steps<b><sup>n</sup></b> 
+functions evaluations and this multiply by <b>refine</b> value. <br>
+ It is a very time consuming tehnique but probably in ten years from now.... 
+<br>
+ Actually, the reason of existence for this function here is related to educational
+ purposes (manual indexations...). One can make an indexation according to 
+Ito's procedure and get any strange triclinic cell. By a subsequent Delaunay 
+transformation we can get a better cell.  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;">Note: the results are printed 
+in the Report pad and not in the Cell Form.  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;">At this moment I don't know 
+much about the accuracy of this program compared to other known programs (the
+minimizations use Double precision for variables but Visual Basic is not
+made for scientists!). I think that the eventual error is smaller than 0.001A
+which for me is good enough. <br>
+ I am waiting some input from you here...  </p>
+   
+<ul>
+  	   
+  <ul>
+  		     
+    <h3 class="western">Automatic indexing (by DICVOL, ITO and TREOR)</h3>
+  		     
+    <h3 class="western">Compute hkl, d, theta</h3>
+  	   
+  </ul>
+   
+</ul>
+   
+<p class="western" style="margin-bottom: 0.5cm;">Both commands perform the 
+same calculation tasks but the output is directed either to the report pad 
+or to data grid. <br>
+ The HKL and d are computed for the cell you have and with the parameters 
+found in the Cell form.The hkl limits and 2theta are to be input by the user 
+as well as Bravais symbols.  </p>
+   
+<ul>
+  	   
+  <ul>
+  		     
+    <h3 class="western">HKLGEN</h3>
+  	   
+  </ul>
+   
+</ul>
+   
+<h3 class="western" style="margin-left: 2.56cm;">Decimate</h3>
+   
+<p class="western" style="text-indent: 2.52cm; margin-bottom: 0.5cm;"><br>
+ This menu contains three functions which are inspired by the Armel LeBail's 
+Overlap. Reading Fullprof FOU, Gsas RFL and/or Shelx HKL files, eliminating 
+the reflections which are too close (the two theta limit will be requested) 
+and save what's left in a Shelx .hkl file for further direct methods or whatever. 
+The cell values are taken from the Cell form, the symmetry is not requested. 
+ </p>
+   
+<p class="western" style="text-indent: 2.52cm; margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><a href="#top">back to top</a> 
+ </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<hr>  
+<h1 class="western" style="margin-left: 0.13cm;"><a
+ name="Powdertutorial"></a> Tutorial</h1>
+   
+<h2 class="western" style="margin-left: 0.13cm;">Basic run through Powder4</h2>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> Let's take the data of
+NAC available at<a
+ href="http://pcb4122.univ-lemans.fr/powdif/low_fwhm_and_rp.html"> http://pcb4122.univ-lemans.fr/powdif/low_fwhm_and_rp.html#NAC</a> 
+, in another tutorial by Armel LeBail. The data are in a zip file and some 
+explanations about the conditions used can be seen in the mentioned page.  
+Grab the file and unzip it. Before attempting to convert it look at it with 
+an ASCII editor like PFE. We can see some resemblance with the Siemens format 
+but this is not a Siemens format though. We look how many header lines are 
+there (59) and open this file with the program Powder 2.0 with the following 
+options: <br>
+     -I don't have a header <br>
+     -Ignore the first 59 lines</p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> <img
+ src="pwd4hlp_files/image4ia.jpg" name="Image4" align="bottom"
+ width="579" height="352" border="0">
+  </p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> Then open the file as 
+Ascii, and choose the file in question.</p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><img
+ src="pwd4hlp_files/imageq95.jpg" name="Image8" align="bottom"
+ width="585" height="352" border="0">
+  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> If this is successful 
+you will see some messages (this is what is called Report Pad in this program), 
+in this case what we can see is:  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> ------------------------------------------------- 
+<br>
+ Y data file, ascii  <br>
+ The filename is C:\WINDOWS\Desktop\NAC-test-2.UXD <br>
+ 59 line(s) will be ignored. <br>
+ The number of points is: 6501 <br>
+ Done... <br>
+ 2/15/99 5:26:39 PM <br>
+ -- <br>
+ <b>NOTE: I have noticed a frequent error in the use of this program. When 
+the data file has been e-mailed without being zipped an extra EOL character 
+appears (I guess it is related to different definition of EOL for DOS and 
+Windows ?). If you look at this kind of file with DOS/Edit you can see alternating 
+empty lines with data. These empty lines will "confuse" the program. Therefore 
+you should remove them by the command Tools/Remove strange characters. The 
+same procedure should be used for files coming from Unix and flavors of Unix.</b> 
+<br>
+ --  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> We can directly inspect 
+the data once read by choosing Graphic in the menu. We get this message</p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><img
+ src="pwd4hlp_files/imagee2i.jpg" name="Image9" align="bottom"
+ width="408" height="100" border="0">
+   </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> and we answer 10 for 
+2 theta and 0.02 for step (this message comes when the program does not know 
+the starting value and step). Following, the Graphic window is shown:</p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><img
+ src="pwd4hlp_files/imagebro.jpg" name="Image10" align="bottom"
+ width="672" height="453" border="0">
+  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> The scale is automatically 
+adjusted to fit all the data. In the top left corner we can see two values 
+65.916, and 12365...: these are the coordinates of the mouse on the screen. 
+You can roughly inspect the data by this method. <br>
+ You can zoom as you like by dragging the mouse on the screen:</p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><img
+ src="pwd4hlp_files/imagee1d.jpg" name="Image11" align="bottom"
+ width="672" height="453" border="0">
+  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> On the zoomed graph a
+horizontal bar appears. Clicking on it you can move to the right or left by
+keeping the same zoom as here. You can go back to the initial zoom by right-clicking
+on the graph area and choosing<b>Undo zoom</b>. <br>
+ Several other menus are available here, most of them are easy to understand. 
+<br>
+ When you right-click on the graph an important menu allows changing some 
+parameters:</p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><img
+ src="pwd4hlp_files/imagevt1.jpg" name="Image12" align="bottom"
+ width="728" height="513" border="0">
+  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> Note that we can resize 
+the graph at any time. The menu (which can be invoked -for people hating the
+mouse- by <b>File/General Options</b> command as well) contains:  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> Viewing style (monochrome 
+or color) <br>
+ Font size <br>
+ Numeric precision <br>
+ Plotting method <br>
+ Grid lines <br>
+ Grid in front <br>
+ Mark data points <br>
+ Undo zoom <br>
+ Maximize <br>
+ Customization dialog <br>
+ Export dialog <br>
+ Help  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> Some of these menus are
+self explanatory; note that <b>Mark Data Points</b> is extremely slow. <br>
+ There are two interesting options here: <b>Customization Dialog</b> and
+<b>Export Dialog,</b> both of them available also from the <b>File</b> menu.</p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><img
+ src="pwd4hlp_files/imagegu8.jpg" name="Image13" align="bottom"
+ width="434" height="386" border="0">
+  <br>
+ <br>
+ By <b>Customization Dialog</b> (equivalent with <b>File/Customize Graph</b>) 
+we open the following menu.<br>
+ <br>
+ <img src="pwd4hlp_files/imagepa3.jpg" name="Image14" align="bottom"
+ width="456" height="331" border="0">
+  <br>
+ <br>
+ <br>
+  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> The most important command 
+here is <b>Subsets</b> which is described later.  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> The second menu is <b>Data 
+treatment</b> which allows: <br>
+ -smooth by Savitzky Golay, Adjacent averaging or a Moving Window algorithm;
+ <br>
+ -remove background (automatic or manual), <br>
+ -remove K alpha 2, <br>
+ -Find peaks, <br>
+ -Add peaks (not shown here but removing some of the peaks can be done easily, 
+just click on the marker) <br>
+ -Export peaks (when you have already determined them) <br>
+ -Show experimental peaks <br>
+ -Show simulated peaks <br>
+ -Intensity correction <br>
+ -zero correction</p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><img
+ src="pwd4hlp_files/image5mm.jpg" name="Image15" align="bottom"
+ width="434" height="386" border="0">
+  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> The values detected are
+sent to the grid as 2theta and the intensity as weight (the intensity is
+however ignored hereafter). <br>
+ You can try to index these by Ito or Dicvol methods. Let's try ITO, select
+ <b>Cell/ Automatic indexing/ Use Ito</b> and the following screen appears:</p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><img
+ src="pwd4hlp_files/imagefa3.jpg" name="Image26" align="bottom"
+ width="547" height="401" border="0">
+  </p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> Only the basic options 
+in ITO can be set up here (NOTE: ITO and DICVOL are independent programs which
+you should install before using the program Powder. These two well known
+programs are neither written nor recommended or supported in any way by me!).
+The data files saved by Powder 2.0 are<b>ito.inp</b> and <b>dicvol.inp</b> 
+in the location chosen by Exe location textbox. <br>
+ In the EXE location field you have to select the location of the program 
+Ito or a directory where the input file ITO.INP should be created when pressing 
+Make file button. You have to go to the DOS end start ITO by yourself. <br>
+ It gives several solutions (among the suggestions the true solution &lt;much 
+easier to decide when you know the true result, :)&gt;,...)</p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><img
+ src="pwd4hlp_files/imageki5.jpg" name="Image33" align="bottom"
+ width="646" height="459" border="0">
+  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> If you want you can check
+that one of the solutions is the correct one. <br>
+ Go to the UnitCell window and enter the value of the unit cell you want
+to check and the command simulate</p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><img
+ src="pwd4hlp_files/imagebd5.jpg" name="Image34" align="bottom"
+ width="563" height="377" border="0">
+  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> The program will compute 
+the theoretical values of 2 theta; select Send DataGrid to Graphic</p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><img
+ src="pwd4hlp_files/images5e.jpg" name="Image35" align="bottom"
+ width="563" height="377" border="0">
+  </p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> and these values will 
+be marked with crosses on the graphic. Note: the intensity at which the crosses 
+are put are determined by the value stored in the column Weight. You can easily
+add a constant to these values</p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><img
+ src="pwd4hlp_files/imageicr.jpg" name="Image36" align="bottom"
+ width="563" height="377" border="0">
+  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> let' say 2000... <br>
+ Make sure that the menu Show simulated values is checked. You get this kind 
+of figure...</p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> <br>
+ <br>
+  </p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><img
+ src="pwd4hlp_files/image13g.jpg" name="Image37" align="bottom"
+ width="800" height="576" border="0">
+  <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> You can print or export 
+this data as you wish. <br>
+ When exiting the Graphic window, if you want to keep some data (for instance 
+Smoothed data) make sure that the <b>Smoothed</b> data is checked in the
+<b>Active Subset</b> menu.  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> You can see 8 graphics 
+at a time (but is difficult to understand them). Let's see corundum (a DBWS 
+file provided by Lachlan Cranswick). We know that is a good DBWS data file 
+so we can read it directly by <b>File/Open/DBWS file</b> from the main part 
+of the program. Then we choose <b>graphic</b> and add a title and subtitle
+ to the graphic. We get this.</p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><img
+ src="pwd4hlp_files/image7o3.jpg" name="Image38" align="bottom"
+ width="672" height="453" border="0">
+  <br>
+ <br>
+ <br>
+  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> We can apply a smooth 
+to this and then check the result (here is shown the smoothed data and what 
+was removed by smoothing).</p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><img
+ src="pwd4hlp_files/image06k.jpg" name="Image39" align="bottom"
+ width="672" height="453" border="0">
+  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> We should remove the 
+Background now. If the Background is rather small and can be well defined 
+by a low degree polynomial you can apply a <b>Manual Correction</b> (in Remove 
+Background menu). If we want to remove the background of the Smoothed data 
+we should choose <b>Active subsets/Smooth data.</b> In the following figure 
+the Smoothed and Raw data are shown (note the point markers, when showing
+ them be veeeeeery patient).</p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><img
+ src="pwd4hlp_files/imaged4t.jpg" name="Image40" align="bottom"
+ width="672" height="453" border="0">
+  <br>
+ <br>
+ <br>
+ <br>
+  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> From now on, as long 
+as the Smoothed Data menu remains checked, all the modifications will be performed
+on Smoothed data. If you smooth again the old smooth data will be replaced
+with the new values.  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;">  Manually removing the 
+Background requires choosing some data points. First we should choose the 
+polynomial degree, let's say 3 is enough (the program can accept a degree 
+up to 8 but I do not recommend going to that value). Then we choose data points
+(the more the merrier) by moving a cursor through points). Choose a point
+by moving the cursor then Click on Set point or Alt+S to keep the value of
+the cursor for interpolation. When finished choose Done.</p>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><img
+ src="pwd4hlp_files/image7uj.jpg" name="Image41" align="bottom"
+ width="800" height="576" border="0">
+  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> The program will compute 
+the interpolation polynomial based on the values you choose. I selected for 
+this tutorial 12 points and I got this ugly results:</p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><img
+ src="pwd4hlp_files/imageu7p.jpg" name="Image42" align="bottom"
+ width="672" height="453" border="0">
+  </p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> The Background contribution 
+is shown so as you can see what it has computed (this is an example of how 
+should not be the background; you should do better than this).  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;">  Now let's remove the 
+background in a better way (from the raw data, we choose Active Subset/Raw 
+data) and get this.</p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><img
+ src="pwd4hlp_files/imagem5n.jpg" name="Image47" align="bottom"
+ width="672" height="453" border="0">
+  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> And now let's smooth 
+the <b>Background removed data</b> (we should choose<b>Active Subset/Background 
+stripped data</b>) we obtain this:</p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><img
+ src="pwd4hlp_files/image6ck.jpg" name="Image48" align="bottom"
+ width="672" height="453" border="0">
+  </p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> <b>Note that the Smoothed 
+data contains the Background removed and smoothed data.</b>  </p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> If we want to quit the 
+Graphic Window now we will get a message:</p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> <img
+ src="pwd4hlp_files/imagekij.jpg" name="Image54" align="bottom"
+ width="221" height="100" border="0">
+  <br>
+ That is, if the <b>Active Subset/Smoothed data</b> is checked you will be 
+asked if the data which you read should be replaced by the Smoothed data. 
+If you do not choose an <b>Active subset</b> no matter what modifications 
+you do in the Graphic window the read data will not be replaced.  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> Enjoy and try it extensively 
+to learn how it works.  </p>
+   
+<p class="western" align="left"
+ style="margin-left: 0.13cm; margin-bottom: 0.5cm;"> -<b>--</b> <br>
+ <b>Final note: Remember to register if you'll ever want to ask something 
+or to receive updates and bug reports. If not, you are on your own.</b> <br>
+  <b>--</b> <br>
+ <b><font size="2">Small print: Use the program at your own risk...</font></b></p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<hr>  
+<h2 class="western"><a name="tutorialmergindata"></a>Merging and normalising 
+data</h2>
+   
+<p class="western" style="margin-bottom: 0.5cm;"><br>
+ Some details about these functions (from www.ccp14.ac.uk).</p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<table width="100%" border="2" cellpadding="8" cellspacing="0">
+  	<tbody>
+     <tr>
+  		<td bgcolor="#fffff0"> 			       
+      <p class="western" style="margin-bottom: 0.5cm;">With the latest 			Powder4 
+for Windows by Nita Dragoe will allow you to merge and 			normalise up to 
+10 files into a single file (calculating 			appropriate ESDs for each count). 
+For this you need to give each 			pattern a "monitor" value (counting time 
+is probably the 			best way for most scans). This is done via the Powder v4
+interface 			as shown below.  			</p>
+  			       
+      <p class="western" style="margin-bottom: 0.5cm;">Following are a 			few 
+tips on how to use the latest Powder4 (i.e. version 0.3b) if 			you want to
+merge powder XRD files. WARNING: this is a dangerous 			operation, do not
+massage your data; make sure you know what you 			are doing.  			</p>
+  			       
+      <p class="western" style="margin-bottom: 0.5cm;">First run Powder 			for 
+Windows (make sure you have the latest versions)  			</p>
+  			       
+      <p class="western" style="margin-bottom: 0.5cm;">A few instructions
+ 			are listed on this panel ; read this from time to time, it 			contains 
+some useful hints on what's going on with the program.  			</p>
+  			       
+      <p class="western"><img src="pwd4hlp_files/merging_data01.gif"
+ name="Image61" alt="Powder starting screen" align="bottom" width="475"
+ height="258" border="0">
+  						</p>
+  		</td>
+  	</tr>
+     
+  </tbody> 
+</table>
+   
+<hr>  
+<table width="100%" border="2" cellpadding="8" cellspacing="0">
+  	<tbody>
+     <tr>
+  		<td bgcolor="#fffff0"> 			       
+      <p class="western" style="margin-bottom: 0.5cm;">We are going to 			merge 
+10 files. Normally you have to conver the files into column 			XY, or XY_ESD 
+format. In the above example data, the UDF files 			have been converted into 
+XY format using Convert.  			</p>
+  			       
+      <p class="western" style="margin-bottom: 0.5cm;">All these files 			have 
+the first line as header, so we'll have to "tell" 			the program how to handle 
+this. First, we click on Header/I don't 			have a header (this is optionally 
+here but in many cases it's 			important to instruct the software that there 
+is no header to look 			for). Then we click on Header/Ignore menu, just like 
+in the 			following picture:  			</p>
+  			       
+      <p class="western" style="margin-bottom: 0.5cm;">Now this is 			important 
+: you have to instruct the program to ignore the first 			line otherwise you'll
+get a mess. Alternatively you can delete all 			the comments from the file
+but it's better to keep the original 			header in place (do not mix up the
+files!!!).  			</p>
+  			       
+      <p class="western"><img src="pwd4hlp_files/merging_data02.gif"
+ name="Image62" alt="Ignoring the header lines" align="bottom"
+ width="474" height="258" border="0">
+  						</p>
+  		</td>
+  	</tr>
+     
+  </tbody> 
+</table>
+   
+<hr>  
+<table width="100%" border="2" cellpadding="8" cellspacing="0">
+  	<tbody>
+     <tr>
+  		<td bgcolor="#fffff0"> 			       
+      <p class="western" style="margin-bottom: 0.5cm;">A small window 			will 
+appear in which you insert (an integer) how many lines will 			be ignored. 
+ 			</p>
+  			       
+      <p class="western" style="margin-bottom: 0.5cm;">Cancel or 0 have 			the 
+same effect.  			</p>
+  			       
+      <p class="western" style="margin-bottom: 0.5cm;">After that you can
+ 			see listed in the menu Header/Ignore how many lines are going to 			be 
+ignored. By <i>line</i>, this means everything up to an EOL 			character. 
+ 			</p>
+  			       
+      <p class="western"><img src="pwd4hlp_files/merging_data03.gif"
+ name="Image63" alt="Ignoring the header lines" align="bottom"
+ width="363" height="145" border="0">
+  						</p>
+  		</td>
+  	</tr>
+     
+  </tbody> 
+</table>
+   
+<hr>  
+<table width="100%" border="2" cellpadding="8" cellspacing="0">
+  	<tbody>
+     <tr>
+  		<td bgcolor="#fffff0"> 			       
+      <p class="western" style="margin-bottom: 0.5cm;">All the Merging 			files 
+have to be in the same format (the same number of comments, 			the same step, 
+the same wavelength). It is not necessary to have 			overlapping ranges, you
+may as well just add to files say one 			having data from 20 to 90 the other
+from 90 to 120.  			</p>
+  			       
+      <p class="western" style="margin-bottom: 0.5cm;">There are two 			possibilities 
+for merging files: either XY ascii files or XYZ 			ascii files. For the first 
+case the ESD will be computed 			internally; then everything is the same. 
+ 			</p>
+  			       
+      <p class="western" style="margin-bottom: 0.5cm;">In the following 			we 
+will merge the three files : we choose File/Merge XY files 			(<b>File, Merge 
+XY Files</b>) and add the files via the dialog 			box. Give the appropriate 
+"normalization / monitor" 			value to the right of the file name. In this 
+case, they are all 1 			(equally weighted or 1 second per step in the counting 
+time)  			</p>
+  			       
+      <p class="western"><img src="pwd4hlp_files/merging_data04.gif"
+ name="Image64" alt="Adding files" align="bottom" width="434"
+ height="397" border="0">
+  						</p>
+  		</td>
+  	</tr>
+     
+  </tbody> 
+</table>
+   
+<hr>  
+<table width="100%" border="2" cellpadding="8" cellspacing="0">
+  	<tbody>
+     <tr>
+  		<td bgcolor="#fffff0"> 			       
+      <p class="western" style="margin-bottom: 0.5cm;">Now click <b>OK</b>
+ 						</p>
+  			       
+      <p class="western" style="margin-bottom: 0.5cm;">You will be 			prompted 
+to output to a filename (enter this and the directory you 			wish the file 
+to be place in); then you should get the following 			style of "OK" message: 
+ 			</p>
+  			       
+      <p class="western" style="margin-bottom: 0.5cm;"><img
+ src="pwd4hlp_files/merging_data05.gif" name="Image65"
+ alt="Files merged" align="bottom" width="300" height="100" border="0">
+  						</p>
+  			       
+      <p class="western" style="margin-bottom: 0.5cm;">This creates a 			file 
+in the following style of format (2-theta, counts, ESD, ready 			to be converted 
+into other formats such as GSAS)  			</p>
+  			       
+      <pre> <font size="3">-&gt; merged 15/07/02 21:16:56</font>
+    <font
+ size="3">17.00 ,         9.00 ,         1.50</font>
+    <font size="3">17.02 ,         6.50 ,      1.27475</font>
+    <font
+ size="3">17.04 ,         6.00 ,      1.22474</font>
+    <font size="3">17.06 ,         4.50 ,      1.06066</font>
+    <font
+ size="3">17.08 ,         5.50 ,       1.1726</font>
+    <font size="3">17.10 ,         5.00 ,      1.11803</font>
+    <font
+ size="3">17.12 ,         9.50 ,       1.5411</font>
+    <font size="3">17.14 ,         4.00 ,         1.00</font>
+    <font
+ size="3">17.16 ,         6.50 ,      1.27475</font>
+    <font size="3">17.18 ,         7.00 ,      1.32288</font>
+    <font
+ size="3">17.20 ,         7.50 ,      1.36931</font>
+    <font size="3">17.22 ,         6.00 ,      1.22474</font>
+    <font
+ size="3">17.24 ,         5.00 ,      1.11803</font>
+    <font size="3">17.26 ,         5.00 ,      1.11803</font>
+    <font
+ size="3">17.28 ,         7.00 ,      1.32288</font>
+    <font size="3">17.30 ,         6.50 ,      1.27475</font>
+    <font
+ size="3">17.32 ,         7.00 ,      1.32288</font>
+    <font size="3">17.34 ,         7.50 ,      1.36931</font></pre>
+  		</td>
+  	</tr>
+     
+  </tbody> 
+</table>
+   
+<hr>  
+<table width="100%" border="2" cellpadding="8" cellspacing="0">
+  	<tbody>
+     <tr>
+  		<td bgcolor="#fffff0"> 			       
+      <p class="western" style="margin-bottom: 0.5cm;">The Merged data is
+ 			still in memory so you can still save this into other formats, 			such 
+as XYZ, ASCII or GSAS ESD format. For creating a GSAS ESD 			file, just select 
+      <b>File, Save As, Gsas - CW ESD</b>  			</p>
+  			       
+      <p class="western" style="margin-bottom: 0.5cm;"><img
+ src="pwd4hlp_files/merging_data06.gif" name="Image66"
+ alt="Creating a GSAS ESD file" align="bottom" width="473" height="258"
+ border="0">
+  						</p>
+  			       
+      <p class="western" style="margin-bottom: 0.5cm;"><font size="4">Following
+ 			is the top of the newly created GSAS file </font> 			</p>
+  			       
+      <pre><font size="3">Sample Title                                                                                </font>
+<font size="3">BANK 1 6145 1229 CONST 1700 2 0 0 ESD                                           </font>
+     <font
+ size="3">9.0     1.5     6.5     1.3     6.0     1.2     4.5     1.1     5.5     1.2</font>
+     <font
+ size="3">5.0     1.1     9.5     1.5     4.0     1.0     6.5     1.3     7.0     1.3</font>
+     <font
+ size="3">7.5     1.4     6.0     1.2     5.0     1.1     5.0     1.1     7.0     1.3</font>
+     <font
+ size="3">6.5     1.3     7.0     1.3     7.5     1.4    10.0     1.6     5.0     1.1</font>
+     <font
+ size="3">7.0     1.3     3.5     0.9     8.0     1.4     7.5     1.4     8.0     1.4</font>
+     <font
+ size="3">6.0     1.2    10.5     1.6     7.0     1.3     6.5     1.3     6.0     1.2</font>
+     <font
+ size="3">5.0     1.1     6.5     1.3     7.0     1.3     6.5     1.3     8.5     1.5</font>
+    <font
+ size="3">11.0     1.7     9.0     1.5     8.5     1.5     6.5     1.3    10.0     1.6</font>
+    <font
+ size="3">10.5     1.6     8.5     1.5    10.5     1.6    11.0     1.7    13.0     1.8</font>
+     <font
+ size="3">7.5     1.4     8.0     1.4    10.5     1.6     5.5     1.2     7.5     1.4</font>
+     <font
+ size="3">7.5     1.4    11.0     1.7     8.5     1.5    13.0     1.8    11.0     1.7</font>
+    <font
+ size="3">10.0     1.6    20.5     2.3    18.5     2.2    14.0     1.9    14.0     1.9</font>
+    <font
+ size="3">17.0     2.1    23.0     2.4    24.5     2.5    22.5     2.4    26.5     2.6</font>
+    <font
+ size="3">34.0     2.9    55.0     3.7    62.0     3.9    77.5     4.4   120.0     5.5</font>
+   <font
+ size="3">127.5     5.6   128.5     5.7   107.0     5.2    67.5     4.1    43.0     3.3</font>
+    <font
+ size="3">19.5     2.2    16.5     2.0    13.0     1.8    11.0     1.7    13.0     1.8</font></pre>
+  		</td>
+  	</tr>
+     
+  </tbody> 
+</table>
+   
+<hr>  
+<table width="100%" border="2" cellpadding="8" cellspacing="0">
+  	<tbody>
+     <tr>
+  		<td bgcolor="#fffff0"> 			       
+      <p class="western" style="margin-bottom: 0.5cm;">If you are in the
+			mood to create other files (e.g., CPI, just select <b>File, Save 			As,
+Sietronics - CPI</b>. However, note that the ESDs will not be 			included
+in this format.  			</p>
+  			       
+      <p class="western" style="margin-bottom: 0.5cm;"><img
+ src="pwd4hlp_files/merging_data07.gif" name="Image67"
+ alt="Creating a CPI file" align="bottom" width="473" height="256"
+ border="0">
+  						</p>
+  			       
+      <p class="western" style="margin-bottom: 0.5cm;"><font size="4">Following
+ 			is the top of the newly created CPI file </font> 			</p>
+  			       
+      <pre><font size="3">SIETRONICS XRD SCAN</font>
+<font size="3">17</font>
+<font size="3">139.9</font>
+<font size="3">0.02</font>
+<font size="3">Cu</font>
+<font size="3">1.54056</font>
+<font size="3">16-1-1998</font>
+<font size="3">1</font>
+<font size="3">SampleIdent</font>
+<font size="3">SCANDATA</font>
+<font size="3">9</font>
+<font size="3">6.5</font>
+<font size="3">6</font>
+<font size="3">4.5</font>
+<font size="3">5.5</font>
+<font size="3">5</font>
+<font size="3">9.5</font>
+<font size="3">4</font>
+<font size="3">6.5</font>
+<font size="3">7</font>
+<font size="3">7.5</font>
+<font size="3">6</font>
+<font size="3">5</font>
+<font size="3">5</font>
+<font size="3">7</font>
+<font size="3">6.5</font>
+<font size="3">7</font>
+<font size="3">7.5</font>
+<font size="3">10</font>
+<font size="3">5</font>
+<font size="3">7</font>
+<font size="3">3.5</font>
+<font size="3">8</font></pre>
+  		</td>
+  	</tr>
+     
+  </tbody> 
+</table>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<hr size="15">   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><b><font
+ size="4"><a name="notice"></a>Notice</font></b> <br>
+   <br>
+ There are some limitations in the use of this program and probably there 
+are some bugs too. It may be slow but it can read as many data as you have, 
+a special attention was paid to the "friendly" characteristic. Some comments 
+may help you out of trouble. <br>
+ And now, the usual stuff: <br>
+   <br>
+ <b>License Agreement</b>  </p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><font
+ size="1">This software is provided "as is" and without warranties of any
+ kind; use it on your own risk.</font> <br>
+ <font size="1">If you don't like it don't blame me but don't use it. I don't 
+guarantee for any accuracy and/or meaning of the output.</font> <br>
+ <font size="1">You are hereby licensed to use this software if you are from 
+a non-profit making institution only.  You may make as many copies of the
+ software as you wish.  You may give exact copies (including this help file) 
+of the original software version and redistribute the complete and unmodified 
+version via electronic means. You are specifically prohibited from charging 
+a fee, or requesting donations, for any such copies.</font> <br>
+   <br>
+ <b><font size="2">I you want to use this software, you are requested to
+send an e-mail to the author, stating your name, institution and the version
+you have. This is for bug reports and updates. Future correspondence regarding 
+this program will be made only to the people on my "user list" where you can
+stay as long as you want (and to encourage you, I will not answer to any
+questions if you are not on that list).</font></b> <br>
+    </p>
+   
+<hr size="2">  
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><br>
+   <br>
+ <a href="#top">back to top</a>  </p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<p class="western" style="margin-left: 0.13cm; margin-bottom: 0.5cm;"><br>
+ <br>
+  </p>
+   
+<p class="western"><br>
+ <br>
+  </p>
+  <br>
+ <br>
+</body>
+</html>

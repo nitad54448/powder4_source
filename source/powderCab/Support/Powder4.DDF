@@ -1,0 +1,48 @@
+.OPTION EXPLICIT
+.Set Cabinet=off
+.Set Compress=off
+.Set MaxDiskSize=CDROM
+.Set ReservePerCabinetSize=6144
+.Set DiskDirectoryTemplate=".."
+.Set CompressionType=MSZIP
+.Set CompressionLevel=7
+.Set CompressionMemory=21
+.Set CabinetNameTemplate="Powder4.CAB"
+"Setup.Lst"
+"setup.exe"
+.Set Cabinet=on
+.Set Compress=on
+"Powder4.exe"
+"msvbvm60.dll"
+"OLEAUT32.DLL"
+"OLEPRO32.DLL"
+"ASYCFILT.DLL"
+"STDOLE2.TLB"
+"COMCAT.DLL"
+"VB6FR.DLL"
+"PEGRAP32.DLL"
+"comctl32.ocx"
+"CMCTLFR.DLL"
+"COMDLG32.OCX"
+"CMDLGFR.DLL"
+"MSFLXGRD.OCX"
+"pesgo32.ocx"
+"TABCTL32.OCX"
+"TABCTFR.DLL"
+"MSCOMCTL.OCX"
+"MSCMCFR.DLL"
+"MSCOMCT2.OCX"
+"SETUP1.EXE"
+"VB6STKIT.DLL"
+"ST6UNST.EXE"
+"pw_dbws3.exe"
+"pwd_Dicvol91.exe"
+"HKLGEN.EXE"
+"pwd_ito.exe"
+"PEAK.EXE"
+"Pk_transd.exe"
+"pwd_treor.exe"
+"pw_ControlFile.cfg"
+"pw_dbws.dat"
+"plotinfo"
+"PEAKPARM.DAT"

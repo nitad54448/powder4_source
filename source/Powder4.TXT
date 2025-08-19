@@ -1,0 +1,3 @@
+Le fichier .cab de votre application a été généré en tant que 'G:\vb6\code\Powder4\powderCab\Powder4.CAB'.
+
+Il y a également dans le dossier de support (G:\vb6\code\Powder4\powderCab\Support\Powder4.BAT) un fichier de commandes qui vous permettra de recréer le fichier .cab si vous modifiez certains des fichiers.

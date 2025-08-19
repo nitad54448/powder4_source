@@ -1,0 +1,284 @@
+1RIETVELD ANALYSIS PROGRAM DBWS-9807, RELEASE  21.09.98,
+   COPYRIGHT 1998 BY R.A.YOUNG,
+   SEE APPENDIX B ON COPYRIGHT-AND-FAIR-USE IN USERS GUIDE FOR CONDITIONS,
+   THIS PROGRAM SHOULD BE CITED IN ALL WORK TO WHICH IT HAS CONTRIBUTED AS AN UPGRADE OF:
+  "DBWS-9411 - an upgrade of the DBWS programs for Rietveld
+   Refinement with PC and mainframe computers",
+   J. Appl. Cryst., Vol. 28, 366-7; 1995
+ PROGRAM PARAMETERS:
+ IDSZ= 8000    IRS= 4096    NATS= 128     MSZ= 64     NOV= 512
+ QDATA 2 PHASE TEST CASE QUARTZ+?  8FWHM  24.9.98 2/24                 
+ FOR X-RAY DATA
+ READ DATA IN TRADITIONAL DBWS FORMAT
+ NUMBER OF PHASES=    2
+ NUMBER OF EXCLUDED REGIONS=    0
+ NUMBER OF SCATTERING SETS=    0
+ BACKGROUND TO BE REFINED  
+ GAUSSIAN PROFILE, NPROF =    0
+ IPREF=1, MARCH-DOLLASE PREFERRED ORIENTATION FUNCTION
+ IABSR=1, CORRECTION OF SURFACE ROUGHNESS BY YOUNG
+ IASYM=0, Usual Rietveld Asymmetry
+ NO AMOPHOUS AND COMPTON CORRECTION TO THE BGD
+ PRINT REFLECTION LIST
+ Print merged reflection list
+ WAVELENGTHS=    1.54050  1.54430  LAMDA MEAN =    1.54177
+ ALPHA2:ALPHA1 RATIO =    .5000
+ BASE OF PEAK = 2.0*HW*    8.00
+ MONOCHROMATOR CORRECTION =   .8009
+ ABSORPTION CORRECTION COEFFICIENT =   1.0000 CM-1
+ SLAB-WIDTH =    .0000 CM.
+ RIETVELD ASYMMETRY CORRECTION FOR ANGLES LESS THAN   35.000 DEGREES
+ NUMBER OF CYCLES =    2
+ RELAXATION FACTORS
+ FOR COORDINATES=  .95
+ FOR ANISOTRPIC TEMPERATURE FACTORS=  .95
+ FOR FWHM PARAMETERS=   .95
+ FOR LATTICE CONSTANTS=  .95
+ EPS-VALUE=    .1
+ NUMBER OF PARAMETERS VARIED=   24
+ GLOBAL PARAMETERS AND CODEWORDS
+ ZEROPOINT=     .00     .00
+ BACKGROUND PARAMETERS AND CODEWORDS
+ ORIGIN OF BACKGROUND POLYNOMIAL AT TWO-THETA =   90.000DEGREES
+ 38.5600     116.730     134.670     .000000     .000000     .000000    
+  31.000      41.000     181.000        .000        .000        .000
+ DISPLACEMENT PEAKSHIFT PARAMETER AND CODEWORD    -.02   21.00
+ TRANSPARENCY PEAKSHIFT PARAMETER AND CODEWORD     .00     .00
+ SURFACE ROUGHNESS P PARAMETER AND CODEWORD    .0000    .0000
+ SURFACE ROUGHNESS Q PARAMETER AND CODEWORD    .0000    .0000
+ SURFACE ROUGHNESS R PARAMETER AND CODEWORD   1.0000    .0000
+ SURFACE ROUGHNESS T PARAMETER AND CODEWORD    .0000    .0000
+
+     DATA ID PS999RF 24AP90  QUARTZ, 6-7-86  T=10     20.120         
+ DATA RANGE (2THETA):  START =  20.120, STOP =  60.100, STEP =    .020
+
+1PHASE  1
+ Alpha quartz                                      
+ NUMBER OF ATOMS=    2
+ NUMBER OF FORMULA UNITS PER UNIT CELL=    3
+ PARTICLE ABSORPTION FACTOR =   1.0000
+ PREFERRED ORIENTATION VECTOR=    .0000   .0000   .0000
+
+0THE SPACE GROUP IS P 32 2 1            
+ The multiplicity of the general site is   6
+
+ ***INITIAL PARAMETERS***
+ ATOM    M NTYP              X         Y         Z         B        So
+                           B11       B22       B33       B12       B13       B23
+ SI1     3 SI+4           .47001    .47001    .00000    .55058   1.00000
+                          .00490    .00270    .00490    .00140   -.00010    .00002
+ O1      6 O-1            .14855    .41915    .11983   1.14585   1.03391
+                          .01430    .00000    .01900    .00850   -.00320   -.00420
+ OVERALL SCALE FACTOR= .658000E-02
+ OVERALL TEMP. FACTOR=      .00000
+ DIRECT CELL PARAMETERS=   4.9139   4.9139   5.4052  90.0000  90.0000 120.0000
+ PREFERRED ORIENTATION PARAMETERS=  1.000   .000
+ ASYMMETRY PARAMETER= .169280
+ MIXING PARAMETERS = .510    .000    .000    
+
+ FWHM PARAMETERS (U,V,W,CT,Z,X,Y)=    .0196    .0033    .0059    .0000    .0000    .0000    .0000
+
+0THE LAUE SYMMETRY IS 3BAR M 1
+ CELL VOLUME PHASE( 1 ) =     113.0303
+0***Coding of variables***
+ ATOM                        X         Y         Z         B         So
+                           B11       B22       B33       B12       B13       B23
+ SI1                       91.00     91.00       .00    190.50       .00
+                             .00       .00       .00       .00       .00       .00
+ O1                       101.00    111.00    121.00    200.50    210.40
+                             .00       .00       .00       .00       .00       .00
+ OVERALL SCALE FACTOR=   11.00
+ OVERALL TEMP. FACTOR=     .00
+ DIRECT CELL PARAMETERS=   61.00   61.00   71.00     .00     .00   61.00
+ PREFERRED ORIENTATION PARAMETERS=     .00     .00
+ ASYMMETRY PARAMETER=  130.50
+ MIXING PARAMETERS =   140.50     .00     .00
+
+ FWHM PARAMETERS (U,V,W,CT,Z,X,Y)=  160.25     .00   80.25     .00     .00     .00     .00
+
+ ATOM =SI+4 dfp,dfpp=    .25410     .33020  MASS=  28.080  Wlenght:1.540500
+ Scat Coef.=  4.43918   1.64167   3.20345   3.43757   1.19453    .21490    .41653   6.65365    .74630
+ ATOM =O-1  dfp,dfpp=    .04920     .03220  MASS=  15.999  Wlenght:1.540500
+ Scat Coef.=  4.19160  12.85730   1.63969   4.17236   1.52673  47.01790 -20.30700   -.01404  21.94120
+ LAUE SYMMETRY 3BAR M 1 WILL BE USED TO GENERATE INDICES
+1NO.  CODE    H   K   L  MULT     HW    POSN    FACTOR  
+
+    1   1      0   1   0     3    .085  20.838 26.372160
+    2   1      1   0   0     3    .085  20.838 26.372160
+    3   2      0   1   0     3    .085  20.890 26.237250
+    4   2      1   0   0     3    .085  20.890 26.237250
+    5   1      0   1   1     6    .088  26.619 15.878380
+    6   1      1   0   1     6    .088  26.619 15.878380
+    7   2      0   1   1     6    .088  26.686 15.795290
+    8   2      1   0   1     6    .088  26.686 15.795290
+    9   1      1   1   0     6    .096  36.523  8.127302
+   10   2      1   1   0     6    .096  36.616  8.082874
+   11   1      0   1   2     6    .098  39.447  6.884593
+   12   1      1   0   2     6    .098  39.447  6.884593
+   13   2      0   1   2     6    .098  39.548  6.846477
+   14   2      1   0   2     6    .098  39.548  6.846477
+   15   1      1   1   1    12    .099  40.269  6.583952
+   16   2      1   1   1    12    .099  40.373  6.547375
+   17   1      0   2   0     3    .101  42.429  5.878245
+   18   1      2   0   0     3    .101  42.429  5.878245
+   19   2      0   2   0     3    .101  42.538  5.845303
+   20   2      2   0   0     3    .101  42.538  5.845303
+   21   1      0   2   1     6    .104  45.772  4.982666
+   22   1      2   0   1     6    .104  45.772  4.982666
+   23   2      0   2   1     6    .104  45.892  4.954405
+   24   2      2   0   1     6    .104  45.892  4.954405
+   25   1      1   1   2    12    .108  50.118  4.086885
+   26   2      1   1   2    12    .109  50.250  4.063429
+   27   1      0   0   3     2    .109  50.602  4.002028
+   28   2      0   0   3     2    .109  50.736  3.979037
+   29   1      0   2   2     6    .114  54.852  3.357859
+   30   1      2   0   2     6    .114  54.852  3.357859
+   31   2      0   2   2     6    .114  54.999  3.338482
+   32   2      2   0   2     6    .114  54.999  3.338482
+   33   1      0   1   3     6    .114  55.306  3.298419
+   34   1      1   0   3     6    .114  55.306  3.298419
+   35   2      0   1   3     6    .114  55.454  3.279385
+   36   2      1   0   3     6    .114  55.454  3.279385
+   37   1      1   2   0     6    .116  57.208  3.066570
+   38   1      2   1   0     6    .116  57.208  3.066570
+   39   2      1   2   0     6    .117  57.362  3.048894
+   40   2      2   1   0     6    .117  57.362  3.048894
+   41   1      1   2   1    12    .120  59.935  2.776599
+   42   1      2   1   1    12    .120  59.935  2.776599
+   43   2      1   2   1    12    .120  60.098  2.760681
+   44   2      2   1   1    12    .120  60.098  2.760681
+1PHASE  2
+ Alpha quartz                                      
+ NUMBER OF ATOMS=    2
+ NUMBER OF FORMULA UNITS PER UNIT CELL=    0
+ PARTICLE ABSORPTION FACTOR =   1.0000
+ PREFERRED ORIENTATION VECTOR=   1.0000   .0000  1.0000
+
+0THE SPACE GROUP IS R -3 C H            
+ The multiplicity of the general site is  36
+
+ ***INITIAL PARAMETERS***
+ ATOM    M NTYP              X         Y         Z         B        So
+                           B11       B22       B33       B12       B13       B23
+ AL1    12 AL+3           .00000    .00000    .34994    .80000   1.00000
+                          .00000    .00000    .00000    .00000    .00000    .00000
+ O1     18 O-1            .31286    .00000    .25000   1.00000   1.00000
+                          .00000    .00000    .00000    .00000    .00000    .00000
+ OVERALL SCALE FACTOR= .460000E-04
+ OVERALL TEMP. FACTOR=     3.31450
+ DIRECT CELL PARAMETERS=   4.7609   4.7609  12.9962  90.0000  90.0000 120.0000
+ PREFERRED ORIENTATION PARAMETERS=  1.000   .000
+ ASYMMETRY PARAMETER= .000000
+ MIXING PARAMETERS = .585    .000    .000    
+
+ FWHM PARAMETERS (U,V,W,CT,Z,X,Y)=    .0318    .0033    .0246    .0000    .0000    .0000    .0000
+
+0THE LAUE SYMMETRY IS 3BAR M 1
+ CELL VOLUME PHASE( 2 ) =     255.1086
+0***Coding of variables***
+ ATOM                        X         Y         Z         B         So
+                           B11       B22       B33       B12       B13       B23
+ AL1                         .00       .00    220.50       .00       .00
+                             .00       .00       .00       .00       .00       .00
+ O1                       230.10       .00       .00       .00       .00
+                             .00       .00       .00       .00       .00       .00
+ OVERALL SCALE FACTOR=   51.00
+ OVERALL TEMP. FACTOR=  240.50
+ DIRECT CELL PARAMETERS=     .00     .00     .00     .00     .00     .00
+ PREFERRED ORIENTATION PARAMETERS=     .00     .00
+ ASYMMETRY PARAMETER=     .00
+ MIXING PARAMETERS =      .00     .00     .00
+
+ FWHM PARAMETERS (U,V,W,CT,Z,X,Y)=  170.10     .00  150.30     .00     .00     .00     .00
+
+ ATOM =AL+3 dfp,dfpp=    .21300     .24550  MASS=  26.982  Wlenght:1.540500
+ Scat Coef.=  4.17448   1.93816   3.38760   4.14553   1.20296    .22875    .52814   8.28524    .70679
+ LAUE SYMMETRY 3BAR M 1 WILL BE USED TO GENERATE INDICES
+   45   1      0   1   2     6    .164  25.547 17.300520
+   46   2      0   1   2     6    .164  25.611 17.210390
+   47   1      1   0   4     6    .170  35.118  8.840433
+   48   2      1   0   4     6    .170  35.207  8.792409
+   49   1      1   1   0     6    .172  37.741  7.573660
+   50   2      1   1   0     6    .172  37.838  7.532036
+   51   1      0   0   6     2    .175  41.644  6.121645
+   52   2      0   0   6     2    .175  41.751  6.087446
+   53   1      1   1   3    12    .176  43.316  5.619306
+   54   2      1   1   3    12    .176  43.429  5.587709
+   55   1      2   0   2     6    .178  46.139  4.896571
+   56   2      2   0   2     6    .178  46.259  4.868765
+   57   1      0   2   4     6    .184  52.510  3.691718
+   58   2      0   2   4     6    .184  52.649  3.670448
+   59   1      1   1   6    12    .190  57.457  3.038095
+   60   2      1   1   6    12    .190  57.612  3.020588
+1NO.  CODE    H   K   L  MULT     HW    POSN    FACTOR  
+
+   61   1      2   1   1    12    .192  59.694  2.800395
+   62   2      2   1   1    12    .192  59.856  2.784329
+0******* CODEWORD   6 is used   3 times **
+0******* CODEWORD   9 is used   2 times **
+1NO.  CODE    H   K   L  PHASE  HW    POSN            
+
+    1   1      0   1   0     1    .085  20.838
+    2   1      1   0   0     1    .085  20.838
+    3   2      0   1   0     1    .085  20.890
+    4   2      1   0   0     1    .085  20.890
+    5   1      0   1   2     2    .164  25.547
+    6   2      0   1   2     2    .164  25.611
+    7   1      0   1   1     1    .088  26.619
+    8   1      1   0   1     1    .088  26.619
+    9   2      0   1   1     1    .088  26.686
+   10   2      1   0   1     1    .088  26.686
+   11   1      1   0   4     2    .170  35.118
+   12   2      1   0   4     2    .170  35.207
+   13   1      1   1   0     1    .096  36.523
+   14   2      1   1   0     1    .096  36.616
+   15   1      1   1   0     2    .172  37.741
+   16   2      1   1   0     2    .172  37.838
+   17   1      0   1   2     1    .098  39.447
+   18   1      1   0   2     1    .098  39.447
+   19   2      0   1   2     1    .098  39.548
+   20   2      1   0   2     1    .098  39.548
+   21   1      1   1   1     1    .099  40.269
+   22   2      1   1   1     1    .099  40.373
+   23   1      0   0   6     2    .175  41.644
+   24   2      0   0   6     2    .175  41.751
+   25   1      0   2   0     1    .101  42.429
+   26   1      2   0   0     1    .101  42.429
+   27   2      0   2   0     1    .101  42.538
+   28   2      2   0   0     1    .101  42.538
+   29   1      1   1   3     2    .176  43.316
+   30   2      1   1   3     2    .176  43.429
+   31   1      0   2   1     1    .104  45.772
+   32   1      2   0   1     1    .104  45.772
+   33   2      0   2   1     1    .104  45.892
+   34   2      2   0   1     1    .104  45.892
+   35   1      2   0   2     2    .178  46.139
+   36   2      2   0   2     2    .178  46.259
+   37   1      1   1   2     1    .108  50.118
+   38   2      1   1   2     1    .109  50.250
+   39   1      0   0   3     1    .109  50.602
+   40   2      0   0   3     1    .109  50.736
+   41   1      0   2   4     2    .184  52.510
+   42   2      0   2   4     2    .184  52.649
+   43   1      0   2   2     1    .114  54.852
+   44   1      2   0   2     1    .114  54.852
+   45   2      0   2   2     1    .114  54.999
+   46   2      2   0   2     1    .114  54.999
+   47   1      0   1   3     1    .114  55.306
+   48   1      1   0   3     1    .114  55.306
+   49   2      0   1   3     1    .114  55.454
+   50   2      1   0   3     1    .114  55.454
+   51   1      1   2   0     1    .116  57.208
+   52   1      2   1   0     1    .116  57.208
+   53   2      1   2   0     1    .117  57.362
+   54   2      2   1   0     1    .117  57.362
+   55   1      1   1   6     2    .190  57.457
+   56   2      1   1   6     2    .190  57.612
+   57   1      2   1   1     2    .192  59.694
+   58   2      2   1   1     2    .192  59.856
+   59   1      1   2   1     1    .120  59.935
+   60   1      2   1   1     1    .120  59.935
+1NO.  CODE    H   K   L  PHASE  HW    POSN            
+
+   61   2      1   2   1     1    .120  60.098
+   62   2      2   1   1     1    .120  60.098

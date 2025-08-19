@@ -1,0 +1,60 @@
+QDATA 2 PHASE TEST CASE QUARTZ+?  8FWHM  24.9.98 2/24                 
+   0   5   2   0   0   0   0   1   0   1   0             LINE 2.1
+00211 10000 10000 000                                    LINE 3
+ 1.54050 1.54430  .50000 90.0000  8.0000   .8009  1.0000 35.0000   .0000
+   2 .10 .95 .95 .95 .95                                 CYCLS EPS RELAX P_CALC
+      24                                                 PARAMS REFINED
+   .0000  -.0183   .0000   .0000   .0000  1.0000   .0000 ZER DISP TRANS p q r t
+   .0000 21.0000   .0000   .0000   .0000   .0000   .0000 CODEWORDS
+    38.61   116.93   134.89      .00      .00      .00   BACKGROUND
+  31.0000  41.0000 181.0000    .0000    .0000    .0000   CODEWORDS
+Alpha quartz                                             PHASE NUMBER  1
+   2   3  1.0000 .00 .001.00                             #ATMS #FU AFQPA PREFDIR
+P 32 2 1                                                 SPACE GROUP
+SI1     3 SI+4    .47002  .47002  .00000  .54946 1.00000  LBL M NTYP x y z B So
+                   91.00   91.00     .00  190.50     .00  CODEWORDS
+  .00490  .00270  .00490  .00140 -.00010 -.00002          BETAS
+     .00     .00     .00     .00     .00     .00          CODEWORDS
+O1      6 O-1     .14855  .41914  .11984 1.14810 1.03417  LBL M NTYP x y z B So
+                  101.00  111.00  121.00  200.50  210.40  CODEWORDS
+  .01430  .00000  .01900  .00850 -.00320 -.00420          BETAS
+     .00     .00     .00     .00     .00     .00          CODEWORDS
+.658E-02   .0000                                         SCALE Bo(OVERALL)
+   11.00     .00
+  .01959 -.00327  .00594  .00000  .00000  .00000  .00000 U V W CT Z X Y
+  160.25     .00   80.25     .00     .00     .00     .00
+  4.9139  4.9139  5.4052 90.0000 90.0000120.0000         CELL PARAMETERS
+   61.00   61.00   71.00     .00     .00   61.00
+ 1.00000  .00000  .16624                                 PREF1 PREF2 R/RCF_ASYM
+     .00     .00  130.50
+   .5100   .0000   .0000                                 NA NB NC (MIX_PARAMS)
+  140.50     .00     .00
+   .0000   .0000   .0000                                 NA NB NC (HIGH SIDE)
+     .00     .00     .00
+   .0000                                                 PEARSON ASYM.FACTOR
+     .00
+PHASE 2   ALPHA ALUMINA                                  PHASE NUMBER  2
+   2   0  1.00001.001.00 .00                             #ATMS #FU AFQPA PREFDIR
+R -3 C H                                                 SPACE GROUP
+AL1    12 AL+3    .00000  .00000  .35002  .80000 1.00000  LBL M NTYP x y z B So
+                     .00     .00  220.50     .00     .00  CODEWORDS
+  .00000  .00000  .00000  .00000  .00000  .00000          BETAS
+     .00     .00     .00     .00     .00     .00          CODEWORDS
+O1     18 O-1     .31343  .00000  .25000 1.00000 1.00000  LBL M NTYP x y z B So
+                  230.10     .00     .00     .00     .00  CODEWORDS
+  .00000  .00000  .00000  .00000  .00000  .00000          BETAS
+     .00     .00     .00     .00     .00     .00          CODEWORDS
+.468E-04  3.2732                                         SCALE Bo(OVERALL)
+   51.00  240.50
+ -.03020 -.00327  .02394  .00000  .00000  .00000  .00000 U V W CT Z X Y
+  170.10     .00  150.30     .00     .00     .00     .00
+  4.7609  4.7609 12.9962 90.0000 90.0000120.0000         CELL PARAMETERS
+     .00     .00     .00     .00     .00     .00
+ 1.00000  .00000  .00000                                 PREF1 PREF2 R/RCF_ASYM
+     .00     .00     .00
+   .5850   .0000   .0000                                 NA NB NC (MIX_PARAMS)
+     .00     .00     .00
+   .0000   .0000   .0000                                 NA NB NC (HIGH SIDE)
+     .00     .00     .00
+   .0000                                                 PEARSON ASYM.FACTOR
+     .00

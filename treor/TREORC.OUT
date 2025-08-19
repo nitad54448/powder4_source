@@ -1,0 +1,53 @@
+  VERSION JANUARY 1990 
+  N A M E                                      N A M E                   N A M E
+       12.112300       
+       15.410300       
+       19.422300       
+       22.414300       
+       22.856300       
+       25.814300       
+       28.024300       
+       29.622300       
+       30.710300       
+       31.951300       
+       32.393300       
+       34.807300       
+       39.439800       
+       45.857300       
+       46.817800       
+       51.637300       
+       52.759300       
+       57.026300       
+       66.911800       
+       71.552800       
+       76.108800       
+       84.999800       
+       93.686800       
+ PRINT ALL TRIALS WITH IQ GE   20
+ STOP LIMITS
+ FIGURE OF MERIT REQUIRED=   10
+ MAX NUMBER OF UNINDEXED LINES IN FIGURE OF MERIT TEST=    4
+ THE 7 FIRST LINES ADJUSTED BY THEIR HIGHER ORDERS
+ CUBIC,TETRAGONAL,HEXAGONAL AND ORTHOROMBIC SYMMETRY
+ MAX CELL EDGE= 25.0 MAX CELL VOLUME=     750.0
+ D1=   .000200 SSQTL=   .050000 D2=   .000400 WAVE=  1.540598
+ NUMBER OF LINES WITH SQ LESS THAN 0.327 NOT EQUAL TO   23
+ NUMBER OF TEST LINES=   19 IQ REQUIRED=   16
+ ** CUBIC TEST ********************* MAX. VOLUME=  750.
+ SELECTED BASE LINES (1) (2)
+ BASE LINE ONE.(HKL)-MAX=    4    4    4 MAX H+K+L=    6
+ ** TETRAGONAL TEST **************** MAX. VOLUME=  750.
+ SELECTED BASE LINES (1,2) (1,3) (2,3)
+ BASE LINE ONE.(HKL)-MAX=    4    4    4 MAX H+K+L=    4
+ BASE LINE TWO.(HKL)-MAX=    4    4    4 MAX H+K+L=    4
+ ** HEXAGONAL TEST ***************** MAX. VOLUME=  750.
+ SELECTED BASE LINES (1,2) (1,3) (2,3)
+ BASE LINE ONE.(HKL)-MAX=    4    4    4 MAX H+K+L=    4
+ BASE LINE TWO.(HKL)-MAX=    4    4    4 MAX H+K+L=    4
+ ** ORTHORHOMBIC TEST ************** MAX. VOLUME=  750.
+ SELECTED BASE LINES (1,2,3) (1,2,4) (1,2,5) (1,3,4) (2,3,4) (1,2,6) 
+ BASE LINE ONE.(HKL)-MAX=    2    2    2 MAX H+K+L=    3
+ BASE LINE TWO.(HKL)-MAX=    2    2    2 MAX H+K+L=    4
+ BASE LINE THREE.(HKL)-MAX=    2    2    2 MAX H+K+L=    4
+  NO SOLUTION ACCEPTED.....THINK! 
+ USED CPU-TIME=       .00 SEC.

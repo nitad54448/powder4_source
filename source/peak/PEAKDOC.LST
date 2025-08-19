@@ -1,0 +1,34 @@
+ NAME=     PARAMETER FILE   :   PEAKPARM.DAT                                     
+ BLANK :                                                                         
+ BLANK :  YOU MAY CHANGE THESE VALUES, BUT YOU SHOULD STAY BETWEEN               
+ BLANK :  THE CHARACTERS  = AND ,   INTEGER VALUES RIGHT ADJUSTED !!             
+ BLANK :                                                                         
+ BLANK :        ---- INPUT - OUTPUT  UNITS -----                                 
+ IOPAR :  NPUNCH=13, INOUT=14,   INP=15,  IOUT=16,  NOUT=18,LSTOUT=17,           
+ BLANK :                                                                         
+ BLANK :        ---- CHECK BEFORE EACH RUN ------                                
+ RUNPR1:                      IBROAD= 1, HWBST=0.10 ,  SKEW=  5. ,               
+ BLANK :                                                                         
+ RUNPR2:  MAXPNT= 9000, IPGST= 2, HWMIN= 0.0 ,                                   
+ BLANK :                                                                         
+ BLANK :        ---- TO SKIP PART OF THE PATTERN  ----                           
+ SKIPPR:  SKWPOS=180.   ,                                                        
+ BLANK :                                                                         
+ BLANK :        ---- AMORPHOUS HUMP  ----                                        
+ AMORPH:    CURV=  0.3  , PKBG1= 0.00 , PKBG2= 25.00,                            
+ BLANK :                                                                         
+ BLANK :        ----  INSTRUMENT  ----                                           
+ INSTRU:  IDIFFR= 1,IALFA2= 0,  FRNL= 0.500  ,                                   
+ BLANK :                                                                         
+ BLANK :        ----  DIVERSE  DATA  ----                                        
+ DIVERS:    DLOL= 0.002485 ,  INFO= 0,LAMBDA= 1.54051,                           
+ BLANK :                                                                         
+ BLANK :        ----  PROGRAM PARAMETERS  ----                                   
+ PROGR1:  IPRNT1= 0,IPRNT2= 1, MAXPK= 8,IASMRF= 1,ITERSG= 2,                     
+ BLANK :                                                                         
+ PROGR2:  RATHWB= 3.00  ,DSTMIN= 1.0 ,FACSTD= 1.0 ,SIGDEF= 0.15  ,               
+ BLANK :                                                                         
+ PROGR3:   SIGTR= 100.,  ISUB= 1, I2DST= 1000,I2DEND= 1000,                      
+ BLANK :                                                                         
+ END                                                                             
+ END OF INPUT 

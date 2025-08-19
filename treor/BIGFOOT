@@ -1,0 +1,91 @@
+  VERSION JANUARY 1990 
+  N A M E                                      N A M E                   N A M E
+       25.095800       
+       25.780900       
+       27.736100       
+       29.056300       
+       29.716400       
+       30.744200       
+       34.546000       
+       35.398300       
+       38.949400       
+       41.489500       
+       43.194100       
+       44.138300       
+       49.034700       
+       50.171000       
+       51.399300       
+       51.783700       
+       52.911700       
+       54.724800       
+       57.206500       
+       57.783000       
+       60.064100       
+       60.548700       
+       67.007600       
+       68.035400       
+       71.252300       
+       72.756300       
+       73.842500       
+       74.928800       
+       75.572200       
+       81.095200       
+ PRINT ALL TRIALS WITH IQ GE   27
+ STOP LIMITS
+ FIGURE OF MERIT REQUIRED=   10
+ MAX NUMBER OF UNINDEXED LINES IN FIGURE OF MERIT TEST=    2
+ THE 7 FIRST LINES ADJUSTED BY THEIR HIGHER ORDERS
+ CUBIC,TETRAGONAL,HEXAGONAL AND ORTHOROMBIC SYMMETRY
+ MAX CELL EDGE= 25.0 MAX CELL VOLUME=     750.0
+ D1=   .000200 SSQTL=   .050000 D2=   .000400 WAVE=  1.540598
+ NUMBER OF LINES WITH SQ LESS THAN 0.327 NOT EQUAL TO   30
+ NUMBER OF TEST LINES=   24 IQ REQUIRED=   21
+ ** CUBIC TEST ********************* MAX. VOLUME=  750.
+ SELECTED BASE LINES (1) (2)
+ BASE LINE ONE.(HKL)-MAX=    4    4    4 MAX H+K+L=    0
+ ** TETRAGONAL TEST **************** MAX. VOLUME=  750.
+ SELECTED BASE LINES (1,2) (1,3) (2,3)
+ BASE LINE ONE.(HKL)-MAX=    4    4    4 MAX H+K+L=    4
+ BASE LINE TWO.(HKL)-MAX=    4    4    4 MAX H+K+L=    4
+ ** HEXAGONAL TEST ***************** MAX. VOLUME=  750.
+ SELECTED BASE LINES (1,2) (1,3) (2,3)
+ BASE LINE ONE.(HKL)-MAX=    4    4    4 MAX H+K+L=    4
+ BASE LINE TWO.(HKL)-MAX=    4    4    4 MAX H+K+L=    4
+ ** ORTHORHOMBIC TEST ************** MAX. VOLUME=  750.
+ SELECTED BASE LINES (1,2,3) (1,2,4) (1,2,5) (1,3,4) (2,3,4) (1,2,6) 
+ BASE LINE ONE.(HKL)-MAX=    2    2    2 MAX H+K+L=    3
+ BASE LINE TWO.(HKL)-MAX=    2    2    2 MAX H+K+L=    4
+ BASE LINE THREE.(HKL)-MAX=    2    2    2 MAX H+K+L=    4
+ PROGRAM FOR DIFFERENCE ANALYSIS
+ PROGRAM  I1  REF: WERNER,P-E., Z.KRIST. 120(1964)375-378
+ NUMBER OF SINE SQUARE(THETA) USED=   20
+  DELTA=X/16 IF THIS IS LESS THAN    .00040 OTHERWISE DELTA=    .00040
+   NR MULT. DIFF.TABLE
+    1   39  .004270
+    2   38           .007800
+    3   32  .002570
+    4   30  .004250
+    5   27  .005690
+    6   27           .007340
+    7   27           .007680
+    8   25           .007550
+    9   24  .002620
+   10   23  .004510
+   11   22                             .015710
+   12   21           .008310
+   13   21           .008310
+   14   21  .005480
+   15   20  .002830
+   16   19                    .010420
+   17   19                    .012820
+   18   19                    .010250
+   19   16                    .010930
+   20   15                    .010020
+  NO SOLUTION ACCEPTED.....THINK! 
+ TEST FINISHED
+ NUMBER OF CELLS WITH  21 OR MORE INDEXABLE LINES 
+ IN MONOCLINIC (020)-TESTS     0 SOLUTIONS 
+ IN MONOCLINIC DOMINANT ZONE TESTS     0 SOLUTIONS 
+ IN MONOCLINIC GENERAL TESTS     0 SOLUTIONS 
+ IN TRICLINIC TESTS     0 SOLUTIONS 
+ USED CPU-TIME=       .00 SEC.
